@@ -1,2 +1,2 @@
-# grupo_7
+# grupo_7_Mizu
 Proyecto integrador
