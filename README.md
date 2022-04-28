@@ -8,7 +8,7 @@ El publico objetivo de este sitio es toda persona que tenga una mascota.
 ## Integrantes
 
 - Diego Salvatore:  .
-- Faccundo Guzman:  .
+- Facundo Guzman:  Tesorero en un concesionario de autos. 0 años de experiencia en programación.
 - Rocco Fodaro:  .
 - Matteo Murcia: Ingeniero de sistemas con 1 año de experiencia en Java.
 
