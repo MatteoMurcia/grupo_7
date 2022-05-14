@@ -1,0 +1,22 @@
+{
+  "name": "grupo_7_mizu",
+  "version": "1.0.0",
+  "description": "Nuestro sitio se dedica a vender productos y servicios para mascotas como por ejemplo comida, juguetes, cepillados, hotel, entre otras cosas.\r El publico objetivo de este sitio es toda persona que tenga una mascota.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatteoMurcia/grupo_7_Mizu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatteoMurcia/grupo_7_Mizu/issues"
+  },
+  "homepage": "https://github.com/MatteoMurcia/grupo_7_Mizu#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
