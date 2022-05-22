@@ -6,7 +6,11 @@ const path = require("path");
 app.use(express.static("public"));
 
 app.get('/', function (req, res){
-    res.sendFile(path.join(__dirname, '/views/home.html'))
+    res.sendFile(path.join(__dirname, '/views/index.html'))
+});
+
+app.get('/detalle', function (req, res){
+    res.sendFile(path.join(__dirname, '/views/detalle.html'))
 });
 
 app.listen(PORT, function() {console.log('Servidor corriendo en el puerto ${PORT}')});
