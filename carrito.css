@@ -1,0 +1,153 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ACDDDA;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.tituloCarrito {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.548);
+    justify-content: space-between;
+    padding: 5px;
+    height: min-content;
+
+}
+
+.imgProducto {
+    width: 75px;
+    background-color: white;
+}
+
+.logo {
+    padding: 10px;
+}
+
+h4 {
+    background-color: rgb(190, 190, 190);
+}
+
+.articulo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 5px;
+    margin: 5px;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px rgb(180, 180, 180);
+}
+
+.descProducto {
+    font-size: 0.8rem;
+    background-color: white;
+    margin-bottom: 5px;
+
+}
+
+.cantProducto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    background-color: rgb(200, 200, 200);
+    margin-left: 50px;
+    margin-right: 60px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.detalleProducto {
+    margin-left: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: white;
+}
+
+.footerProducto {
+    flex-grow: 25%;
+    background-color: white;
+}
+
+.nombreProducto {
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.articuloPrinc {
+    background-color: white;
+    display: flex;
+    flex-grow: 1;
+}
+
+.precio {
+    display: flex;
+    align-self: flex-end;
+    font-weight: bold;
+    background-color: white;
+    z-index: 2;
+}
+
+.fa-trash-alt {
+    background-color: white;
+}
+
+.fa-minus {
+    background-color: rgb(190, 190, 190);
+    margin-right: 5px;
+}
+
+.fa-plus {
+    background-color: rgb(190, 190, 190);
+    margin-left: 5px;
+}
+
+.fa-trash-alt {
+    color: rgb(150, 150, 150);
+}
+
+.numerocantidad {
+    background-color: rgb(190, 190, 190);
+}
+
+.envio {
+
+    margin: 50px 5px 5px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    border: solid 1px rgb(190, 190, 190);
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px 0;
+
+}
+
+.total {
+
+    margin: 10px 5px 5px 5px;
+    display: flex;
+    justify-content: space-around;
+    border: solid 1px rgb(190, 190, 190);
+    border-radius: 15px;
+    padding: 10px 0;
+
+}
+
+.botonFinalizarCompra {
+    margin: 20px 5px 5px 5px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    padding: 10px 0;
+    background-color: rgb(0, 128, 255);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+
+}
