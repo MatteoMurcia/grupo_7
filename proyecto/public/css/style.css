@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    background-color: fondo;
+    font-family: fuente;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+
+ul li a{
+    text-decoration: none;
+    color: #000;
+}
