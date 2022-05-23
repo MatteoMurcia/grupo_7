@@ -1,127 +1,163 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-wid th, initial-scale-1">
-    <link rel="stylesheet" href="/proyecto/public/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="top-header">
-            <div class="burger-menu">
-                <i class="fa-solid fa-bars"></i>
+            <div class="top-header__menus">
+                <div class="top-header__menus-burger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="top-header__menus-adress">
+                    <p>Agregar dirección<i class="fa-solid fa-sort-down"></i></p>
+                </div>
             </div>
-            <div class="adress-menu">
-                <p>Agregar dirección<i class="fa-solid fa-sort-down"></i></p>
-            </div>
-            <div class="login-button">
-                <i class="fa-solid fa-user"></i>
-            </div>
-            <div class="cart">
-                <i class="fa-solid fa-cart-shopping"></i>
+            <div class="top-header__buttons">
+                <div class="top-header__buttons-login">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="top-header__buttons-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
             </div>
         </div>
         <div class="bottom-header">
-            <div class="logo">
-                <img src="/proyecto/public/images/logo.png">
+            <div class="bottom-header__logo">
+                <img src="/images/logo.png">
             </div>
-            <div class="search-bar">
+            <div class="bottom-header__search-bar">
                 <form action="/" method="GET">
-                    <input type="text">
+                    <input type="text" placeholder="¿Qué necesita tu mascota?">
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
+        </div>
             <nav>
                 <ul class="site-bar">
-                    <li>
-                        <ul class="site-bar__pets">
+                    <li class="control-site-bar"><p>Mascotas</p>
+                        <ul class="site-bar-pets">
 
                         </ul>
                         <i class="fa-solid fa-chevron-down"></i>
                     </li>
-                    <li>
-                        <ul class="site-bar__brands">
+                    <li class="control-site-bar"><p>Marcas</p>
+                        <ul class="site-bar-brands">
 
                         </ul>
                         <i class="fa-solid fa-chevron-down"></i>
                     </li>
-                    <li><a href="#"><p></p></a></li>
-                    <li>
-                        <ul class="site-bar__services">
+                    <li class="control-site-bar"><a href="#"><p>Ofertas</p></a></li>
+                    <li class="control-site-bar"><p>Servicios</p>
+                        <ul class="site-bar-services">
 
                         </ul>
                         <i class="fa-solid fa-chevron-down"></i>
                     </li>
-                    <li><a href="#"><p></p><i class="fa-solid fa-location-dot"></i></a></li>
-                    <li><a href="#"><p></p></a></li>
+                    <li class="control-site-bar"><a href="#"><p>Sucursales</p><i class="fa-solid fa-location-dot"></i></a></li>
+                    <li class="control-site-bar"><a href="#"><p>Sobre nosotros</p><i class="fa-solid fa-family"></i></a></li>
                 </ul>
             </nav>
-        </div>
     </header>
     <section class="banner">
-
+        <img src="/images/banner.webp">
     </section>
     <main>
+        <h3 class="tittle">Categorías</h3>
         <section class="categories">
-            <p class="tittle">Categorías</p>
             <article>
-                <img src="">
-                <p>Alimentos</p>
+                <div>
+                    <img src="/images/icono_plato.png">
+                </div>
+                <p class="categories-1">Alimentos</p>
             </article>
             <article>
-                <img src="">
-                <p>Snacks</p>
+                <div>
+                    <img src="/images/icono_snack.png">
+                </div>
+                <p class="categories-2">Snacks</p>
             </article>
             <article>
-                <img src="">
-                <p>Accesorios</p>
+                <div>
+                    <img src="/images/icono_collar.png">
+                </div>
+                <p class="categories-3">Accesorios</p>
             </article>
             <article>
-                <img src="">
-                <p>Juguetes</p>
+                <div>
+                    <img src="/images/icono_pelota.png">
+                </div>
+                <p class="categories-4">Juguetes</p>
             </article>
             <article>
-                <img src="">
-                <p>Cuidado e Higiene</p>
+                <div>
+                    <img src="/images/icono_peluqueria.png">
+                </div>
+                <p class="categories-5">Cuidado e Higiene</p>
             </article>
         </section>
+        <h3 class="tittle">Productos destacados</h3>
         <section class="products">
-            <p class="tittle">Productos destacados</p>
             <article>
-                <img src="">
+                <img src="images/275286.webp">
                 <div class="products__details">
-                    <p class="products__details-description"></p>
-                    <p class="products__details-price"></p>
+                    <p class="products__details-description">Pelota Dental</p>
+                    <p class="products__details-price">$1.847,00</p>
                 </div>
             </article>
             <article>
-                <img src="">
+                <img src="images/275092.webp">
                 <div class="products__details">
-                    <p class="products__details-description"></p>
-                    <p class="products__details-price"></p>
+                    <p class="products__details-description">Pelota Chuckit</p>
+                    <p class="products__details-price">$2.860,00</p>
                 </div>
             </article>
             <article>
-                <img src="">
+                <img src="images/138004-138005.webp">
                 <div class="products__details">
-                    <p class="products__details-description"></p>
-                    <p class="products__details-price"></p>
+                    <p class="products__details-description">Alimento Eukanuba Active</p>
+                    <p class="products__details-price">$9.787,00</p>
+                </div>
+            </article>
+            <article>
+                <img src="images/138004-138005.webp">
+                <div class="products__details">
+                    <p class="products__details-description">Alimento Eukanuba Active</p>
+                    <p class="products__details-price">$9.787,00</p>
                 </div>
             </article>
         </section>
     </main>
     <footer>
-        <article>
-                
-        </article>
-        <article>
-                
-        </article>
-        <article>
-                
-        </article>
-        <article>
-                
-        </article>
+        <div class="footer">
+            <article>
+                <div class="footer-icon">
+                    <i class="fa-solid fa-comment-sms"></i>
+                </div>
+                <strong>Contactanos en</strong>
+                <p>@mizu.petshop</p>
+                <p>mizu.petshop@gmail.com</p>
+            </article>
+            <article>
+                <div class="footer-icon">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <strong>Envío gratis desde $ 2.500</strong>
+                <p>Solo por estar registrad@ en Mizu Petshop tenés envíos gratis en la mayoría de los productos. Es un beneficio de Mizu Points</p>
+            </article>
+            <article>
+                <div class="footer-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <strong>Servicio al consumidor</strong>
+                <p>¿No te llego en condiciones? ¡Devolvelo! En Mizu Petshop, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+            </article>
+        </div>
+        <p class="copyright">Copyright © 2021-2022 Mizu Petshop S.R.L.</p>
     </footer>
 </body>
