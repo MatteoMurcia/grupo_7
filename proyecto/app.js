@@ -9,4 +9,4 @@ app.get('/', function (req, res){
   res.sendFile(path.join(__dirname, '/views/index.html'))
 });
 
-app.listen(PORT, function() {console.log('Servidor corriendo en el puerto ${PORT}')});
+app.listen(PORT, function() {console.log(`Servidor corriendo en el puerto ${PORT}`)});
