@@ -7,7 +7,7 @@
 
 body{
     background-color: #eaeae6;
-    font-family: Montserrat;
+    font-family: Quicksand;
 }
 
 .control-site-bar{
@@ -22,7 +22,7 @@ body{
 
 header{
     width: 100vw;
-    background-color: #4a2d15;
+    background-color: #b8dbd9;
 }
 
 
@@ -127,6 +127,11 @@ nav{
     margin-left: 20px;
 }
 
+
+.banner {
+    width: 100vw;
+}
+
 .banner img{
     width: 100%;
 }
@@ -226,6 +231,7 @@ nav{
 
 
 footer{
+    width: 100vw;
     background-color: #FFF;
 }
 
@@ -272,9 +278,13 @@ footer p.copyright{
         padding: 2%;
     }
 
+    .bottom-header{
+        margin-bottom: 1rem;
+    }
+
     nav{
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         color: #fff;
     }
     
@@ -285,7 +295,7 @@ footer p.copyright{
     .control-site-bar,
     .control-site-bar a{
         display: flex;
-        margin: 0px 25px 10px 0px;
+        margin: 0px 30px 30px 0px;
     }
 
     .control-site-bar i,
@@ -299,4 +309,36 @@ footer p.copyright{
     }
 }
 
+@media (min-width: 1280px){
+    .top-header{
+        position: absolute;
+    }
 
+    .top-header__menus-adress{
+        display: none;
+    }
+
+    .top-header__buttons{
+        position: relative;
+        top: 3.2rem;
+        right: 5rem;
+        font-size: 1.3rem;
+    }
+
+    .bottom-header{
+        justify-content: center;
+        padding-top: 2rem;
+    }
+
+    .bottom-header__logo{
+        width: 20%;
+    }
+
+    .bottom-header__search-bar {
+        width: 50%;
+    }
+
+    .bottom-header__search-bar button{
+        width: 5%;
+    }
+}
