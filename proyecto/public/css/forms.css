@@ -22,7 +22,7 @@ h2 {
 input {
   background-image: none;
   border: none;
-  font: inherit;
+  font-size: 15px;
   margin: 0;
   padding: 0;
   transition: all 0.3s;
