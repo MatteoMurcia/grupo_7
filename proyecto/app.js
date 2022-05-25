@@ -5,11 +5,11 @@ const path = require("path");
 
 app.use(express.static("public"));
 
-app.get('/', function (req, res){
+app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '/views/index.html'))
 });
 
-app.get('/detalle', function (req, res){
+app.get('/detalle', function (req, res) {
   res.sendFile(path.join(__dirname, '/views/detalle.html'))
 });
 

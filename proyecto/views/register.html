@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet"> 
+    <link href="/css/forms.css" rel="stylesheet"> 
   </head>
   <body>
     <header>
@@ -118,33 +119,85 @@
                 <input class="button"  value="Volver a la tienda" type="submit"> 
               </div>
           </form>
+  <main class="align">
+    <div class="register">
+      <header class="login__header">
+        <h2>Crea tu cuenta</h2>
+      </header>
+      <form action="/" class="login__form" method="get">
+        <div>
+          <label for="name">Nombre</label>
+          <input type="name" id="name" name="name" placeholder="">
         </div>
-    </main>
-        <footer>
-          <div class="footer">
-              <article>
-                  <div class="footer-icon">
-                      <i class="fa-solid fa-comment-sms"></i>
-                  </div>
-                  <strong>Contactanos en</strong>
-                  <p>@mizu.petshop</p>
-                  <p>mizu.petshop@gmail.com</p>
-              </article>
-              <article>
-                  <div class="footer-icon">
-                      <i class="fa-solid fa-truck-fast"></i>
-                  </div>
-                  <strong>Envío gratis desde $ 2.500</strong>
-                  <p>Solo por estar registrad@ en Mizu Petshop tenés envíos gratis en la mayoría de los productos. Es un beneficio de Mizu Points</p>
-              </article>
-              <article>
-                  <div class="footer-icon">
-                      <i class="fa-solid fa-user-shield"></i>
-                  </div>
-                  <strong>Servicio al consumidor</strong>
-                  <p>¿No te llego en condiciones? ¡Devolvelo! En Mizu Petshop, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
-              </article>
-          </div>
-          <p class="copyright">Copyright © 2021-2022 Mizu Petshop S.R.L.</p>
-      </footer>
-  </body>
+
+        <div>
+          <label for="lastname">Apellido</label>
+          <input type="lastname" id="lastname" name="lastname" placeholder="">
+        </div>
+        <div>
+          <label for="number">Numero de documento</label>
+          <input type="number" id="number" name="number" placeholder="">
+        </div>
+        <div>
+          <label for="email">Ingresa tu em@il</label>
+          <input type="email" id="email" name="email" placeholder="">
+        </div>
+
+        <div>
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="">
+        </div>
+
+        <header>
+          <h2>Queremos saber de tus mascotas</h2>
+        </header>
+        <div>
+          <label for="species">Especie</label>
+          <input type="species" id="species" name="species" placeholder="">
+        </div>
+        <div>
+          <label for="age">Edad</label>
+          <input type="age" id="age" name="age" placeholder="">
+        </div>
+        <div>
+          <input class="button" value="Agregar Mascota" type="submit">
+        </div>
+        <div>
+          <input class="button" value="Crear cuenta" type="submit">
+        </div>
+        <div>
+          <input class="button" value="Volver a la tienda" type="submit">
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <article>
+        <div class="footer-icon">
+          <i class="fa-solid fa-comment-sms"></i>
+        </div>
+        <strong>Contactanos en</strong>
+        <p>@mizu.petshop</p>
+        <p>mizu.petshop@gmail.com</p>
+      </article>
+      <article>
+        <div class="footer-icon">
+          <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <strong>Envío gratis desde $ 2.500</strong>
+        <p>Solo por estar registrad@ en Mizu Petshop tenés envíos gratis en la mayoría de los productos. Es un beneficio
+          de Mizu Points</p>
+      </article>
+      <article>
+        <div class="footer-icon">
+          <i class="fa-solid fa-user-shield"></i>
+        </div>
+        <strong>Servicio al consumidor</strong>
+        <p>¿No te llego en condiciones? ¡Devolvelo! En Mizu Petshop, no hay nada que no puedas hacer, porque estás
+          siempre protegid@.</p>
+      </article>
+    </div>
+    <p class="copyright">Copyright © 2021-2022 Mizu Petshop S.R.L.</p>
+  </footer>
+</body>
