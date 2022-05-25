@@ -1,21 +1,38 @@
-*{
-    font-family: 'Quicksand';
-}
-
 .producto{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-left: 15%;
 }
+.producto .Nombre{
+    font-size: 1.5rem;
+}
+
+.producto .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    align-self: stretch;
+    height: 40vh;
+}
+
 .producto img{
     width: 80%;
     border: solid;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .producto .marca-stars{
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: baseline;
+}
+
+.producto .info .marca-stars p{
+    margin-right: 6vw;
 }
 
 .detalle{
@@ -23,16 +40,22 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: left;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 4vh;
 }
 
-@media (min-width: 730px) {
+.detalle h3{
+    margin-bottom: 2vh;
+}
+
+@media (min-width: 769px) {
     .producto{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+        margin-top: 10vh;
     }
 
     .producto img{
@@ -42,5 +65,22 @@
     .producto .info{
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        width: 40%;
+        justify-content: space-around;
+        align-self: stretch;
+    }
+    .producto .info .marca-stars p{
+        margin-right: 2vw;
+    }
+
+    .detalle{
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .detalle h3{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
     }
 }
