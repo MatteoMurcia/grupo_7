@@ -56,7 +56,15 @@ header{
 .top-header__buttons{
     width: 30%;
     justify-content: flex-end;
+}
+
+.top-header__buttons a{
+    text-decoration: none;
     color: #ffffff;
+}
+
+.top-header__buttons a:hover{
+    color: #cc9754;
 }
 
 .top-header__menus-adress{
@@ -206,9 +214,14 @@ nav{
     align-items: flex-start;
 }
 
-.products article{
+.products a{
     max-width: 45%;
     max-height: 45%;
+    text-decoration: none;
+    color: #000;
+}
+
+.products article{
     margin-top: 1.25rem;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     padding: 0.75rem 1.25rem;
@@ -223,9 +236,6 @@ nav{
     font-size: 0.75rem;
     margin-top: 1rem;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
     border-top: 1px solid #ebebeb;
 }
 
@@ -283,8 +293,9 @@ footer p.copyright{
     }
 
     nav{
+        padding-left: 2rem;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         color: #fff;
     }
     
@@ -294,8 +305,16 @@ footer p.copyright{
 
     .control-site-bar,
     .control-site-bar a{
+        text-align: center;
         display: flex;
-        margin: 0px 30px 30px 0px;
+        margin: 0 2rem 2rem 0;
+    }
+
+    .control-site-bar:hover,
+    .control-site-bar a:hover,
+    .control-site-bar i:hover,
+    .control-site-bar a i:hover{
+        color: #cc9754;
     }
 
     .control-site-bar i,
@@ -304,7 +323,7 @@ footer p.copyright{
         left: 0.3rem;
     }
 
-    .products article{
+    .products a{
         width: 22%;
     }
 }
@@ -320,8 +339,8 @@ footer p.copyright{
 
     .top-header__buttons{
         position: relative;
-        top: 3.2rem;
-        right: 5rem;
+        top: 6.8rem;
+        right: 8rem;
         font-size: 1.3rem;
     }
 
@@ -340,5 +359,30 @@ footer p.copyright{
 
     .bottom-header__search-bar button{
         width: 5%;
+    }
+
+    .products article{
+        box-shadow: none;
+    }
+
+    .products__details{
+        display: none;
+    }
+
+    .products article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .products article:hover .products__details{
+        display: block;
+    }
+
+    .footer-icon i:hover{
+        color: #d2ac80;
+    }
+
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
