@@ -88,7 +88,7 @@ section h2 {
 /* ----------Register-------------- */
 
 .register {
-  width: 400px;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -126,4 +126,9 @@ section h2 {
   color: gray;
   padding: 4px 5px;
   width: 90%;
+}
+
+.button_bck_home,
+.button_register {
+  text-decoration: none;
 }
