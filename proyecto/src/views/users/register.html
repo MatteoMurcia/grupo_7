@@ -9,71 +9,79 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet"> 
+    <link href="/css/style.css" rel="stylesheet"> 
     <link href="/css/forms.css" rel="stylesheet"> 
   </head>
   <body>
     <header>
-      <div class="top-header">
-          <div class="top-header__menus">
-              <div class="top-header__menus-burger">
-                  <i class="fa-solid fa-bars"></i>
-              </div>
-              <div class="top-header__menus-adress">
-                  <p>Agregar dirección<i class="fa-solid fa-sort-down"></i></p>
-              </div>
-          </div>
-          <div class="top-header__buttons">
-              <div class="top-header__buttons-login">
-                  <a href="/login"><i class="fa-solid fa-user"></i></a>
-              </div>
-              <div class="top-header__buttons-cart">
-                  <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-              </div>
-          </div>
-      </div>
-      <div class="bottom-header">
-          <div class="bottom-header__logo">
-              <a href="/"><img src="/images/logo.png"></a>
-          </div>
-          <div class="bottom-header__search-bar">
-              <form action="/" method="GET">
-                  <input type="text" placeholder="¿Qué necesita tu mascota?">
-                  <button><i class="fa-solid fa-magnifying-glass"></i></button>
-              </form>
-          </div>
-      </div>
-          <nav>
-              <ul class="site-bar">
-                  <li class="control-site-bar"><p>Mascotas</p>
-                      <ul class="site-bar-pets">
+        <div class="top-header">
+            <div class="top-header__menus">
+                <div class="top-header__menus-burger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="top-header__menus-adress">
+                    <p>Agregar dirección<i class="fa-solid fa-sort-down"></i></p>
+                </div>
+            </div>
+            <div class="top-header__buttons">
+                <div class="top-header__buttons-login">
+                    <a href="/login"><i class="fa-solid fa-user"></i></a>
+                </div>
+                <div class="top-header__buttons-cart">
+                    <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header">
+            <div class="bottom-header__logo">
+                <a href="/"><img src="/images/logo.png"></a>
+            </div>
+            <div class="bottom-header__search-bar">
+                <form action="/" method="GET">
+                    <input type="text" placeholder="¿Qué necesita tu mascota?">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+        <nav>
+            <ul class="site-bar">
+                <li class="control-site-bar">
+                    <p>Mascotas</p>
+                    <ul class="site-bar-pets">
 
-                      </ul>
-                      <i class="fa-solid fa-chevron-down"></i>
-                  </li>
-                  <li class="control-site-bar"><p>Marcas</p>
-                      <ul class="site-bar-brands">
+                    </ul>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </li>
+                <li class="control-site-bar">
+                    <p>Marcas</p>
+                    <ul class="site-bar-brands">
 
-                      </ul>
-                      <i class="fa-solid fa-chevron-down"></i>
-                  </li>
-                  <li class="control-site-bar"><a href="#"><p>Ofertas</p></a></li>
-                  <li class="control-site-bar"><p>Servicios</p>
-                      <ul class="site-bar-services">
-
-                      </ul>
-                      <i class="fa-solid fa-chevron-down"></i>
-                  </li>
-                  <li class="control-site-bar"><a href="#"><p>Sucursales</p><i class="fa-solid fa-location-dot"></i></a></li>
-                  <li class="control-site-bar"><a href="#"><p>Sobre nosotros</p><i class="fa-solid fa-family"></i></a></li>
-              </ul>
-          </nav>
-  </header>
+                    </ul>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </li>
+                <li class="control-site-bar"><a href="#">
+                        <p>Ofertas</p>
+                    </a></li>
+                <li class="control-site-bar">
+                    <p>Servicios</p>
+                    <ul class="site-bar-services">
+                    </ul>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </li>
+                <li class="control-site-bar"><a href="#">
+                        <p>Sucursales</p><i class="fa-solid fa-location-dot"></i>
+                    </a></li>
+                <li class="control-site-bar"><a href="#">
+                        <p>Sobre nosotros</p><i class="fa-solid fa-family"></i>
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
     <main class="align">
         <div class="register">
-          <header class="login__header">
+          <section class="login__header">
             <h2>Crea tu cuenta</h2>
-          </header>
+          </section>
           <form action="/" class="login__form" method="get">
             <div>
                 <label for="name">Nombre</label>
@@ -98,9 +106,9 @@
               <input type="password" id="password" name="password" placeholder="">
             </div>
     
-            <header>
-                <h2>Queremos saber de tus mascotas</h2>
-              </header>
+            <section>
+                <h3>Queremos saber de tus mascotas</h3>
+            </section>
               <div>
                 <label for="species">Especie</label>
                 <input type="species" id="species" name="species" placeholder="">
@@ -115,62 +123,11 @@
               <div>
                 <input class="button"  value="Crear cuenta" type="submit"> 
               </div>
-              <div>
-                <input class="button"  value="Volver a la tienda" type="submit"> 
-              </div>
           </form>
-  <main class="align">
-    <div class="register">
-      <header class="login__header">
-        <h2>Crea tu cuenta</h2>
-      </header>
-      <form action="/" class="login__form" method="get">
-        <div>
-          <label for="name">Nombre</label>
-          <input type="name" id="name" name="name" placeholder="">
-        </div>
-
-        <div>
-          <label for="lastname">Apellido</label>
-          <input type="lastname" id="lastname" name="lastname" placeholder="">
-        </div>
-        <div>
-          <label for="number">Numero de documento</label>
-          <input type="number" id="number" name="number" placeholder="">
-        </div>
-        <div>
-          <label for="email">Ingresa tu em@il</label>
-          <input type="email" id="email" name="email" placeholder="">
-        </div>
-
-        <div>
-          <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" placeholder="">
-        </div>
-
-        <header>
-          <h2>Queremos saber de tus mascotas</h2>
-        </header>
-        <div>
-          <label for="species">Especie</label>
-          <input type="species" id="species" name="species" placeholder="">
-        </div>
-        <div>
-          <label for="age">Edad</label>
-          <input type="age" id="age" name="age" placeholder="">
-        </div>
-        <div>
-          <input class="button" value="Agregar Mascota" type="submit">
-        </div>
-        <div>
-          <input class="button" value="Crear cuenta" type="submit">
-        </div>
-        <div>
-          <input class="button" value="Volver a la tienda" type="submit">
-        </div>
-      </form>
-    </div>
-  </main>
+          <div>
+            <a href="/" class="button_bck_home"><input class="button"  value="Volver a la tienda" type="submit"></a> 
+          </div>
+        </main>
   <footer>
     <div class="footer">
       <article>
