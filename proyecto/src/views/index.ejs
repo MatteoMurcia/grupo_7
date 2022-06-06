@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<%- include('./partials/head')%>
+<body>
+    <%- include('./partials/header') %>
+    <section class="banner">
+        <img src="images/banner.webp">
+    </section>
+    <main>
+        <h3 class="tittle">Categorías</h3>
+        <section class="categories">
+            <article>
+                <div>
+                    <img src="images/icono_plato.png">
+                </div>
+                <p class="categories-1">Alimentos</p>
+            </article>
+            <article>
+                <div>
+                    <img src="images/icono_snack.png">
+                </div>
+                <p class="categories-2">Snacks</p>
+            </article>
+            <article>
+                <div>
+                    <img src="images/icono_collar.png">
+                </div>
+                <p class="categories-3">Accesorios</p>
+            </article>
+            <article>
+                <div>
+                    <img src="images/icono_pelota.png">
+                </div>
+                <p class="categories-4">Juguetes</p>
+            </article>
+            <article>
+                <div>
+                    <img src="images/icono_peluqueria.png">
+                </div>
+                <p class="categories-5">Cuidado e Higiene</p>
+            </article>
+        </section>
+        <h3 class="tittle">Productos destacados</h3>
+        <section class="products">
+            <a href="/detalle"><article>
+                <img src="images/275286.webp">
+                <div class="products__details">
+                    <p class="products__details-description">Pelota Dental</p>
+                    <p class="products__details-price">$1.847,00</p>
+                </div>
+            </article></a>
+            <a href="/detalle"><article>
+                <img src="images/275092.webp">
+                <div class="products__details">
+                    <p class="products__details-description">Pelota Chuckit</p>
+                    <p class="products__details-price">$2.860,00</p>
+                </div>
+            </article></a>
+            <a href="/detalle"><article>
+                <img src="images/138004-138005.webp">
+                <div class="products__details">
+                    <p class="products__details-description">Alimento Eukanuba Active</p>
+                    <p class="products__details-price">$9.787,00</p>
+                </div>
+            </article></a>
+            <a href="/detalle"><article>
+                <img src="images/138004-138005.webp">
+                <div class="products__details">
+                    <p class="products__details-description">Alimento Eukanuba Active</p>
+                    <p class="products__details-price">$9.787,00</p>
+                </div>
+            </article></a>
+        </section>
+    </main>
+    <%- include('./partials/footer') %>
+</body>

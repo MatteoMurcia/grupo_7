@@ -3,7 +3,7 @@ const path = require("path");
 
 const controller ={
     index: function (req, res){
-        res.sendFile(path.join(__dirname, '../views/index.html'))
+        res.render('index')
     },
     login:  function (req, res){
         res.sendFile(path.join(__dirname, '../views/login.html'))
