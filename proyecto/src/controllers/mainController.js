@@ -6,7 +6,7 @@ const controller ={
         res.render('index')
     },
     login:  function (req, res){
-        res.sendFile(path.join(__dirname, '../views/login.html'))
+        res.render('../views/users/login.ejs')
     },
     carrito:  function (req, res){
         res.sendFile(path.join(__dirname, '../views/carrito.html'))
@@ -15,7 +15,7 @@ const controller ={
         res.sendFile(path.join(__dirname, '../views/detalle.html'))
     },
     register:  function (req, res){
-        res.sendFile(path.join(__dirname, '../views/register.html'))
+        res.render('../views/users/register.ejs')
     }
 };
 
