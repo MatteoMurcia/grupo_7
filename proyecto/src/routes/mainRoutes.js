@@ -8,6 +8,8 @@ routes.get('/login', controller.login);
 routes.get('/carrito', controller.carrito);
 routes.get('/detalle', controller.detalle);
 routes.get('/register', controller.register);
+routes.get('/productos', controller.listadoDeProductos);
+
 
 
 module.exports = routes;

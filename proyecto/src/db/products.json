@@ -1,0 +1,58 @@
+[
+    {
+        "nombre": "Pelota Dental",
+        "precio": "$1.847,00",
+        "imagen": "275286.webp",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "destacado": true
+    },
+    {
+        "nombre": "Pelota Chuckit",
+        "precio": "$2.860,00",
+        "imagen": "275092.webp",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "destacado": true
+    },
+    {
+        "nombre": "Alimento Eukanuba Active",
+        "precio": "$9.787,00",
+        "imagen": "138004-138005.webp",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "destacado": true
+    },
+    {
+        "nombre": "Alimento Eukanuba Active",
+        "precio": "$9.787,00",
+        "imagen": "138004-138005.webp",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "destacado": true
+    },
+    {
+        "nombre": "Pelota Dental",
+        "precio": "$1.847,00",
+        "imagen": "275286.webp",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "destacado": false
+    },
+    {
+        "nombre": "Pelota Chuckit",
+        "precio": "$2.860,00",
+        "imagen": "275092.webp",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "destacado": false
+    },
+    {
+        "nombre": "Alimento Eukanuba Active",
+        "precio": "$9.787,00",
+        "imagen": "138004-138005.webp",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "destacado": false
+    },
+    {
+        "nombre": "Alimento Eukanuba Active",
+        "precio": "$9.787,00",
+        "imagen": "138004-138005.webp",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "destacado": false
+    }
+]
