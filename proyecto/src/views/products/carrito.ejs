@@ -1,33 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mizu - Carrito de Compras</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/carrito.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-
-</head>
-
+<%- include('../partials/head', {hojasDeEstilo: ["carrito"] })%>
 <body>
-    <header>
-        <div class="logo">
-            <a href="/">
-                <img src="/images/logo.png" width="150" alt="Logo1">
-            </a>
-        </div>
-
-        <div class="tituloCarrito">
-            <h4>Mi Carrito</h4>
-            <h4>3 Productos</h4>
-        </div>
-
-    </header>
+    <%- include('../partials/header') %>
+    <div class="tituloCarrito">
+        <h4>Mi Carrito</h4>
+        <h4>3 Productos</h4>
+    </div>
     <main>
         <div class="body">
             <section class="articulos">
@@ -167,41 +146,7 @@
 
 
     </main>
-
-    <footer>
-        <div class="footer">
-            <article>
-                <div class="footer-icon">
-                    <i class="fa fa-comment"></i>
-                </div>
-                <strong>Contactanos en</strong>
-                <p>@mizu.petshop</p>
-                <p>mizu.petshop@gmail.com</p>
-            </article>
-            <article>
-                <div class="footer-icon">
-                    <i class="fa fa-truck"></i>
-                </div>
-                <strong>Envío gratis desde $ 2.500</strong>
-                <p>Solo por estar registrad@ en Mizu Petshop tenés envíos gratis en la mayoría de los productos. Es
-                    un beneficio de Mizu Points</p>
-            </article>
-            <article>
-                <div class="footer-icon">
-                    <i class="fa fa-user-shield"></i>
-                </div>
-                <strong>Servicio al consumidor</strong>
-                <p>¿No te llego en condiciones? ¡Devolvelo! En Mizu Petshop, no hay nada que no puedas hacer, porque
-                    estás siempre protegid@.</p>
-            </article>
-        </div>
-
-
-    </footer>
-
-
-
-
+    <%- include('../partials/footer') %>
 </body>
 
 </html>

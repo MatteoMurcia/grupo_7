@@ -4,19 +4,13 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: #166e91;
-    height: 10rem;
-    width: 100%;
-}
-
 .tituloCarrito {
     display: flex;
     background-color: rgba(255, 255, 255, 0.548);
     justify-content: space-between;
     padding: 5px;
     height: min-content;
-
+    padding-top: 15vh;
 }
 
 .imgProducto {
@@ -39,9 +33,6 @@ section.articulo {
     background-color: #eaeae6;
 }
 
-footer {
-    display: none;
-}
 
 .articulo {
     display: flex;
@@ -293,7 +284,11 @@ section.resumen {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+    .tituloCarrito{
+    padding-top: 25vh;
+    }
+
     section.articulos {
         width: 60%;
     }
@@ -335,70 +330,6 @@ section.resumen {
     .envio {
         margin-top: 20px;
         margin-bottom: 20px;
-    }
-
-
-}
-
-footer {
-    display: block;
-    width: 100vw;
-    background-color: #eaeae6;
-}
-
-footer p.copyright {
-    position: relative;
-    left: 20px;
-    margin-top: 30px;
-    font-size: 0.75rem;
-    padding-bottom: 10px;
-}
-
-.footer {
-    padding-top: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer article strong {
-    font-size: 1rem;
-}
-
-.footer article p {
-    font-size: 0.75rem;
-}
-
-.footer article {
-    text-align: center;
-    width: 70%;
-    margin-top: 2rem;
-}
-
-.footer-icon {
-    color: #cc9754;
-    margin-bottom: 0.6rem;
-    font-size: 2em;
-}
-
-@media (min-width: 1280px) {
-    footer {
-        display: block;
-        display: flex;
-
-    }
-
-    .footer {
-        padding-top: 0px;
-        padding-bottom: 20px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-
-    }
-
-    footer article {
-        width: 33%;
     }
 
 

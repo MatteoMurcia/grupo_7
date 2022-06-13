@@ -13,26 +13,19 @@ const readJsonFile = ( path ) => {
 const controller ={
     index: function (req, res){
         const productsList = readJsonFile(productsDbPath);
-        const productosDestacados = productsList.filter(function(producto){
-            return producto.destacado == true;
+        const productosDestacados = productsList.filter(function(product){
+            return product.category == "destacado";
         })
-        res.render('index', {productosDestacados: productosDestacados})
-    },
-    login:  function (req, res){
-        res.render('../views/users/login.ejs')
+        res.render('index', {productosDestacados})
     },
     carrito:  function (req, res){
-        res.sendFile(path.join(__dirname, '../views/carrito.html'))
+        res.render('../views/products/carrito');
     },
-    detalle:  function (req, res){
-        res.sendFile(path.join(__dirname, '../views/detalle.html'))
+    login:  function (req, res){
+        res.render('../views/users/login')
     },
     register:  function (req, res){
-        res.render('../views/users/register.ejs')
-    },
-    listadoDeProductos: function (req, res){
-        const productsList = readJsonFile(productsDbPath);
-        res.render('../views/products/productsList', {productsList})
+        res.render('../views/users/register')
     }
 };
 

@@ -1,58 +1,82 @@
 [
     {
-        "nombre": "Pelota Dental",
-        "precio": "$1.847,00",
-        "imagen": "275286.webp",
+        "name": "Pelota Dental",
+        "price": "$1.847,00",
+        "image": "275286.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "destacado": true
+        "category": "destacado",
+        "type": "juguetes",
+        "id": "1",
+        "brand": "No especifica"
     },
     {
-        "nombre": "Pelota Chuckit",
-        "precio": "$2.860,00",
-        "imagen": "275092.webp",
+        "name": "Pelota Chuckit",
+        "price": "$2.860,00",
+        "image": "275092.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "destacado": true
+        "category": "destacado",
+        "type": "juguetes",
+        "id": "2",
+        "brand": "Chuckit"
     },
     {
-        "nombre": "Alimento Eukanuba Active",
-        "precio": "$9.787,00",
-        "imagen": "138004-138005.webp",
+        "name": "Alimento Eukanuba Active",
+        "price": "$9.787,00",
+        "image": "138004-138005.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "destacado": true
+        "category": "destacado",
+        "type": "alimentos",
+        "id": "3",
+        "brand": "Eukanuba"
     },
     {
-        "nombre": "Alimento Eukanuba Active",
-        "precio": "$9.787,00",
-        "imagen": "138004-138005.webp",
+        "name": "Alimento Eukanuba Active",
+        "price": "$9.787,00",
+        "image": "138004-138005.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "destacado": true
+        "category": "destacado",
+        "type": "alimentos",
+        "id": "4",
+        "brand": "Eukanuba"
     },
     {
-        "nombre": "Pelota Dental",
-        "precio": "$1.847,00",
-        "imagen": "275286.webp",
+        "name": "Pelota Dental",
+        "price": "$1.847,00",
+        "image": "275286.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "destacado": false
+        "category": "in-sale",
+        "type": "juguetes",
+        "id": "5",
+        "brand": "No especifica"
     },
     {
-        "nombre": "Pelota Chuckit",
-        "precio": "$2.860,00",
-        "imagen": "275092.webp",
+        "name": "Pelota Chuckit",
+        "price": "$2.860,00",
+        "image": "275092.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "destacado": false
+        "category": "in-sale",
+        "type": "jueguetes",
+        "id": "6",
+        "brand": "Chuckit"
     },
     {
-        "nombre": "Alimento Eukanuba Active",
-        "precio": "$9.787,00",
-        "imagen": "138004-138005.webp",
+        "name": "Alimento Eukanuba Active",
+        "price": "$9.787,00",
+        "image": "138004-138005.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "destacado": false
+        "category": "in-sale",
+        "type": "alimentos",
+        "id": "7",
+        "brand": "Eukanuba"
     },
     {
-        "nombre": "Alimento Eukanuba Active",
-        "precio": "$9.787,00",
-        "imagen": "138004-138005.webp",
+        "name": "Alimento Eukanuba Active",
+        "price": "$9.787,00",
+        "image": "138004-138005.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "destacado": false
+        "category": "in-sale",
+        "type": "alimentos",
+        "id": "8",
+        "brand": "Eukanuba"
     }
 ]

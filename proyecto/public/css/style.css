@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body{
     background-color: #eaeae6;
     font-family: Quicksand;
@@ -23,39 +22,22 @@ body{
 header{
     width: 100vw;
     background-color: #166e91;
-}
-
-
-.bottom-header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 1rem;
+    position: fixed;
+    padding: 10px;
+    height: 15vh;
+    z-index: 99999;
 }
 
 .top-header{
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    padding: 5%;
-    margin-bottom: 1rem;
+    margin-bottom: 25px;
 }
 
 .top-header__buttons,
 .top-header__menus{
     display: flex;
-    flex-wrap: wrap;
-}
-
-.top-header__menus{
-    width: 70%;
-}
-
-.top-header__buttons{
-    width: 30%;
-    justify-content: flex-end;
 }
 
 .top-header__buttons a{
@@ -63,43 +45,42 @@ header{
     color: #ffffff;
 }
 
-.top-header__buttons a:hover{
+.top-header__buttons a:hover,
+.top-header__menus-burger i:hover{
     color: #cc9754;
 }
 
-.top-header__menus-adress{
-    margin-left: 5%;
-    color: #ffffff;
-}
-
+.top-header__menus-adress,
 .top-header__menus-burger{
     color: #ffffff;
 }
 
-.top-header__menus-adress i{
-    position: relative;
-    left: 0.5rem;
-    bottom: 0.2rem;
+.top-header__menus-adress{
+    display: flex;
+    padding: 0 10px;
 }
 
-.top-header__buttons-login{
-    position: relative;
-    right: 0.5rem;
+.flecha{
+    vertical-align: text-top;
+    margin-left: 4px;
+}
+
+.bottom-header{
+    display: flex;
+    justify-content: space-between;
 }
 
 .bottom-header__logo{
     width: 30%;
-    padding: 0 0.6rem;
 }
 
 .bottom-header__logo img{
     max-width: 100%;
-    max-height: 100%;
 }
 
 .bottom-header__search-bar {
     width: 60%;
-    margin: auto 0 auto 1rem;
+    padding-top: 2.5%;
 }
 
 .bottom-header__search-bar form{
@@ -132,77 +113,57 @@ header{
 
 nav{
     display: none;
-    margin-left: 20px;
 }
 
 
 .banner {
-    width: 100vw;
+    width: 100%;
+    padding-top: 15vh;
 }
 
 .banner img{
     width: 100%;
 }
 
-.tittle{
+h3{
     font-size: 1.5rem;
-    margin-left: 1rem;
-    margin-top: 1rem;
 }
 
 .categories{
+    margin-top: 2%;
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.categories article{
-    width: 20%;
-    margin: auto;
+.categories-article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.categories article p{
-    font-size: 0.70rem;
+.categories a{
+    text-decoration: none;
+    color: #000;
+}
+
+.categories-div{
+    max-width: 100%;
+}
+
+.categories img{
+    height: 60px;
+    border-radius: 50%;
+}
+
+.categories-p{
+    font-size: .5rem;
     font-weight: bold;
-    text-align: center;
-    width: 100%;
 }
 
-.categories article div{
-    width: 70%;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    border-radius: 1rem;
-    padding: 0.5rem;
-}
-
-.categories article img{
-    width: 100%;
-}
-
-.categories-1,
-.categories-5{
-    position: relative;
-    top: 1rem;
-}
-
-.categories-2{
-    position: relative;
-    top: 1.20rem;
-}
-
-.categories-3{
-    position: relative;
-    top: 0.85rem;
-}
-
-.categories-4{
-    position: relative;
-    top: 0.75rem;
+main{
+    padding: 5%;
 }
 
 .products{
@@ -214,9 +175,7 @@ nav{
 }
 
 .products a{
-    margin: 2.5%;
     max-width: 45%;
-    max-height: 45%;
     text-decoration: none;
     color: #000;
 }
@@ -234,9 +193,10 @@ nav{
 
 .products article p{
     font-size: .5rem;
+    font-weight: bold;
 }
 
-.control__a-article .products__details{
+.products__details{
     margin-top: 1rem;
     width: 100%;
     border-top: 1px solid #ebebeb;
@@ -244,7 +204,7 @@ nav{
 
 
 footer{
-    width: 100vw;
+    width: 100%;
     background-color: #FFF;
 }
 
@@ -282,35 +242,50 @@ footer p.copyright{
     font-size: 2em;
 }
 
-@media (min-width: 769px){
+@media (min-width: 768px){
+    header{
+        padding: 20px;
+        height: 25vh;
+    }
+
+    .top-header__menus{
+        margin-left: 27%;
+    }
+
     .top-header__menus-burger{
         display: none;
     }
-    
-    .top-header{
-        padding: 2%;
-    }
-
-    .bottom-header{
-        margin-bottom: 1rem;
-    }
 
     nav{
-        padding-left: 2rem;
         display: flex;
-        justify-content: center;
         color: #fff;
+        width: 100%;
+        font-size: 1rem;
     }
     
     .site-bar{
         display: flex;
+        flex-direction: row;
+    }
+
+    .bottom-header{
+        margin-bottom: 20px;
+        padding: 0 5%;
+    }
+
+    .bottom-header__logo{
+        width: 20%;
+    }
+
+    .bottom-header__search-bar{
+        width:75%;
     }
 
     .control-site-bar,
     .control-site-bar a{
         text-align: center;
         display: flex;
-        margin: 0 2rem 2rem 0;
+        margin: 0 1.5vw;
     }
 
     .control-site-bar:hover,
@@ -322,50 +297,65 @@ footer p.copyright{
 
     .control-site-bar i,
     .control-site-bar a i{
-        position: relative;
-        left: 0.3rem;
+        margin: 0 5px;
     }
 
     .products a{
-        width: 20%;
+        width: 22%;
     }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    .categories{
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+
+    .categories-article{
+        width: 18%;
+    }
+    
+    .categories-div{
+        margin-top: 50px;
+    }
+    
+    .categories img{
+        height: 120px;
+    }
+    
+    .categories-p{
+        font-size: 1.5rem;
+    }
+
+    .site-bar-pets,
+    .site-bar-brands,
+    .site-bar-services{
+        display: none;
+    }
+
+    .banner{
+        padding-top: 25vh;
+    }
+
+    .top-header__buttons{
+        padding-right: 5%;
+    }
+
 }
 
 @media (min-width: 1280px){
-    .top-header{
-        position: absolute;
+    nav{
+        padding-left: 15%;
+    }
+
+    .bottom-header__logo{
+        width: 12%;
     }
 
     .products article p{
         font-size: .75rem;
-    }
-    
-    .top-header__menus-adress{
-        display: none;
-    }
-
-    .top-header__buttons{
-        position: relative;
-        top: 6.8rem;
-        right: 8rem;
-        font-size: 1.3rem;
-    }
-
-    .bottom-header{
-        justify-content: center;
-        padding-top: 2rem;
-    }
-
-    .bottom-header__logo{
-        width: 20%;
-    }
-
-    .bottom-header__search-bar {
-        width: 50%;
-    }
-
-    .bottom-header__search-bar button{
-        width: 5%;
     }
 
     .products article{

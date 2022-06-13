@@ -1,55 +1,60 @@
-.products{
-    flex-flow: wrap;
-    width: 100vw;
+main{
+    padding-top: 15vh;
 }
 
-.products .control__article{
+.products{
+    flex-flow: wrap;
+}
+
+.products .control__a{
     max-width: 100%;
     display: block;
     flex: 80%;
-
 }
 
-.products .control__article article{
+.products .control__a article{
     display: flex;
-    flex-direction: row;
     max-width: 100%;
 }
 
-.products .control__article article img{
+.products .control__a article img{
     width: 30%;
 }
 
-.products .control__article article .products__details{
+.products .control__a article .products__details{
     border-left: 1px solid #ebebeb;
     margin-left: 0.5rem;
 }
 
-.products .control__article article .products__details-description,
-.products .control__article article .products__details-price{
+.products .control__a article .products__details-description,
+.products .control__a article .products__details-price{
     font-weight: bold;
 }
 
-.products .control__article article .products__details p{
+.products .control__a article .products__details p{
     margin: 0.5rem 0 0 0.5rem;
 }
 
-@media (min-width: 769px){
-    .products .control__article article .products__details p{
+@media (min-width: 768px){
+    main{
+        padding-top: 25vh;
+    }
+
+    .products .control__a article .products__details p{
         font-size: 1rem;
     }
 }
 
 @media (min-width: 1280px){
-    .products .control__article article .products__details{
+    .products .control__a article .products__details{
         margin-left: 2rem;
     }
 
-    .products .control__article article .products__details p{
+    .products .control__a article .products__details p{
         margin: 2rem 0 0 1rem;
     }
 
-    .products .control__article article img{
+    .products .control__a article img{
         width: 15%;
     }
 }

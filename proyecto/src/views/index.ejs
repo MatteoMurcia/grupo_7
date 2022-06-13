@@ -7,47 +7,47 @@
         <img src="images/banner.webp">
     </section>
     <main>
-        <h3 class="tittle">Categorías</h3>
+        <h3 class="tittle-categories">Categorías</h3>
         <section class="categories">
-            <article>
-                <div>
-                    <img src="images/icono_plato.png">
-                </div>
-                <p class="categories-1">Alimentos</p>
-            </article>
-            <article>
-                <div>
-                    <img src="images/icono_snack.png">
-                </div>
-                <p class="categories-2">Snacks</p>
-            </article>
-            <article>
-                <div>
-                    <img src="images/icono_collar.png">
-                </div>
-                <p class="categories-3">Accesorios</p>
-            </article>
-            <article>
-                <div>
-                    <img src="images/icono_pelota.png">
-                </div>
-                <p class="categories-4">Juguetes</p>
-            </article>
-            <article>
-                <div>
-                    <img src="images/icono_peluqueria.png">
-                </div>
-                <p class="categories-5">Cuidado e Higiene</p>
-            </article>
+                <article class="categories-article">
+                    <div class="categories-div">
+                        <a href="/"><img src="images/category-alimento.png"></a>
+                    </div>
+                    <a href="/"><p class="categories-p">Alimentos</p></a>
+                </article>
+                <article class="categories-article">
+                    <div class="categories-div">
+                        <a href="/"><img src="images/category-snacks.png"></a>
+                    </div>
+                    <a href="/"><p class="categories-p">Snacks</p></a>
+                </article>
+                <article class="categories-article">
+                    <div class="categories-div">
+                        <a href="/"><img src="images/category-accesorios.png"></a>
+                    </div>
+                    <a href="/"><p class="categories-p">Accesorios</p></a>
+                </article>
+                <article class="categories-article">
+                    <div class="categories-div">
+                        <a href="/"><img src="images/category-juguetes.png"></a>
+                    </div>
+                    <a href="/"><p class="categories-p">Juguetes</p></a>
+                </article>
+                <article class="categories-article">
+                    <div class="categories-div">
+                        <a href="/"><img src="images/category-higiene.png"></a>
+                    </div>
+                    <a href="/"><p class="categories-p">Cuidado e Higiene</p></a>
+                </article>
         </section>
-        <h3 class="tittle">Productos destacados</h3>
+        <h3 class="tittle-products">Productos destacados</h3>
         <section class="products">
             <% for(let i = 0; i < productosDestacados.length; i++){ %>
                 <a href="/detalle"><article class="control__a-article">
-                    <img src="images/<%= productosDestacados[i].imagen %>">
+                    <img src="images/<%= productosDestacados[i].image %>">
                     <div class="products__details">
-                        <p class="products__details-description"><%= productosDestacados[i].nombre %></p>
-                        <p class="products__details-price"><%= productosDestacados[i].precio %></p>
+                        <p class="products__details-name"><%= productosDestacados[i].name %></p>
+                        <p class="products__details-price"><%= productosDestacados[i].price %></p>
                     </div>
                 </article></a>
               <% } %>
