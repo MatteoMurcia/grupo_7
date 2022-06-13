@@ -20,6 +20,41 @@ const controller ={
     listadoDeProductos: function (req, res){
         const productsList = readJsonFile(productsDbPath);
         res.render('../views/products/productsList', {productsList})
+    },
+    listadoDeAlimentos: function(req,res){
+        const productsList = readJsonFile(productsDbPath);
+        const alimentos = productsList.filter(function(product){
+            return product.category == "alimentos";
+        })
+        res.render('../views/products/alimentos', {alimentos});
+    },
+    listadoDeSnacks: function(req,res){
+        const productsList = readJsonFile(productsDbPath);
+        const snacks = productsList.filter(function(product){
+            return product.category == "snacks";
+        })
+        res.render('../views/products/snacks', {snacks});
+    },
+    listadoDeAccesorios: function(req,res){
+        const productsList = readJsonFile(productsDbPath);
+        const accesorios = productsList.filter(function(product){
+            return product.category == "accesorios";
+        })
+        res.render('../views/products/accesorios', {accesorios});
+    },
+    listadoDeJuguetes: function(req,res){
+        const productsList = readJsonFile(productsDbPath);
+        const juguetes = productsList.filter(function(product){
+            return product.category == "juguetes";
+        })
+        res.render('../views/products/juguetes', {juguetes});
+    },
+    listadoDeHigiene: function(req,res){
+        const productsList = readJsonFile(productsDbPath);
+        const higiene = productsList.filter(function(product){
+            return product.category == "higiene";
+        })
+        res.render('../views/products/higiene', {higiene});
     }
 };
 

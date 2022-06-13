@@ -14,7 +14,7 @@ const controller ={
     index: function (req, res){
         const productsList = readJsonFile(productsDbPath);
         const productosDestacados = productsList.filter(function(product){
-            return product.category == "destacado";
+            return product.type == "destacado";
         })
         res.render('index', {productosDestacados})
     },

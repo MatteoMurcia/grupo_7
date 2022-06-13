@@ -4,21 +4,21 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        <h3 class="tittle">Todos los productos</h3>
+        <h3 class="tittle">Cuidado e higiene</h3>
         <section class="products">
-            <% for(let i = 0; i < productsList.length; i++){ %>
-                <a class="control__a" href="/products/<%=productsList[i].id%>">
+            <% for(let i = 0; i < higiene.length; i++){ %>
+                <a class="control__a" href="/products/<%= higiene[i].id %>">
                     <article>
-                  <img src="images/<%= productsList[i].image %>">
+                  <img src="/images/<%= higiene[i].image %>">
                   <div class="products__details">
                       <p class="products__details-name">
-                          <%= productsList[i].name %> 
+                          <%= higiene[i].name %> 
                       </p>
                       <p class="products__details-price">
-                          <%= productsList[i].price %>
+                          <%= higiene[i].price %>
                       </p>
                       <p>
-                          <%= productsList[i].description %>
+                          <%= higiene[i].description %>
                       </p>
                   </div>
                     </article>
@@ -29,4 +29,3 @@
     <%- include('../partials/footer') %>
 </body>
 </html>
-

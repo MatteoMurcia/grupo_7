@@ -4,8 +4,8 @@
         "price": "$1.847,00",
         "image": "275286.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "category": "destacado",
-        "type": "juguetes",
+        "type": "destacado",
+        "category": "juguetes",
         "id": "1",
         "brand": "No especifica"
     },
@@ -14,8 +14,8 @@
         "price": "$2.860,00",
         "image": "275092.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "category": "destacado",
-        "type": "juguetes",
+        "type": "destacado",
+        "category": "juguetes",
         "id": "2",
         "brand": "Chuckit"
     },
@@ -24,8 +24,8 @@
         "price": "$9.787,00",
         "image": "138004-138005.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "category": "destacado",
-        "type": "alimentos",
+        "type": "in-sale",
+        "category": "alimentos",
         "id": "3",
         "brand": "Eukanuba"
     },
@@ -34,8 +34,8 @@
         "price": "$9.787,00",
         "image": "138004-138005.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "category": "destacado",
-        "type": "alimentos",
+        "type": "destacado",
+        "category": "alimentos",
         "id": "4",
         "brand": "Eukanuba"
     },
@@ -44,8 +44,8 @@
         "price": "$1.847,00",
         "image": "275286.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "category": "in-sale",
-        "type": "juguetes",
+        "type": "in-sale",
+        "category": "juguetes",
         "id": "5",
         "brand": "No especifica"
     },
@@ -54,29 +54,109 @@
         "price": "$2.860,00",
         "image": "275092.webp",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "category": "in-sale",
-        "type": "jueguetes",
+        "type": "in-sale",
+        "category": "jueguetes",
         "id": "6",
         "brand": "Chuckit"
     },
     {
-        "name": "Alimento Eukanuba Active",
-        "price": "$9.787,00",
-        "image": "138004-138005.webp",
+        "name": "Nutrique - Perro Cachorro Talla Mediana",
+        "price": "$41.200",
+        "image":"78136_Nutrique_Perro_Cachorro_Talla_Mediana_1651524834_0_500x500.avif",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "category": "in-sale",
-        "type": "alimentos",
+        "type": "in-sale",
+        "category": "alimentos",
         "id": "7",
-        "brand": "Eukanuba"
+        "brand": "Nutrique"
     },
     {
-        "name": "Alimento Eukanuba Active",
-        "price": "$9.787,00",
-        "image": "138004-138005.webp",
+        "name": "Nutrique - Perro Cachorro Talla Mediana",
+        "price": "$41.200",
+        "image":"78136_Nutrique_Perro_Cachorro_Talla_Mediana_1651524834_0_500x500.avif",
         "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
-        "category": "in-sale",
-        "type": "alimentos",
+        "type": "destacado",
+        "category": "alimentos",
         "id": "8",
-        "brand": "Eukanuba"
+        "brand": "Nutrique"
+    },
+    {
+        "name": "Salvaje Snacks Efecto Calmante",
+        "price": "$6.650",
+        "image": "14556_34697_SALVAJE_SNACKS_EFECTO_CALMANTE_1607611645_500x500.avif",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "type": "destacado",
+        "category": "snacks",
+        "id": "9",
+        "brand": "Salvaje"
+    },
+    {
+        "name": "Salvaje Snacks Efecto Calmante",
+        "price": "$6.650",
+        "image": "14556_34697_SALVAJE_SNACKS_EFECTO_CALMANTE_1607611645_500x500.avif",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "type": "in-sale",
+        "category": "snacks",
+        "id": "10",
+        "brand": "Salvaje"
+    },
+    {
+        "name": "Frikidesign - Capa Impermeable - Azul",
+        "price": "$68.000",
+        "image": "77503_153949_Frikidesign___Capa_Impermeable___Azul_1650641760_500x500.avif",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "type": "in-sale",
+        "category": "accesorios",
+        "id": "11",
+        "brand": "Frikidesign"
+    },
+    {
+        "name": "Frikidesign - Capa Impermeable - Azul",
+        "price": "$68.000",
+        "image": "77503_153949_Frikidesign___Capa_Impermeable___Azul_1650641760_500x500.avif",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "type": "destacado",
+        "category": "accesorios",
+        "id": "12",
+        "brand": "Frikidesign"
+    },
+    {
+        "name": "Furminator - Cepillo Dual Perro/Gato.",
+        "price": "$90.100",
+        "image":"9853_127178_Furminator___Cepillo_Dual_Perro_Gato__1641483585_300x300.avif",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "type": "destacado",
+        "category": "higiene",
+        "id": "13",
+        "brand": "Furminator"
+    },
+    {
+        "name": "Furminator - Cepillo Dual Perro/Gato.",
+        "price": "$90.100",
+        "image":"9853_127178_Furminator___Cepillo_Dual_Perro_Gato__1641483585_300x300.avif",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "type": "in-sale",
+        "category": "higiene",
+        "id": "13",
+        "brand": "Furminator"
+    }, 
+    {
+        "name": "Wow Can Cocinado - Carne De Res",
+        "price": "$4.400",
+        "image": "321_Wow_Can_Cocinado_-_Carne_De_Res_354X391.avif",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "type": "destacado",
+        "category": "snacks",
+        "id": "14",
+        "brand": "Wow Can"
+    },
+    {
+        "name": "Wow Can Cocinado - Carne De Res",
+        "price": "$4.400",
+        "image": "321_Wow_Can_Cocinado_-_Carne_De_Res_354X391.avif",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
+        "type": "in-sale",
+        "category": "snacks",
+        "id": "15",
+        "brand": "Wow Can"
     }
 ]
