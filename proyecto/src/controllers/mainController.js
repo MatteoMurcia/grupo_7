@@ -18,9 +18,6 @@ const controller ={
         })
         res.render('index', {productosDestacados})
     },
-    carrito:  function (req, res){
-        res.render('../views/products/carrito');
-    },
     login:  function (req, res){
         res.render('../views/users/login')
     },

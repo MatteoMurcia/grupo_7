@@ -4,9 +4,9 @@ const fs = require("fs");
 
 
 const controller = {
-    crearProducto: (req, res) => { ('../views/adm/productNew') }
-
+    crearProducto:  function (req, res){
+        res.render('../views/adm/productNew')
+    }
 }
-
 
 module.exports = controller;

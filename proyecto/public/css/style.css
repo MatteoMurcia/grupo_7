@@ -67,7 +67,7 @@ header{
 
 .top-header__menus-adress{
     display: flex;
-    padding: 10px;
+    padding: 0 10px;
     border-radius: 5px;
     transition: all 450ms;
 }
@@ -398,5 +398,9 @@ footer p.copyright{
     .footer{
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .top-header__menus-adress{
+        padding: 10px;
     }
 }

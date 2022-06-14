@@ -11,6 +11,9 @@ const readJsonFile = ( path ) => {
 }
 
 const controller ={
+    carrito:  function (req, res){
+        res.render('../views/products/carrito');
+    },
     detalle:  function (req, res){
         const productsList = readJsonFile(productsDbPath);
         const id = req.params.id;
