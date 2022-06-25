@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', { hojasDeEstilo: ["detalle"] })%>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main>
+                <div class="producto">
+                    <img src="/images/<%= product.image %>">
+                    <div class="info">
+                        <h3 class="Nombre">
+                            <%= product.name %>
+                        </h3>
+                        <div class="marca-stars">
+                            <p><u>Marca: <%= product.brand %></u></p>
+                            <div class="stars">
+                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                    class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <h2><u>
+                                <%= product.price %>
+                            </u></h2>
+                        <p>Disponivilidad: <i class="fa fa-check"></i></p>
+                        <h3>Referencia</h3>
+                        <div class="referencia">
+                            <input type="checkbox" class="slectOne" value="xxl" id="xxl">
+                            <label for="xxl">XXL </label>
+                            <input type="checkbox" class="slectOne" value="xl" id="xl">
+                            <label for="xl">XL </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="detalle">
+                    <h3>Detalles del producto</h3>
+                    <br>
+                    <p>
+                        <%= product.description %>
+                    </p>
+                </div>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

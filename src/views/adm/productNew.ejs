@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {hojasDeEstilo: ["formCreateProduct"] })%>
+
+
+    <body>
+
+        <%- include('../partials/header') %>
+
+            <main class="align">
+                <div class="register">
+                    <section class="login__header">
+                        <h2>Crear Producto</h2>
+                    </section>
+                    <form action="new" class="createProduct__form" method="POST" enctype="multipart/form-data">
+                        <div class="insideForm">
+                            <div class="inputs">
+                                <div>
+                                    <label for="nameProduct" style="margin-right: 20px;">Nombre</label>
+                                    <input type="text" id="name" name="nameProduct"
+                                        placeholder="Ingrese el nombre del producto">
+                                </div>
+
+                                <div>
+                                    <label for="descriptionProduct" style="margin-right: 20px;">Descripción</label>
+                                    <textarea id="ProductDescription" name="descriptionProduct"
+                                        placeholder="Ingrese la descripción"></textarea>
+                                </div>
+                                <div>
+                                    <label for="imageProduct" style="margin-right: 20px;">Imagen</label>
+                                    <input type="file" name="imageProduct" accept=".pdf,.jpg,.png" />
+
+                                </div>
+                                <div>
+                                    <label for="categoryProduct" style="margin-right: 20px;">Categoria</label>
+                                    <select name="categoryProduct">
+                                        <option value="Alimentos">Alimentos</option>
+                                        <option value="Snacks">Snacks</option>
+                                        <option value="Accesorios">Accesorios</option>
+                                        <option value="Juguetes">Juguetes</option>
+                                        <option value="Cuidado">Cuidado e Higiene</option>
+                                    </select>
+
+                                </div>
+                                <div>
+                                    <label for="typeProduct" style="margin-right: 50px;">Tipo</label>
+                                    <select name="typeProduct">
+                                        <option value="destacado">Destacados</option>
+                                        <option value="in-sale">Con Rebajas</option>
+                                        <option value="normal">Normal</option>
+                                    </select>
+
+                                </div>
+
+                                <div>
+                                    <label for="brandProduct" style="margin-right: 20px;">Marca</label>
+                                    <input type="text" id="brand" name="brandProduct" placeholder="Ingrese la marca">
+                                </div>
+
+                                <div>
+                                    <label for="priceProduct" style="margin-right: 20px;">Precio</label>
+                                    <input type="text" id="price" name="priceProduct" placeholder="Ingrese el precio">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+                            <input class="button" value="Crear producto" type="submit">
+                        </div>
+                    </form>
+                    <div>
+                        <a href="/" class="button_bck_home"><input class="button" value="Volver a la tienda"
+                                type="submit"></a>
+                    </div>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>
