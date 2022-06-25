@@ -14,6 +14,8 @@ router.get('/juguetes', controller.listadoDeJuguetes);
 
 router.get('/higiene', controller.listadoDeHigiene);
 
+
+
 router.get('/:id', controller.detalle);
 
 

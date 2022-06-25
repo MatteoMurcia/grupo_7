@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../partials/head', { hojasDeEstilo: ["productsList"] })%>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <h3 class="tittle">Accesorios</h3>
+        <section class="products">
+            <% for(let i = 0; i < accesorios.length; i++){ %>
+                <a class="control__a" href="/products/<%= accesorios[i].id %>">
+                    <article>
+                  <img src="/images/<%= accesorios[i].image %>">
+                  <div class="products__details">
+                      <p class="products__details-name">
+                          <%= accesorios[i].name %> 
+                      </p>
+                      <p class="products__details-price">
+                          <%= accesorios[i].price %>
+                      </p>
+                      <p>
+                          <%= accesorios[i].description %>
+                      </p>
+                  </div>
+                    </article>
+                </a>
+              <% } %>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

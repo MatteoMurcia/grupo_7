@@ -1,152 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head', {hojasDeEstilo: ["carrito"] })%>
-<body>
-    <%- include('../partials/header') %>
-    <div class="tituloCarrito">
-        <h4>Mi Carrito</h4>
-        <h4>3 Productos</h4>
-    </div>
-    <main>
-        <div class="body">
-            <section class="articulos">
-                <article class="articulo">
-                    <div class="articuloPrinc">
-                        <div class="imgProducto">
-                            <img src="images/275092.webp" width="75px" alt="Producto1">
-                        </div>
-                        <div class="detalleProducto">
-                            <h5 class="nombreProducto">
-                                Pelota Chuckit
-                            </h5>
-                            <p class="descProducto">Descripcion producto</p>
-                            <div class="cantProducto">
-                                <i class="fas fa-minus"></i>
-                                <p class="numerocantidad"> 2 </p>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="precio">
-                            $2.810,00
-                        </div>
-                    </div>
-                    <div class="footerProducto">
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
 
-                </article>
-
-                <article class="articulo">
-                    <div class="articuloPrinc">
-                        <div class="imgProducto">
-                            <img src="images/275286.webp" width="75px" alt="Producto2">
-                        </div>
-                        <div class="detalleProducto">
-                            <h5 class="nombreProducto">
-                                Pelota Dental
-                            </h5>
-                            <p class="descProducto">Marca Puppis</p>
-                            <div class="cantProducto">
-                                <i class="fas fa-minus"></i>
-                                <p class="numerocantidad"> 2 </p>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="precio">
-                            $1.847,00
-                        </div>
-                    </div>
-                    <div class="footerProducto">
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-
-                </article>
-
-                <article class="articulo">
-                    <div class="articuloPrinc">
-                        <div class="imgProducto">
-                            <img src="images/138004-138005.webp" width="75px" alt="Producto3">
-                        </div>
-                        <div class="detalleProducto">
-                            <h5 class="nombreProducto">
-                                Alimento Eukanuba Active
-                            </h5>
-                            <p class="descProducto">Perro mediano grande 15Kg</p>
-                            <div class="cantProducto">
-                                <i class="fas fa-minus"></i>
-                                <p class="numerocantidad"> 1 </p>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
-                        <div class="precio">
-                            $9.787,00
-                        </div>
-                    </div>
-                    <div class="footerProducto">
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-
-                </article>
-
-
-
-            </section>
-            <section class="resumen">
-                <div>
-                    <p class="titulo_resumen">Resumen de compra</p>
-                </div>
-                <div class="resumen_detalle">
-                    <div>
-                        <span class="nombre">Subtotal</span>
-                        <span class="monto">$14.494,00</span>
-                    </div>
-                    <div>
-                        <span class="nombre">Envio</span>
-                        <span class="monto">$1.250,00</span>
-                    </div>
-                    <div>
-                        <span class="nombre_total">Total</span>
-                        <span class="monto_total">$15.694,00</span>
-                    </div>
-                </div>
-                <section>
-                    <a class="botoncompra" href="/">
-                        <button type="submit" class="botonFinalizarCompra_769">Finalizar
-                            Compra</button>
-                    </a>
-
-                </section>
-
-
-        </div>
-
-        </section>
-        <div class="contenedor_envio">
-            <div>
-                <section class="envio">
-                    <div>Lugar de Envio:</div>
-                    <div>Malabia 1948 - Boulogne</div>
-                </section>
-
-                <section class="total">
-                    <div>Total a Pagar con Envio:</div>
-                    <div>$ 15.694,00</div>
-                </section>
-                <section>
-                    <a class="botoncompra" href="/">
-                        <button type="submit" class="botonFinalizarCompra">Finalizar
-                            Compra</button>
-                    </a>
-
-
-                </section>
+    <body>
+        <%- include('../partials/header') %>
+            <div class="tituloCarrito">
+                <h4>Mi Carrito</h4>
+                <h4>
+                    <%= carrito.length %> Productos
+                </h4>
             </div>
-        </div>
+            <main>
+                <div class="body">
+                    <section class="articulos">
+
+                        <article class="articulo">
+                            <% for(let i=0; i < carrito.length; i++){ %>
+                                <div class="articuloPrinc">
+                                    <div class="imgProducto">
+                                        <img src="/images/<%= carrito[i].image %>" width="40 rem" alt="Producto1">
+                                    </div>
+                                    <div class="detalleProducto">
+                                        <h5 class="nombreProducto">
+                                            <%= carrito[i].name %>
+                                        </h5>
+                                        <p class="descProducto">
+                                            <%= carrito[i].description%>>
+                                        </p>
+                                        <div class="cantProducto">
+                                            <i class="fas fa-minus"></i>
+                                            <p class="numerocantidad"> 2 </p>
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        <div class="precio">
+                                            <%= carrito[i].price%>
+                                        </div>
+                                    </div>
+
+                                    <div class="footerProducto">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </div>
+                                </div>
+
+                                <% } %>
+
+                        </article>
+
+                    </section>
+                    <section class="resumen">
+                        <div>
+                            <p class="titulo_resumen">Resumen de compra</p>
+                        </div>
+                        <div class="resumen_detalle">
+                            <div>
+                                <span class="nombre">Subtotal</span>
+                                <span class="monto">$14.494,00</span>
+                            </div>
+                            <div>
+                                <span class="nombre">Envio</span>
+                                <span class="monto">$1.250,00</span>
+                            </div>
+                            <div>
+                                <span class="nombre_total">Total</span>
+                                <span class="monto_total">$15.694,00</span>
+                            </div>
+                        </div>
+                        <section>
+                            <a class="botoncompra" href="/">
+                                <button type="submit" class="botonFinalizarCompra_769">Finalizar
+                                    Compra</button>
+                            </a>
+
+                        </section>
+
+
+                </div>
+
+                </section>
+                <div class="contenedor_envio">
+                    <div>
+                        <section class="envio">
+                            <div>Lugar de Envio:</div>
+                            <div>Malabia 1948 - Boulogne</div>
+                        </section>
+
+                        <section class="total">
+                            <div>Total a Pagar con Envio:</div>
+                            <div>$ 15.694,00</div>
+                        </section>
+                        <section>
+                            <a class="botoncompra" href="/">
+                                <button type="submit" class="botonFinalizarCompra">Finalizar
+                                    Compra</button>
+                            </a>
+
+
+                        </section>
+                    </div>
+                </div>
 
 
 
-    </main>
-    <%- include('../partials/footer') %>
-</body>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
 
 </html>
