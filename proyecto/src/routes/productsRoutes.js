@@ -4,6 +4,7 @@ const controller = require('../controllers/productsController');
 
 router.get('/', controller.listadoDeProductos);
 
+
 router.get('/alimentos', controller.listadoDeAlimentos);
 
 router.get('/snacks', controller.listadoDeSnacks);
@@ -18,6 +19,7 @@ router.get('/higiene', controller.listadoDeHigiene);
 
 router.get('/:id', controller.detalle);
 
+router.delete('/:id', controller.detalle);
 
 module.exports = router;
 
