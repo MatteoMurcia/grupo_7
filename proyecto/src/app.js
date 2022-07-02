@@ -22,5 +22,6 @@ app.use(methodOverride('_method'));
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/adm', admRoutes);
+app.use('/user',userRoutes);
 
 app.listen(PORT, function () { console.log(`Servidor corriendo en el puerto ${PORT}`) });
