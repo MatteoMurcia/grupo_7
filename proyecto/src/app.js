@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const admRoutes = require('./routes/admRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
