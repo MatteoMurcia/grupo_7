@@ -1,5 +1,33 @@
 main{
-    padding-top: 15vh;
+    padding-top: 130px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons__edit,
+.buttons__delete{
+    padding: 5px;
+    border-radius: 45%;
+    transition: all 450ms;
+}
+
+.buttons__edit{
+    margin-right: 10px;
+}
+
+.buttons__edit:hover{
+    color: #fff;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color:#0eb7fa;
+}
+
+.buttons__delete:hover{
+    color: #fff;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color:#fa0e0eb7;
 }
 
 .producto{
@@ -55,7 +83,13 @@ main{
 
 @media (min-width: 768px) {
     main{
-        padding-top: 25vh;
+        padding-top: 260px;
+    }
+
+    .buttons__edit,
+    .buttons__delete{
+        padding: 10px;
+        font-size: 1.55rem;
     }
 
     .producto{
@@ -63,7 +97,6 @@ main{
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        margin-top: 10vh;
     }
 
     .producto img{

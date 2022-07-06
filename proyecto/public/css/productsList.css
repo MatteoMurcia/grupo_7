@@ -1,5 +1,5 @@
 main{
-    padding-top: 15vh;
+    padding-top: 130px;
 }
 
 .products{
@@ -37,7 +37,7 @@ main{
 
 @media (min-width: 768px){
     main{
-        padding-top: 25vh;
+        padding-top: 210px;
     }
 
     .products .control__a article .products__details p{
@@ -46,6 +46,10 @@ main{
 }
 
 @media (min-width: 1280px){
+    main{
+        padding-top: 260px;
+    }
+
     .products .control__a article .products__details{
         margin-left: 2rem;
     }
