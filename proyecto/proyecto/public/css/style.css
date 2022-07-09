@@ -1,0 +1,406 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #eaeae6;
+    font-family: Quicksand;
+}
+
+
+.control__main-a{
+    text-decoration: none;
+    color: #000;
+}
+
+.control__main-a:hover{
+    text-decoration: underline;
+}
+
+.control-site-bar{
+    list-style-type: none;
+}
+
+
+.control-site-bar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+header{
+    width: 100vw;
+    background-color: #166e91;
+    position: fixed;
+    padding: 10px;
+    height: 15vh;
+    z-index: 99999;
+}
+
+.top-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.top-header__buttons,
+.top-header__menus{
+    display: flex;
+}
+
+.top-header__buttons a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.top-header__buttons a:hover,
+.top-header__menus-burger i:hover{
+    color: #cc9754;
+}
+
+.top-header__menus-adress,
+.top-header__menus-burger{
+    color: #ffffff;
+}
+
+.top-header__menus-adress{
+    display: flex;
+    padding: 0 10px;
+    border-radius: 5px;
+    transition: all 450ms;
+}
+
+.top-header__menus-adress:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color:#0eb7fa;
+}
+
+.flecha{
+    vertical-align: text-top;
+    margin-left: 4px;
+}
+
+.bottom-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-header__logo{
+    width: 30%;
+}
+
+.bottom-header__logo img{
+    max-width: 100%;
+}
+
+.bottom-header__search-bar {
+    width: 60%;
+    padding-top: 2.5%;
+}
+
+.bottom-header__search-bar form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-header__search-bar form input,
+.bottom-header__search-bar form button{
+    border-style: none;
+    background-color: #fff;
+    padding: 0.25rem;
+}
+
+.bottom-header__search-bar form input{
+    width: 90%;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.bottom-header__search-bar form input::placeholder{
+    font-size: 0.75rem;
+}
+
+.bottom-header__search-bar form button{
+    width: 10%;
+    color: #666;
+    border-radius: 0px 5px 5px 0px;
+}
+
+nav{
+    display: none;
+}
+
+
+.banner {
+    width: 100%;
+    padding-top: 15vh;
+}
+
+.banner img{
+    width: 100%;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+.categories{
+    margin-top: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.categories-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categories a{
+    text-decoration: none;
+    color: #000;
+}
+
+.categories-div{
+    max-width: 100%;
+}
+
+.categories img{
+    height: 60px;
+    border-radius: 50%;
+}
+
+.categories-p{
+    font-size: .5rem;
+    font-weight: bold;
+}
+
+main{
+    padding: 5%;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.products a{
+    max-width: 45%;
+    text-decoration: none;
+    color: #000;
+}
+
+.products article{
+    margin-top: 1.25rem;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    padding: 0.75rem 1.25rem;
+    background-color: #ffffff;
+}
+
+.products article img{
+    width: 90%;
+}
+
+.products article p{
+    font-size: .5rem;
+    font-weight: bold;
+}
+
+.products__details{
+    margin-top: 1rem;
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+}
+
+
+footer{
+    width: 100%;
+    background-color: #FFF;
+}
+
+footer p.copyright{
+    position: relative;
+    left: 20px;
+    margin-top: 30px;
+    font-size: 0.75rem;
+    padding-bottom: 10px;
+}
+
+.footer{
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer article strong{
+    font-size: 1rem;
+}
+.footer article p{
+    font-size: 0.75rem;
+}
+
+.footer article{
+    text-align: center;
+    width: 70%;
+    margin-top: 2rem;
+}
+
+.footer-icon{
+    color: #cc9754;
+    margin-bottom: 0.6rem;
+    font-size: 2em;
+}
+
+@media (min-width: 768px){
+    header{
+        padding: 20px;
+        height: 25vh;
+    }
+
+    .top-header__menus{
+        margin-left: 27%;
+    }
+
+    .top-header__menus-burger{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        color: #fff;
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+    .site-bar{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bottom-header{
+        margin-bottom: 20px;
+        padding: 0 5%;
+    }
+
+    .bottom-header__logo{
+        width: 20%;
+    }
+
+    .bottom-header__search-bar{
+        width:75%;
+    }
+
+    .control-site-bar,
+    .control-site-bar a{
+        text-align: center;
+        display: flex;
+        margin: 0 1.5vw;
+    }
+
+    .control-site-bar:hover,
+    .control-site-bar a:hover,
+    .control-site-bar i:hover,
+    .control-site-bar a i:hover{
+        color: #cc9754;
+    }
+
+    .control-site-bar i,
+    .control-site-bar a i{
+        margin: 0 5px;
+    }
+
+    .products a{
+        width: 22%;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    .categories{
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+
+    .categories-article{
+        width: 18%;
+    }
+    
+    .categories-div{
+        margin-top: 50px;
+    }
+    
+    .categories img{
+        height: 120px;
+    }
+    
+    .categories-p{
+        font-size: 1.5rem;
+    }
+
+    .site-bar-pets,
+    .site-bar-brands,
+    .site-bar-services{
+        display: none;
+    }
+
+    .banner{
+        padding-top: 25vh;
+    }
+
+    .top-header__buttons{
+        padding-right: 5%;
+    }
+
+}
+
+@media (min-width: 1280px){
+    nav{
+        padding-left: 15%;
+    }
+
+    .bottom-header__logo{
+        width: 12%;
+    }
+
+    .products article p{
+        font-size: .75rem;
+    }
+
+    .products article{
+        box-shadow: none;
+    }
+
+    .control__a-article .products__details{
+        display: none;
+    }
+
+    .products article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .products .control__a-article:hover .products__details{
+        display: block;
+    }
+
+    .footer-icon i:hover{
+        color: #d2ac80;
+    }
+
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .top-header__menus-adress{
+        padding: 10px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {hojasDeEstilo: ["forms"] })%>
+    <body>
+    <%- include('../partials/header') %>
+            <main class="align">
+                <div class="register">
+                    <section class="login__header">
+                        <h2>Crear Producto</h2>
+                    </section>
+                    <form action="/" class="createProduct__form" method="get">
+                        <div>
+                            <label for="productName">Nombre del Producto</label>
+                            <input type="text" id="name" name="nameProduct"
+                                placeholder="Ingresa el nombre del producto">
+                        </div>
+
+                        <div>
+                            <label for="ProductDescription">Descripción</label>
+                            <input type="text" id="ProductDescription" name="descriptionProduct"
+                                placeholder="Ingrese la descripcion">
+                        </div>
+                        <div>
+                            <label for="ProductImage">Imagen del Producto</label>
+                            <input type="file" name="imageProduct" accept=".pdf,.jpg,.png" multiple />
+
+                        </div>
+                        <div>
+                            <label for="categoria">Categoria del producto</label>
+                            <input type="text" id="categoria" name="categoryProduct" placeholder="Ingrese la categoria">
+                        </div>
+                        <div>
+                            <label for="type">Tipo</label>
+                            <input type="text" id="tipo" name="typeProduct" placeholder="Ingrese el tipo de producto">
+                        </div>
+
+                        <div>
+                            <label for="brand">Marca</label>
+                            <input type="text" id="brand" name="brandProduct" placeholder="Ingrese la marca">
+                        </div>
+
+                        <div>
+                            <label for="price">Precio</label>
+                            <input type="text" id="price" name="priceProduct" placeholder="Ingrese el precio">
+                        </div>
+
+                        <div>
+                            <input class="button" value="Crear producto" type="submit">
+                        </div>
+                    </form>
+                    <div>
+                        <a href="/" class="button_bck_home"><input class="button" value="Volver a la tienda"
+                                type="submit"></a>
+                    </div>
+            </main>
+    <%- include('../partials/footer') %>
+    </body>
+
+</html>

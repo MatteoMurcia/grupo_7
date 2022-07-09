@@ -14,7 +14,7 @@
 }
 
 .imgProducto {
-    width: 20%;
+    width: 15%;
 
     background-color: white;
 }
@@ -31,13 +31,15 @@ main {
 section.articulo {
     width: 90%;
     background-color: #eaeae6;
+    align-items: stretch;
 }
 
 
 .articulo {
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 5px;
     margin-top: 10px;
     justify-content: space-between;
@@ -78,11 +80,13 @@ section.articulo {
     flex-direction: column;
     flex-grow: 1;
     background-color: white;
+    width: 70%;
 }
 
 .footerProducto {
-    flex-grow: 25%;
+
     background-color: white;
+    width: 5%;
 }
 
 .nombreProducto {
@@ -94,6 +98,12 @@ section.articulo {
     background-color: white;
     display: flex;
     flex-grow: 1;
+    border: solid 1px rgb(190, 190, 190);
+    border-radius: 15px;
+    padding: 5px;
+    height: 125px;
+    margin-bottom: 10px;
+
 }
 
 .precio {
@@ -198,8 +208,11 @@ section.articulo {
 
 .body {
     display: flex;
-    justify-content: center;
+    justify-content: stretch;
     background-color: #eaeae6;
+    width: 100%;
+
+
 }
 
 .titulo_resumen {
@@ -277,7 +290,9 @@ section.resumen {
 }
 
 .articulos {
-    width: 100%
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .articulo:hover {
@@ -285,8 +300,8 @@ section.resumen {
 }
 
 @media (min-width: 768px) {
-    .tituloCarrito{
-    padding-top: 25vh;
+    .tituloCarrito {
+        padding-top: 25vh;
     }
 
     section.articulos {

@@ -4,7 +4,6 @@ const controller = require('../controllers/productsController');
 
 router.get('/', controller.listadoDeProductos);
 
-router.get('/carrito', controller.carrito);
 
 router.get('/alimentos', controller.listadoDeAlimentos);
 
@@ -15,6 +14,8 @@ router.get('/accesorios', controller.listadoDeAccesorios);
 router.get('/juguetes', controller.listadoDeJuguetes);
 
 router.get('/higiene', controller.listadoDeHigiene);
+
+
 
 router.get('/:id', controller.detalle);
 

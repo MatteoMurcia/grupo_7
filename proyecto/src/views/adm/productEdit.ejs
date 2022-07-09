@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {hojasDeEstilo: ["formCreateProduct"] })%>
+
+
+    <body>
+
+        <%- include('../partials/header') %>
+
+            <main class="align">
+                <div class="register">
+                    <section class="login__header">
+                        <h2>Editar Producto</h2>
+                    </section>
+                    <form action="/adm/<%= product.id %>?_method=PUT" class="createProduct__form" method="POST">
+                        <div class="insideForm">
+                            <div class="inputs">
+
+                                <div>
+                                    <label for="nameProduct" style="margin-right: 50px;">Nombre</label>
+                                    <input type="text" id="name" name="nameProduct"
+                                        placeholder="Ingrese el nombre del producto" value="<%=product.name%>">
+                                </div>
+
+                                <div>
+                                    <label for="descriptionProduct">Descripción</label>
+                                    <textarea id="ProductDescription" name="descriptionProduct"
+                                        placeholder="Ingrese la descripción"><%=product.description%></textarea>
+                                </div>
+                                <div class="image_edit">
+                                    <img src="/images/<%= product.image %>" style="border: solid 1px black;">
+                                </div>
+                                <div>
+                                    <label for="imageProduct" style="margin-right: 50px;">Imagen</label>
+                                    <input type="file" name="imageProduct" accept=".pdf,.jpg,.png"
+                                        value="<%=product.image%>" />
+
+                                </div>
+                                <div>
+                                    <label for="categoryProduct" style="margin-right: 50px;">Categoria</label>
+                                    <select name="categoryProduct">
+                                        <option value="alimentos" <%=product.category=="alimentos" ? "selected" : null
+                                            %> >Alimentos</option>
+                                        <option value="snacks" <%=product.category=="snacks" ? "selected" : null %>
+                                            >Snacks</option>
+                                        <option value="accesorios" <%=product.category=="accesorios" ? "selected" : null
+                                            %>>Accesorios</option>
+                                        <option value="juguetes" <%=product.category=="juguetes" ? "selected" : null %>
+                                            >Juguetes</option>
+                                        <option value="cuidado" <%=product.category=="cuidado" ? "selected" : null %>
+                                            >Cuidado e Higiene</option>
+                                    </select>
+
+                                </div>
+                                <div>
+                                    <label for="typeProduct" style="margin-right: 50px;">Tipo</label>
+                                    <select name="typeProduct">
+                                        <option value="destacado" <%=product.type=="destacado" ? "selected" : null %>
+                                            >Destacados</option>
+                                        <option value="in-sale" <%=product.type=="in-sale" ? "selected" : null %>
+                                            >Con
+                                            Rebajas</option>
+                                        <option value="normal" <%=product.type=="normal" ? "selected" : null %>
+                                            >Normal
+                                        </option>
+                                    </select>
+
+                                </div>
+
+                                <div>
+                                    <label for="brandProduct" style="margin-right: 20px;"> Marca </label>
+                                    <input type="text" id="brand" name="brandProduct" placeholder="Ingrese la marca"
+                                        value="<%=product.brand%>">
+                                </div>
+
+                                <div>
+                                    <label for="priceProduct" style="margin-right: 20px;"> Precio </label>
+                                    <input type="text" id="price" name="priceProduct" placeholder="Ingrese el precio"
+                                        value="<%=product.price%>">
+                                </div>
+
+                            </div>
+                            <div class="image_edit_big">
+                                <div>
+                                    <img src="/images/<%= product.image %>" id="imgproductbig">
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                <div style="
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+            ">
+                    <input class="button" value="Editar el producto" type="submit">
+                </div>
+
+
+                </div>
+
+                </div>
+                </form>
+                <div div style="
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+            ">
+                    <a href="/" class="button_bck_home"><input class="button" value="Volver a la tienda"
+                            type="submit"></a>
+                </div>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

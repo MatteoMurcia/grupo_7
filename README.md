@@ -19,3 +19,7 @@ El publico objetivo de este sitio es toda persona que tenga una mascota.
 - [Mis Pichos](https://mispichos.com/) por su manejo de marcas de productos y su estetica.
 - [Petcol](https://petcol.co/) por su estetica y publico objetivo.
 - [Dog Center](https://www.dogcenter.com.ar/) por su estetica y publico objetivo.
+
+## Tablero
+
+ https://trello.com/invite/b/ykpfhQZe/8c9ed1471e7cf80aada82eabe41f74cf/mizu
