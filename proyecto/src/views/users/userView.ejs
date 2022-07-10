@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<%- include('../partials/head', {hojasDeEstilo: ["forms"] })%>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main class="align">
+                <div class="register">
+                    <section class="login__header">
+                        <h2>Bienvenid@ - <%=user.first_name%>
+                                <h2>
+                    </section>
+                    <section>
+                        <img src="/images/users/<%=locals.userLogged.image%>" width="100" style="border-radius: 100%;">
+                    </section>
+                    <section>
+                        <div>
+                            <label style="margin-right: 20px;">Primer Nombre: <%= user.first_name%> </label>
+                        </div>
+                        <div>
+                            <label style="margin-right: 20px;">Apellido: <%= user.last_name%> </label>
+                        </div>
+                        <div>
+                            <label style="margin-right: 20px;">Nombre Usuario: <%= user.user_name%> </label>
+                        </div>
+                        <div>
+                            <label style="margin-right: 20px;">Email: <%= user.email%> </label>
+                        </div>
+                        <div>
+                            <label style="margin-right: 20px;">Categoria: <%= user.category%> </label>
+                        </div>
+                    </section>
+
+                </div>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>

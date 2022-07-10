@@ -1,35 +1,35 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #eaeae6;
     font-family: Quicksand;
 }
 
 
-.control__main-a{
+.control__main-a {
     text-decoration: none;
     color: #000;
 }
 
-.control__main-a:hover{
+.control__main-a:hover {
     text-decoration: underline;
 }
 
-.control-site-bar{
+.control-site-bar {
     list-style-type: none;
 }
 
 
-.control-site-bar a{
+.control-site-bar a {
     text-decoration: none;
     color: #fff;
 }
 
-header{
+header {
     width: 100vw;
     background-color: #166e91;
     position: fixed;
@@ -38,7 +38,7 @@ header{
     z-index: 99999;
 }
 
-.top-header{
+.top-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -46,52 +46,52 @@ header{
 }
 
 .top-header__buttons,
-.top-header__menus{
+.top-header__menus {
     display: flex;
 }
 
-.top-header__buttons a{
+.top-header__buttons a {
     text-decoration: none;
     color: #ffffff;
 }
 
 .top-header__buttons a:hover,
-.top-header__menus-burger i:hover{
+.top-header__menus-burger i:hover {
     color: #cc9754;
 }
 
 .top-header__menus-adress,
-.top-header__menus-burger{
+.top-header__menus-burger {
     color: #ffffff;
 }
 
-.top-header__menus-adress{
+.top-header__menus-adress {
     display: flex;
     padding: 0 10px;
     border-radius: 5px;
     transition: all 450ms;
 }
 
-.top-header__menus-adress:hover{
+.top-header__menus-adress:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    background-color:#0eb7fa;
+    background-color: #0eb7fa;
 }
 
-.flecha{
+.flecha {
     vertical-align: text-top;
     margin-left: 4px;
 }
 
-.bottom-header{
+.bottom-header {
     display: flex;
     justify-content: space-between;
 }
 
-.bottom-header__logo{
+.bottom-header__logo {
     width: 30%;
 }
 
-.bottom-header__logo img{
+.bottom-header__logo img {
     max-width: 100%;
 }
 
@@ -100,35 +100,35 @@ header{
     padding-top: 2.5%;
 }
 
-.bottom-header__search-bar form{
+.bottom-header__search-bar form {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .bottom-header__search-bar form input,
-.bottom-header__search-bar form button{
+.bottom-header__search-bar form button {
     border-style: none;
     background-color: #fff;
     padding: 0.25rem;
 }
 
-.bottom-header__search-bar form input{
+.bottom-header__search-bar form input {
     width: 90%;
     border-radius: 5px 0px 0px 5px;
 }
 
-.bottom-header__search-bar form input::placeholder{
+.bottom-header__search-bar form input::placeholder {
     font-size: 0.75rem;
 }
 
-.bottom-header__search-bar form button{
+.bottom-header__search-bar form button {
     width: 10%;
     color: #666;
     border-radius: 0px 5px 5px 0px;
 }
 
-nav{
+nav {
     display: none;
 }
 
@@ -138,15 +138,15 @@ nav{
     padding-top: 15vh;
 }
 
-.banner img{
+.banner img {
     width: 100%;
 }
 
-h3{
+h3 {
     font-size: 1.5rem;
 }
 
-.categories{
+.categories {
     margin-top: 2%;
     width: 100%;
     display: flex;
@@ -154,36 +154,36 @@ h3{
     margin-bottom: 20px;
 }
 
-.categories-article{
+.categories-article {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.categories a{
+.categories a {
     text-decoration: none;
     color: #000;
 }
 
-.categories-div{
+.categories-div {
     max-width: 100%;
 }
 
-.categories img{
+.categories img {
     height: 60px;
     border-radius: 50%;
 }
 
-.categories-p{
+.categories-p {
     font-size: .5rem;
     font-weight: bold;
 }
 
-main{
+main {
     padding: 5%;
 }
 
-.products{
+.products {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -191,41 +191,41 @@ main{
     align-items: flex-start;
 }
 
-.products a{
+.products a {
     max-width: 45%;
     text-decoration: none;
     color: #000;
 }
 
-.products article{
+.products article {
     margin-top: 1.25rem;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     padding: 0.75rem 1.25rem;
     background-color: #ffffff;
 }
 
-.products article img{
+.products article img {
     width: 90%;
 }
 
-.products article p{
+.products article p {
     font-size: .5rem;
     font-weight: bold;
 }
 
-.products__details{
+.products__details {
     margin-top: 1rem;
     width: 100%;
     border-top: 1px solid #ebebeb;
 }
 
 
-footer{
+footer {
     width: 100%;
     background-color: #FFF;
 }
 
-footer p.copyright{
+footer p.copyright {
     position: relative;
     left: 20px;
     margin-top: 30px;
@@ -233,73 +233,83 @@ footer p.copyright{
     padding-bottom: 10px;
 }
 
-.footer{
+.footer {
     padding-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.footer article strong{
+.footer article strong {
     font-size: 1rem;
 }
-.footer article p{
+
+.footer article p {
     font-size: 0.75rem;
 }
 
-.footer article{
+.footer article {
     text-align: center;
     width: 70%;
     margin-top: 2rem;
 }
 
-.footer-icon{
+.footer-icon {
     color: #cc9754;
     margin-bottom: 0.6rem;
     font-size: 2em;
 }
 
-@media (min-width: 768px){
-    header{
+.top-header__buttons-user {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+
+}
+
+@media (min-width: 768px) {
+    header {
         padding: 20px;
         height: 25vh;
     }
 
-    .top-header__menus{
+    .top-header__menus {
         margin-left: 27%;
     }
 
-    .top-header__menus-burger{
+    .top-header__menus-burger {
         display: none;
     }
 
-    nav{
+    nav {
         display: flex;
         color: #fff;
         width: 100%;
         font-size: 1rem;
     }
-    
-    .site-bar{
+
+    .site-bar {
         display: flex;
         flex-direction: row;
+
     }
 
-    .bottom-header{
+    .bottom-header {
         margin-bottom: 20px;
         padding: 0 5%;
     }
 
-    .bottom-header__logo{
+    .bottom-header__logo {
         width: 20%;
     }
 
-    .bottom-header__search-bar{
-        width:75%;
+    .bottom-header__search-bar {
+        width: 75%;
     }
 
     .control-site-bar,
-    .control-site-bar a{
+    .control-site-bar a {
         text-align: center;
         display: flex;
         margin: 0 1.5vw;
@@ -308,99 +318,99 @@ footer p.copyright{
     .control-site-bar:hover,
     .control-site-bar a:hover,
     .control-site-bar i:hover,
-    .control-site-bar a i:hover{
+    .control-site-bar a i:hover {
         color: #cc9754;
     }
 
     .control-site-bar i,
-    .control-site-bar a i{
+    .control-site-bar a i {
         margin: 0 5px;
     }
 
-    .products a{
+    .products a {
         width: 22%;
     }
 
-    h3{
+    h3 {
         font-size: 2rem;
     }
 
-    .categories{
+    .categories {
         margin-top: 0;
         margin-bottom: 60px;
     }
 
-    .categories-article{
+    .categories-article {
         width: 18%;
     }
-    
-    .categories-div{
+
+    .categories-div {
         margin-top: 50px;
     }
-    
-    .categories img{
+
+    .categories img {
         height: 120px;
     }
-    
-    .categories-p{
+
+    .categories-p {
         font-size: 1.5rem;
     }
 
     .site-bar-pets,
     .site-bar-brands,
-    .site-bar-services{
+    .site-bar-services {
         display: none;
     }
 
-    .banner{
+    .banner {
         padding-top: 25vh;
     }
 
-    .top-header__buttons{
+    .top-header__buttons {
         padding-right: 5%;
     }
 
 }
 
-@media (min-width: 1280px){
-    nav{
+@media (min-width: 1280px) {
+    nav {
         padding-left: 15%;
     }
 
-    .bottom-header__logo{
+    .bottom-header__logo {
         width: 12%;
     }
 
-    .products article p{
+    .products article p {
         font-size: .75rem;
     }
 
-    .products article{
+    .products article {
         box-shadow: none;
     }
 
-    .control__a-article .products__details{
+    .control__a-article .products__details {
         display: none;
     }
 
-    .products article:hover{
+    .products article:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
-    .products .control__a-article:hover .products__details{
+    .products .control__a-article:hover .products__details {
         display: block;
     }
 
-    .footer-icon i:hover{
+    .footer-icon i:hover {
         color: #d2ac80;
     }
 
-    .footer{
+    .footer {
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .top-header__menus-adress{
+    .top-header__menus-adress {
         padding: 10px;
     }
 }
