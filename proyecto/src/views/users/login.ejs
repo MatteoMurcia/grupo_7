@@ -2,37 +2,48 @@
 
 <%- include('../partials/head', {hojasDeEstilo: ["forms"] })%>
 
-<body>
-    <%- include('../partials/header') %>
-    <main class="align">
+    <body>
+        <%- include('../partials/header') %>
+            <main class="align">
 
-        <div class="login">
+                <div class="login">
 
-            <section class="login__header">
-                <h2>Ingresa a tu cuenta</h2>
-            </section>
+                    <section class="login__header">
+                        <h2>Ingresa a tu cuenta</h2>
+                    </section>
 
-            <form action="/" class="login__form" method="get">
+                    <form action="/users/login" class="login__form" method="POST">
 
-                <div>
-                    <label for="email">Ingresa tu em@il</label>
-                    <input type="email" id="email" name="email" placeholder="">
+                        <div>
+                            <label for="email">Ingresa tu em@il</label>
+                            <input type="email" id="email" name="email" style="width:75%">
+                        </div>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+
+                                <div>
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" id="password" name="password" style="width:75%">
+                                </div>
+
+                                <div>
+                                    <label>Recordar</label>
+                                    <input type="checkbox" name="chkRecordame">
+                                </div>
+
+                                <div>
+                                    <input class="button" value="Ingresar" type="submit">
+                                </div>
+                    </form>
+                    <div>
+                        <a class="button_register" href="register"><input class="button" value="Crear cuenta"
+                                type="submit"></a>
+                    </div>
+
                 </div>
-
-                <div>
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="password" placeholder="">
-                </div>
-
-                <div>
-                    <input class="button" value="Ingresar" type="submit">
-                </div>
-            </form>
-                <div>
-                   <a class="button_register" href="register"><input class="button" value="Crear cuenta" type="submit"></a> 
-                </div>
-            
-        </div>
-    </main>
-    <%- include('../partials/footer') %>
-</body>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
