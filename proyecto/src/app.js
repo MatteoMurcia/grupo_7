@@ -16,6 +16,7 @@ const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const admRoutes = require('./routes/admRoutes');
 const usersRoutes = require('./routes/usersRoutes');
+const validationLogin = require("./middlewares/validationLogin");
 
 const PORT = process.eventNames.PORT || 3000;
 
@@ -26,6 +27,7 @@ app.use(session({
 }));
 
 app.use(userLoggedMiddleware);
+app.use(validationLogin);
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');

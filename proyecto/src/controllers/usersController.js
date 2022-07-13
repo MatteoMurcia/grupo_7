@@ -12,7 +12,7 @@ const controller = {
             if (isOk) {
                 delete userToLogin.password;
                 req.session.userLoggen = userToLogin;
-
+                res.cookie('User',userToLogin)
                 return res.redirect('userView');
 
             }
