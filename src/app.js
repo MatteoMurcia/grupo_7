@@ -7,6 +7,18 @@ const methodOverride = require('method-override');
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const admRoutes = require('./routes/admRoutes');
+const usersRoutes = require('./routes/usersRoutes');
+const validationLogin = require("./middlewares/validationLogin");
+
+
+app.use(session({
+    secret: "Esto es un secreto",
+    resave: false,
+    saveUninitialized: false,
+}));
+
+app.use(userLoggedMiddleware);
+app.use(validationLogin);
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
