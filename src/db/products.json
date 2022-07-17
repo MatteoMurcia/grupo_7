@@ -34,10 +34,10 @@
     "type": "destacado",
     "id": 4,
     "brand": "Eukanuba",
-    "name": " Alimento Eukanuba Active",
+    "name": " Alimento Eukanuba Active -m",
     "price": "2560",
     "description": "Lorem blah blah",
-    "category": "Alimentos"
+    "category": "Snacks"
   },
   {
     "name": "Pelota Dental",
@@ -50,14 +50,14 @@
     "brand": "No especifica"
   },
   {
-    "name": "Pelota Chuckit",
-    "price": "$2.860,00",
+    "name": "Pelota Chuckit - modificada 56",
+    "price": "10000",
     "image": "275092.webp",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, illo eos. Dolorem amet adipisci tempora debitis sint maxime deleniti nesciunt neque ducimus reprehenderit. Delectus corrupti error libero ipsam animi qui.",
     "type": "in-sale",
-    "category": "jueguetes",
+    "category": "juguetes",
     "id": 6,
-    "brand": "Chuckit"
+    "brand": "Chuckit - modificada"
   },
   {
     "name": "Nutrique - Perro Cachorro Talla Mediana",
@@ -188,5 +188,25 @@
     "category": "Alimentos",
     "id": 19,
     "brand": "Gato"
+  },
+  {
+    "name": "Alimento para Carpincho adulto",
+    "price": "1623",
+    "description": "Descripcion 1",
+    "type": "destacado",
+    "image": "p-1656195303129.jpg",
+    "category": "Alimentos",
+    "id": 20,
+    "brand": "IDERO"
+  },
+  {
+    "name": "Pelota para jugar",
+    "price": "1563",
+    "description": "Pelota grande ",
+    "type": "destacado",
+    "image": "p-1656197787770.jpg",
+    "category": "Juguetes",
+    "id": 21,
+    "brand": "Pelota3"
   }
 ]

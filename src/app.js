@@ -3,12 +3,15 @@ const app = express();
 const PORT = process.eventNames.PORT || 3000;
 const path = require("path");
 const methodOverride = require('method-override');
+const session = require("express-session");
+
 
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const admRoutes = require('./routes/admRoutes');
 const usersRoutes = require('./routes/usersRoutes');
 const validationLogin = require("./middlewares/validationLogin");
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 
 app.use(session({
@@ -18,7 +21,7 @@ app.use(session({
 }));
 
 app.use(userLoggedMiddleware);
-app.use(validationLogin);
+//app.use(validationLogin);
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -33,5 +36,7 @@ app.use(methodOverride('_method'));
 app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/adm', admRoutes);
+app.use('/users', usersRoutes);
+
 
 app.listen(PORT, function () { console.log(`Servidor corriendo en el puerto ${PORT}`) });
