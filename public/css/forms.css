@@ -115,13 +115,10 @@ section h2 {
   margin-top: 20px;
 }
 
-.register input[type="name"],
-.register input[type="lastname"],
-.register input[type="number"],
+.register input[type="text"],
 .register input[type="email"],
 .register input[type="password"],
-.register input[type="species"],
-.register input[type="age"]{
+.register input[type="number"]{
   background-color: #eee;
   color: gray;
   padding: 4px 5px;

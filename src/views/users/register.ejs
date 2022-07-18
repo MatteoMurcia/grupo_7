@@ -7,28 +7,32 @@
           <section class="login__header">
             <h2>Crea tu cuenta</h2>
           </section>
-          <form action="/" class="login__form" method="get">
+          <form action="/users/register" class="login__form" method="POST" enctype="multipart/form-data">
             <div>
                 <label for="name">Nombre</label>
-                <input type="name" id="name" name="name" placeholder="">
+                <input type="text" id="name" name="name" placeholder="">
               </div>
         
               <div>
                 <label for="lastname">Apellido</label>
-                <input type="lastname" id="lastname" name="lastname" placeholder="">
+                <input type="text" id="lastname" name="lastname" placeholder="">
               </div>
               <div>
-                <label for="number">Numero de documento</label>
-                <input type="number" id="number" name="number" placeholder="">
+                <label for="email">Ingresa tu em@il</label>
+                <input type="email" id="email" name="email" placeholder="">
               </div>
-            <div>
-              <label for="email">Ingresa tu em@il</label>
-              <input type="email" id="email" name="email" placeholder="">
-            </div>
+              <div>
+                <label for="username">Usuario</label>
+                <input type="text" id="username" name="username" placeholder="">
+              </div>
       
             <div>
               <label for="password">Contraseña</label>
               <input type="password" id="password" name="password" placeholder="">
+            </div>
+            <div>
+              <label for="avatar">Avatar</label>
+              <input type="file" id="avatar" name="avatar" placeholder="">
             </div>
     
             <section>
@@ -36,11 +40,11 @@
             </section>
               <div>
                 <label for="species">Especie</label>
-                <input type="species" id="species" name="species" placeholder="">
+                <input type="text" id="species" name="species" placeholder="">
               </div>
               <div>
                 <label for="age">Edad</label>
-                <input type="age" id="age" name="age" placeholder="">
+                <input type="number" id="age" name="age" placeholder="">
               </div>
               <div>
                 <input class="button"  value="Agregar Mascota" type="submit"> 

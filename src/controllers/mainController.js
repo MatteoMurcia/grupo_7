@@ -24,12 +24,6 @@ const controller = {
             return product.brand == "Eukanuba";
         })
         res.render('../views/products/carrito', { carrito });
-    },
-    login: function (req, res) {
-        res.render('../views/users/login')
-    },
-    register: function (req, res) {
-        res.render('../views/users/register')
     }
 };
 

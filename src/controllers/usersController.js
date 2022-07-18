@@ -1,4 +1,14 @@
 const User = require("../models/users");
+const path = require('path');
+const fs = require('fs');
+
+const usersDbPath = path.join(__dirname, "../db/users.json");
+
+const readJsonFile = (path) => {
+    const data = fs.readFileSync(path, "utf-8");
+    const dataParsed = JSON.parse(data);
+    return dataParsed;
+}
 
 
 const controller = {
@@ -50,6 +60,28 @@ const controller = {
     logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
+    },
+    registerView: function (req, res) {
+        res.render('../views/users/register')
+    },
+    register: (req,res)=>{
+        const users = readJsonFile(usersDbPath);
+
+        let user = {
+            id : users[users.length-1].id + 1,
+            first_name: req.body.name,
+            last_name: req.body.lastname,
+            user_name: req.body.username,
+            email: req.body.email,
+            password: req.body.password,
+            category: "user",
+            image: req.file?.filename || 'default.jpg'
+        }
+        users.push(user)
+        newUsers = JSON.stringify(users)
+        fs.writeFileSync(usersDbPath, newUsers)
+        return res.redirect('../')
+        
     }
 }
 
