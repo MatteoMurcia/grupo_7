@@ -39,6 +39,10 @@
                         <%= product.description %>
                     </p>
                 </div>
+                <div class="buttons">
+                    <a href="/adm/<%=product.id %>/edit"><button class="button">Editar</button></a>
+                    <button class="button">Borrar</button>
+                </div>
             </main>
             <%- include('../partials/footer') %>
     </body>

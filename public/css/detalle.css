@@ -1,5 +1,23 @@
 main{
-    padding-top: 15vh;
+    padding-top: 120px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #166e91;
+    border-style: none;
+    border-radius: 5px;
+    color: #FFF;
+}
+
+.button:hover{
+    background-color: #8fd4d2;
 }
 
 .producto{
@@ -55,7 +73,7 @@ main{
 
 @media (min-width: 768px) {
     main{
-        padding-top: 25vh;
+        padding-top: 200px;
     }
 
     .producto{
@@ -90,5 +108,11 @@ main{
     .detalle h3{
         font-size: 1.5rem;
         margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    main{
+        padding-top: 220px;
     }
 }

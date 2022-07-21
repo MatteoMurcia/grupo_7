@@ -8,7 +8,7 @@ main {
   font-family: 'Quicksand', sans-serif;
   line-height: 2;
   margin: 0;
-  padding-top: 30vh;
+  padding-top: 170px;
 }
 
 h2 {
@@ -128,4 +128,16 @@ section h2 {
 .button_bck_home,
 .button_register {
   text-decoration: none;
+}
+
+@media (min-width: 768px){
+  main{
+      padding-top: 250px;
+  }
+}
+
+@media (min-width: 1280px){
+  main{
+      padding-top: 270px;
+  }
 }

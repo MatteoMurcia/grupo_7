@@ -8,7 +8,7 @@ main {
   font-family: 'Quicksand', sans-serif;
   line-height: 2;
   margin: 0;
-  padding-top: 30vh;
+  padding-top: 170px;
 }
 
 h2 {
@@ -191,10 +191,13 @@ section h2 {
 
 
 @media (min-width: 768px) {
+  main{
+    padding-top: 250px;
+  }
+
+
   .image_edit_big {
     display: flex;
-
-
   }
 
   #imgproductbig {

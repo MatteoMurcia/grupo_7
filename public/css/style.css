@@ -9,40 +9,23 @@ body{
     font-family: Quicksand;
 }
 
-
-.control__main-a{
-    text-decoration: none;
-    color: #000;
-}
-
-.control__main-a:hover{
-    text-decoration: underline;
-}
-
-.control-site-bar{
-    list-style-type: none;
-}
-
-
-.control-site-bar a{
-    text-decoration: none;
-    color: #fff;
-}
-
 header{
     width: 100vw;
     background-color: #166e91;
     position: fixed;
     padding: 10px;
-    height: 15vh;
+    height: 120px;
     z-index: 99999;
 }
+
+/* ---------- Top-header ---------- */
+
 
 .top-header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .top-header__buttons,
@@ -55,14 +38,23 @@ header{
     color: #ffffff;
 }
 
-.top-header__buttons a:hover,
-.top-header__menus-burger i:hover{
-    color: #cc9754;
+.fa-bars{
+   height: 80%;
+   padding-top: 20%;
 }
 
 .top-header__menus-adress,
 .top-header__menus-burger{
     color: #ffffff;
+}
+
+.top-header__buttons a,
+.top-header__menus-burger{
+    display: flex;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 450ms;
+    margin: 5px;
 }
 
 .top-header__menus-adress{
@@ -72,8 +64,9 @@ header{
     transition: all 450ms;
 }
 
-.top-header__menus-adress:hover{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+.top-header__buttons a:hover,
+.top-header__menus-adress:hover,
+.top-header__menus-burger:hover{
     background-color:#0eb7fa;
 }
 
@@ -82,9 +75,11 @@ header{
     margin-left: 4px;
 }
 
+/* ---------- Bottom-Header ---------- */
+
 .bottom-header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .bottom-header__logo{
@@ -92,7 +87,7 @@ header{
 }
 
 .bottom-header__logo img{
-    max-width: 100%;
+    width: 70%;
 }
 
 .bottom-header__search-bar {
@@ -128,26 +123,90 @@ header{
     border-radius: 0px 5px 5px 0px;
 }
 
+/* ---------- Nav-Bar ---------- */
+
 nav{
     display: none;
 }
 
+.control-site-bar{
+    list-style-type: none;
+}
 
-.banner {
+
+.control-site-bar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* ---------- Banner ---------- */
+
+.slider{
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding-top: 15vh;
+}
+
+.slider_control{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner{
+    display: flex;
+    width: 100%;
+    transition: all 150ms ease;
+    animation: 20s slider infinite;
 }
 
 .banner img{
     width: 100%;
 }
 
+@keyframes slider {
+    0% {
+        margin-left: 0;
+    }
+    20%{
+        margin-left: 0;
+    }
+    25%{
+        margin-left: -100%;
+    }
+    45%{
+        margin-left: -100%;
+    }
+    50%{
+        margin-left: -200%;
+    }
+    70%{
+        margin-left: -200%;
+    }
+    75%{
+        margin-left: -300%;
+    }
+    95%{
+        margin-left: -300%;
+    }
+}
+
+/* ---------- Main ---------- */
+
 h3{
     font-size: 1.5rem;
 }
 
+main{
+    padding: 2% 5%;
+}
+
+/* ---------- Categories ---------- */
+
 .categories{
-    margin-top: 2%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -179,16 +238,13 @@ h3{
     font-weight: bold;
 }
 
-main{
-    padding: 5%;
-}
+/* ---------- Products ---------- */
 
 .products{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .products a{
@@ -198,14 +254,19 @@ main{
 }
 
 .products article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     margin-top: 1.25rem;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     padding: 0.75rem 1.25rem;
     background-color: #ffffff;
+    height: 200px;
 }
 
 .products article img{
-    width: 90%;
+    width: 80%;
+    max-height: 80%;
 }
 
 .products article p{
@@ -219,6 +280,16 @@ main{
     border-top: 1px solid #ebebeb;
 }
 
+.control__main-a{
+    text-decoration: none;
+    color: #000;
+}
+
+.control__main-a:hover{
+    text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
 
 footer{
     width: 100%;
@@ -260,29 +331,22 @@ footer p.copyright{
 }
 
 @media (min-width: 768px){
+/* ---------- Header ---------- */
     header{
         padding: 20px;
-        height: 25vh;
+        height: 200px;
     }
 
     .top-header__menus{
         margin-left: 27%;
     }
 
-    .top-header__menus-burger{
-        display: none;
+    .top-header__buttons{
+        padding-right: 5%;
     }
 
-    nav{
-        display: flex;
-        color: #fff;
-        width: 100%;
-        font-size: 1rem;
-    }
-    
-    .site-bar{
-        display: flex;
-        flex-direction: row;
+    .top-header__menus-burger{
+        display: none;
     }
 
     .bottom-header{
@@ -298,11 +362,29 @@ footer p.copyright{
         width:75%;
     }
 
+    nav{
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+    .site-bar{
+        display: flex;
+    }
+
+    .site-bar-pets,
+    .site-bar-brands,
+    .site-bar-services{
+        display: none;
+    }
+
     .control-site-bar,
     .control-site-bar a{
         text-align: center;
         display: flex;
-        margin: 0 1.5vw;
+        padding: 0 15px;
     }
 
     .control-site-bar:hover,
@@ -317,9 +399,13 @@ footer p.copyright{
         margin: 0 5px;
     }
 
-    .products a{
-        width: 22%;
+/* ---------- Banner ---------- */
+
+    .slider{
+        padding-top: 200px;
     }
+    
+/* ---------- Main ---------- */
 
     h3{
         font-size: 2rem;
@@ -346,29 +432,40 @@ footer p.copyright{
         font-size: 1.5rem;
     }
 
-    .site-bar-pets,
-    .site-bar-brands,
-    .site-bar-services{
-        display: none;
+    .products a{
+        width: 22%;
     }
-
-    .banner{
-        padding-top: 25vh;
-    }
-
-    .top-header__buttons{
-        padding-right: 5%;
-    }
-
 }
 
 @media (min-width: 1280px){
-    nav{
-        padding-left: 15%;
+/* ---------- Header ---------- */
+
+    header{
+        height: 220px;
     }
 
+    .bottom-header{
+        margin-bottom: 50px;
+    }
+    
     .bottom-header__logo{
         width: 12%;
+    }
+
+/* ---------- Banner ---------- */
+
+    .slider{
+        padding-top: 230px;
+    }
+
+    .slider_control{
+        width: 70%;
+    }
+
+/* ---------- Main ---------- */
+
+    .products a{
+        height: 380px;
     }
 
     .products article p{
@@ -377,6 +474,12 @@ footer p.copyright{
 
     .products article{
         box-shadow: none;
+        height: 350px;
+        transition: all 450ms;
+    }
+
+    .products article img{
+        max-height: 85%;
     }
 
     .control__a-article .products__details{
@@ -385,11 +488,15 @@ footer p.copyright{
 
     .products article:hover{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        height: 370px;
     }
 
     .products .control__a-article:hover .products__details{
         display: block;
     }
+
+/* ---------- Footer ---------- */
+
 
     .footer-icon i:hover{
         color: #d2ac80;

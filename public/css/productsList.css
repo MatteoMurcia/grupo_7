@@ -1,60 +1,88 @@
 main{
-    padding-top: 15vh;
+    padding-top: 120px;
 }
 
-.products{
+.productsList article{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    padding: 0.75rem 1.25rem;
+    background-color: #ffffff;
+}
+
+.productsList article p{
+    font-size: .5rem;
+    font-weight: bold;
+}
+
+.productsList{
     flex-flow: wrap;
 }
 
-.products .control__a{
+.productsList .control__a{
     max-width: 100%;
     display: block;
     flex: 80%;
+    text-decoration: none;
+    color: #000;
+    margin-top: 10px;
 }
 
-.products .control__a article{
-    display: flex;
-    max-width: 100%;
-}
-
-.products .control__a article img{
+.productsList .control__a article img{
     width: 30%;
 }
 
-.products .control__a article .products__details{
+.productsList .control__a article .products__details{
     border-left: 1px solid #ebebeb;
     margin-left: 0.5rem;
 }
 
-.products .control__a article .products__details-description,
-.products .control__a article .products__details-price{
+.productsList .control__a article .products__details-description,
+.productsList .control__a article .products__details-price{
     font-weight: bold;
 }
 
-.products .control__a article .products__details p{
+.productsList .control__a article .products__details p{
     margin: 0.5rem 0 0 0.5rem;
 }
 
 @media (min-width: 768px){
     main{
-        padding-top: 25vh;
+        padding-top: 200px;
     }
 
-    .products .control__a article .products__details p{
+    .productsList .control__a article .products__details p{
         font-size: 1rem;
     }
 }
 
 @media (min-width: 1280px){
-    .products .control__a article .products__details{
+    main{
+        padding-top: 230px;
+    }
+
+    .productsList .control__a article .products__details{
         margin-left: 2rem;
     }
 
-    .products .control__a article .products__details p{
+    .productsList .control__a article .products__details p{
         margin: 2rem 0 0 1rem;
     }
 
-    .products .control__a article img{
+    .productsList .control__a article img{
         width: 15%;
+    }
+
+    .productsList .control__a{
+        margin-top: 20px;
+    }
+
+    .productsList article{
+        box-shadow: none;
+        transition: all 450ms;
+    }
+
+    .productsList article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 }

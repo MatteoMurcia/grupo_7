@@ -10,7 +10,7 @@
     justify-content: space-between;
     padding: 5px;
     height: min-content;
-    padding-top: 15vh;
+    padding-top: 120px;
 }
 
 .imgProducto {
@@ -301,7 +301,7 @@ section.resumen {
 
 @media (min-width: 768px) {
     .tituloCarrito {
-        padding-top: 25vh;
+        padding-top: 200px;
     }
 
     section.articulos {
@@ -348,4 +348,10 @@ section.resumen {
     }
 
 
+}
+
+@media (min-width: 1280px) {
+    .tituloCarrito {
+        padding-top: 220px;
+    }
 }
