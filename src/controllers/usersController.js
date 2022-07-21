@@ -1,6 +1,7 @@
 const User = require("../models/users");
 const path = require('path');
 const fs = require('fs');
+const bcrypt = require('bcryptjs')
 
 const usersDbPath = path.join(__dirname, "../db/users.json");
 
@@ -17,8 +18,7 @@ const controller = {
         let userToLogin = User.findByField('email', req.body.email);
 
         if (userToLogin) {
-            let isOk = req.body.password === userToLogin.password ? true : false;
-            /* let isOk = bcryptjs.compareSync(req.body.password, userToLogin.password);  */
+            let isOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOk) {
                 delete userToLogin.password;
                 req.session.userLoggen = userToLogin;
@@ -66,6 +66,7 @@ const controller = {
     },
     register: (req,res)=>{
         const users = readJsonFile(usersDbPath);
+        const passHasheada = bcrypt.hashSync(req.body.password, 10)
 
         let user = {
             id : users[users.length-1].id + 1,
@@ -73,7 +74,7 @@ const controller = {
             last_name: req.body.lastname,
             user_name: req.body.username,
             email: req.body.email,
-            password: req.body.password,
+            password: passHasheada,
             category: "user",
             image: req.file?.filename || 'default.jpg'
         }
