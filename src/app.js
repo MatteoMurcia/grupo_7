@@ -21,7 +21,7 @@ app.use(session({
 }));
 
 app.use(userLoggedMiddleware);
-//app.use(validationLogin);
+app.use(validationLogin);
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
