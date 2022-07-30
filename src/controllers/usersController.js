@@ -1,7 +1,9 @@
 const User = require("../models/users");
 const path = require('path');
 const fs = require('fs');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
+const cookies = require('cookie-parser')
+
 
 const usersDbPath = path.join(__dirname, "../db/users.json");
 
