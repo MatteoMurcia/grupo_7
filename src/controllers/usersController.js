@@ -20,10 +20,14 @@ const controller = {
         let userToLogin = User.findByField('email', req.body.email);
 
         if (userToLogin) {
-            let isOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            let isOk = bcrypt.compareSync(req.body.password, userToLogin.password);
             if (isOk) {
                 delete userToLogin.password;
                 req.session.userLoggen = userToLogin;
+
+                if (req.body.chkRecordame) {
+                    res.cookie('usercookie', req.body.email, { maxAge: (1000 * 60) * 2 })
+                }
 
                 return res.redirect('userView');
 
@@ -60,18 +64,19 @@ const controller = {
 
     },
     logout: (req, res) => {
+        res.clearCookie('usercookie')
         req.session.destroy();
         return res.redirect('/');
     },
     registerView: function (req, res) {
         res.render('../views/users/register')
     },
-    register: (req,res)=>{
+    register: (req, res) => {
         const users = readJsonFile(usersDbPath);
         const passHasheada = bcrypt.hashSync(req.body.password, 10)
 
         let user = {
-            id : users[users.length-1].id + 1,
+            id: users[users.length - 1].id + 1,
             first_name: req.body.name,
             last_name: req.body.lastname,
             user_name: req.body.username,
@@ -84,7 +89,7 @@ const controller = {
         newUsers = JSON.stringify(users)
         fs.writeFileSync(usersDbPath, newUsers)
         return res.redirect('../')
-        
+
     }
 }
 

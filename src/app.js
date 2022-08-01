@@ -22,6 +22,7 @@ app.use(session({
     saveUninitialized: false,
 }));
 
+
 app.use(userLoggedMiddleware);
 //app.use(validationLogin);
 
