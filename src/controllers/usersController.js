@@ -23,8 +23,8 @@ const controller = {
             let isOk = bcrypt.compareSync(req.body.password, userToLogin.password);
             if (isOk) {
                 delete userToLogin.password;
-                req.session.userLoggen = userToLogin;
-
+                req.session.userLogged = userToLogin;
+                // console.log(req.body.chkRecordame)
                 if (req.body.chkRecordame) {
                     res.cookie('usercookie', req.body.email, { maxAge: (1000 * 60) * 2 })
                 }
@@ -55,7 +55,7 @@ const controller = {
 
         return res.render("users/userView",
             {
-                user: req.session.userLoggen
+                user: req.session.userLogged
             })
     },
     login: (req, res) => {
