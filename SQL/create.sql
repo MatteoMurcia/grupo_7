@@ -31,6 +31,7 @@ CREATE TABLE product(
     description varchar(100),
     brand varchar(50),
     price int(50),
+    type varchar(10),
     image varchar(100),
     PRIMARY KEY (product_id)
 );
