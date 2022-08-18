@@ -6,7 +6,7 @@ CREATE TABLE user(
     user_id int(10),
     user_name varchar(50),
     first_name varchar(50),
-    last_name varchar(50)
+    last_name varchar(50),
     email varchar(50),
     password varchar(50),
     category_user varchar(50),
@@ -28,7 +28,7 @@ CREATE TABLE product(
     product_id int(10),
     category_product varchar(50),
     name varchar(50),
-    description varchar(100)
+    description varchar(100),
     brand varchar(50),
     price int(50),
     image varchar(100),
