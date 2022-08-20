@@ -1,4 +1,4 @@
-const User = require("../models/users");
+const User = require("../models1/users");
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');

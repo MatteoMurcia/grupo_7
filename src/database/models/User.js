@@ -7,10 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        pet_id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
-            allowNull: false,
-        },
+
         // created_at: dataTypes.TIMESTAMP,
         // updated_at: dataTypes.TIMESTAMP,
         user_name: {
@@ -33,12 +30,12 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(50),
             allowNull: false
         },
-        category_id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+        category_user: {
+            type: dataTypes.STRING(50),
             allowNull: false
         },
 
-        image: {
+        images: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
@@ -47,10 +44,10 @@ module.exports = (sequelize, dataTypes) => {
 
     };
     let config = {
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        timestamps: false,
+        //   createdAt: 'created_at',
+        //   updatedAt: 'updated_at',
+        //       deletedAt: false
     }
     const User = sequelize.define(alias, cols, config);
 
@@ -60,17 +57,17 @@ module.exports = (sequelize, dataTypes) => {
         //    foreignKey: "pet_id"
         // })
 
-        User.belongsToMany(models.Pet, { // models.Actor -> Actors es el valor de alias en actor.js
-            as: "Pets",
-            foreignKey: 'pet_id',
-            timestamps: false
-        }),
+        //   User.belongsToMany(models.Pet, { // models.Actor -> Actors es el valor de alias en actor.js
+        //       as: "Pets",
+        //      foreignKey: 'pet_id',
+        //        timestamps: false
+        //   }),
 
-            User.belongsToMany(models.Order, { // models.Actor -> Actors es el valor de alias en actor.js
-                as: "Orders",
-                foreignKey: 'order_id',
-                timestamps: false
-            })
+        User.belongsToMany(models.Order, { // models.Actor -> Actors es el valor de alias en actor.js
+            as: "Orders",
+            foreignKey: 'order_id',
+            timestamps: false
+        })
 
 
 

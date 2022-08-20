@@ -7,17 +7,17 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        category_id: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
+        category_product: {
+            type: dataTypes.STRING(10),
             allowNull: false,
         },
         // created_at: dataTypes.TIMESTAMP,
         // updated_at: dataTypes.TIMESTAMP,
-        name: {
+        product_name: {
             type: dataTypes.STRING(50),
             allowNull: false
         },
-        description: {
+        desc_product: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
@@ -31,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
         },
 
 
-        image: {
+        images: {
             type: dataTypes.STRING(100),
             allowNull: false
         },
@@ -40,10 +40,10 @@ module.exports = (sequelize, dataTypes) => {
 
     };
     let config = {
-        timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: false
+        timestamps: false,
+        //    createdAt: 'created_at',
+        //    updatedAt: 'updated_at',
+        //    deletedAt: false
     }
     const Product = sequelize.define(alias, cols, config);
 
