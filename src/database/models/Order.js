@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'orders'; // esto debería estar en singular
+    let alias = 'Order'; // esto debería estar en singular
     let cols = {
         order_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -42,16 +42,16 @@ module.exports = (sequelize, dataTypes) => {
 
     Order.associate = function (models) {
         Order.belongsTo(models.User, { // models.Genre -> Genres es el valor de alias en genres.js
-            as: "Users",
+            as: "users",
             foreignKey: "user_id"
         })
 
-        Product.belongsToMany(models.Product, { // models.Actor -> Actors es el valor de alias en actor.js
-            as: "Products",
-            foreignKey: 'product_id',
-            timestamps: false
+        Order.belongsToMany(models.Product, {
+            as: "products",
+            otherKey: "order_id",
+            through: "order_products",
+            foreignKey: "product_id"
         })
-
     }
     return Order
 }

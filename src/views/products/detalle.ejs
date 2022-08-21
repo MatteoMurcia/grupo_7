@@ -6,10 +6,10 @@
         <%- include('../partials/header') %>
             <main>
                 <div class="producto">
-                    <img src="/images/<%= product.image %>">
+                    <img src="/images/<%= product.images %>">
                     <div class="info">
                         <h3 class="Nombre">
-                            <%= product.name %>
+                            <%= product.product_name %>
                         </h3>
                         <div class="marca-stars">
                             <p><u>Marca: <%= product.brand %></u></p>
@@ -21,7 +21,7 @@
                         <h2><u>
                                 <%= product.price %>
                             </u></h2>
-                        <p>Disponivilidad: <i class="fa fa-check"></i></p>
+                        <p>Disponibilidad: <i class="fa fa-check"></i></p>
                         <h3>Referencia</h3>
                         <div class="referencia">
                             <input type="checkbox" class="slectOne" value="xxl" id="xxl">
@@ -36,7 +36,7 @@
                     <h3>Detalles del producto</h3>
                     <br>
                     <p>
-                        <%= product.description %>
+                        <%= product.desc_product %>
                     </p>
                 </div>
                 <div class="buttons">

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'shipments'; // esto debería estar en singular
+    let alias = 'Shipment'; // esto debería estar en singular
     let cols = {
         shipment_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -31,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Shipment.associate = function (models) {
         Shipment.belongsTo(models.Order, { // models.Genre -> Genres es el valor de alias en genres.js
-            as: "Orders",
+            as: "orders",
             foreignKey: "order_id"
         })
     }
@@ -40,5 +40,5 @@ module.exports = (sequelize, dataTypes) => {
     //    foreignKey: 'category_id',
     //   timestamps: false
     //  })
-    return Category
+    return Shipment;
 }

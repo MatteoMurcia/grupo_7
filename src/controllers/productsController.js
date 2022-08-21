@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const db = require('../database/models')
 
 
 const productsDbPath = path.join(__dirname, "../db/products.json");
@@ -12,51 +13,60 @@ const readJsonFile = (path) => {
 
 const controller = {
     detalle: function (req, res) {
-        const productsList = readJsonFile(productsDbPath);
+        db.Product.findByPk(req.params.id)
+        .then(product=>  res.render('../views/products/detalle', { product }))
+/*         const productsList = readJsonFile(productsDbPath);
         const id = req.params.id;
         const product = productsList.find((i) => i.id == id);
-        res.render('../views/products/detalle', { product });
+        res.render('../views/products/detalle', { product }); */
     },
     listadoDeProductos: function (req, res) {
-        const productsList = readJsonFile(productsDbPath);
-        res.render('../views/products/productsList', { productsList })
+        db.Product.findAll()
+        .then(productsList => res.render('../views/products/productsList', {productsList}) )
+/*         const productsList = readJsonFile(productsDbPath);
+        res.render('../views/products/productsList', { productsList }) */
     },
     listadoDeAlimentos: function (req, res) {
-        const productsList = readJsonFile(productsDbPath);
-        const alimentos = productsList.filter(function (product) {
-            return product.category == "alimentos";
+        db.Product.findAll({
+            where: {
+                category_product: "alimentos"
+            }
         })
-        res.render('../views/products/alimentos', { alimentos });
+        .then(alimentos => res.render('../views/products/alimentos', { alimentos }))
     },
     listadoDeSnacks: function (req, res) {
-        const productsList = readJsonFile(productsDbPath);
-        const snacks = productsList.filter(function (product) {
-            return product.category == "snacks";
+        db.Product.findAll({
+            where: {
+                category_product: "snacks"
+            }
         })
-        res.render('../views/products/snacks', { snacks });
+        .then(snacks => res.render('../views/products/snacks', { snacks }))
     },
     listadoDeAccesorios: function (req, res) {
-        const productsList = readJsonFile(productsDbPath);
-        const accesorios = productsList.filter(function (product) {
-            return product.category == "accesorios";
+        db.Product.findAll({
+            where: {
+                category_product: "accesorios"
+            }
         })
-        res.render('../views/products/accesorios', { accesorios });
+        .then(accesorios => res.render('../views/products/accesorios', { accesorios }))
     },
     listadoDeJuguetes: function (req, res) {
-        const productsList = readJsonFile(productsDbPath);
-        const juguetes = productsList.filter(function (product) {
-            return product.category == "juguetes";
+        db.Product.findAll({
+            where: {
+                category_product: "juguetes"
+            }
         })
-        res.render('../views/products/juguetes', { juguetes });
+        .then(juguetes => res.render('../views/products/juguetes', { juguetes }))
+        
     },
     listadoDeHigiene: function (req, res) {
-        const productsList = readJsonFile(productsDbPath);
-        const higiene = productsList.filter(function (product) {
-            return product.category == "higiene";
+        db.Product.findAll({
+            where: {
+                category_product: "higiene"
+            }
         })
-        res.render('../views/products/higiene', { higiene });
+        .then(higiene => res.render('../views/products/higiene', { higiene }))
     },
-
-};
+}
 
 module.exports = controller;

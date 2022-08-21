@@ -7,18 +7,18 @@
         <h3 class="tittle">Todos los productos</h3>
         <section class="productsList">
             <% for(let i = 0; i < productsList.length; i++){ %>
-                <a class="control__a" href="/products/<%=productsList[i].id%>">
+                <a class="control__a" href="/products/<%=productsList[i].product_id%>">
                     <article>
-                  <img src="images/<%= productsList[i].image %>">
+                  <img src="images/<%= productsList[i].images %>">
                   <div class="products__details">
                       <p class="products__details-name">
-                          <%= productsList[i].name %> 
+                          <%= productsList[i].product_name %> 
                       </p>
                       <p class="products__details-price">
                           <%= productsList[i].price %>
                       </p>
                       <p>
-                          <%= productsList[i].description %>
+                          <%= productsList[i].desc_product %>
                       </p>
                   </div>
                     </article>

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'pets'; // esto debería estar en singular
+    let alias = 'Pet'; // esto debería estar en singular
     let cols = {
         pet_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,

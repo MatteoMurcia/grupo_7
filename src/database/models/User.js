@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'users'; // esto debería estar en singular
+    let alias = 'User'; // esto debería estar en singular
     let cols = {
         user_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -52,20 +52,15 @@ module.exports = (sequelize, dataTypes) => {
     const User = sequelize.define(alias, cols, config);
 
     User.associate = function (models) {
-        //  Movie.belongsTo(models.Pet, { // models.Genre -> Genres es el valor de alias en genres.js
-        //    as: "Pet",
-        //    foreignKey: "pet_id"
-        // })
-
         //   User.belongsToMany(models.Pet, { // models.Actor -> Actors es el valor de alias en actor.js
         //       as: "Pets",
         //      foreignKey: 'pet_id',
         //        timestamps: false
         //   }),
 
-        User.belongsToMany(models.Order, { // models.Actor -> Actors es el valor de alias en actor.js
-            as: "Orders",
-            foreignKey: 'order_id',
+        User.hasMany(models.Order, {
+            as: "orders",
+            foreignKey: 'user_id',
             timestamps: false
         })
 
