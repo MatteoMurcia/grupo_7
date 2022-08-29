@@ -12,42 +12,42 @@
                     <section class="login__header">
                         <h2>Editar Producto</h2>
                     </section>
-                    <form action="/adm/<%= product.id %>?_method=PUT" class="createProduct__form" method="POST">
+                    <form action="/adm/<%= product.product_id %>?_method=PUT" class="createProduct__form" method="POST" enctype="multipart/form-data">
                         <div class="insideForm">
                             <div class="inputs">
 
                                 <div>
                                     <label for="nameProduct" style="margin-right: 50px;">Nombre</label>
                                     <input type="text" id="name" name="nameProduct"
-                                        placeholder="Ingrese el nombre del producto" value="<%=product.name%>">
+                                        placeholder="Ingrese el nombre del producto" value="<%=product.product_name%>">
                                 </div>
 
                                 <div>
                                     <label for="descriptionProduct">Descripción</label>
                                     <textarea id="ProductDescription" name="descriptionProduct"
-                                        placeholder="Ingrese la descripción"><%=product.description%></textarea>
+                                        placeholder="Ingrese la descripción"><%=product.desc_product%></textarea>
                                 </div>
                                 <div class="image_edit">
-                                    <img src="/images/<%= product.image %>" style="border: solid 1px black;">
+                                    <img src="/images/<%= product.images %>" style="border: solid 1px black;">
                                 </div>
                                 <div>
                                     <label for="imageProduct" style="margin-right: 50px;">Imagen</label>
                                     <input type="file" name="imageProduct" accept=".pdf,.jpg,.png"
-                                        value="<%=product.image%>" />
+                                        value="<%=product.images%>" />
 
                                 </div>
                                 <div>
                                     <label for="categoryProduct" style="margin-right: 50px;">Categoria</label>
                                     <select name="categoryProduct">
-                                        <option value="alimentos" <%=product.category=="alimentos" ? "selected" : null
+                                        <option value="alimentos" <%=product.category_product=="alimentos" ? "selected" : null
                                             %> >Alimentos</option>
-                                        <option value="snacks" <%=product.category=="snacks" ? "selected" : null %>
+                                        <option value="snacks" <%=product.category_product=="snacks" ? "selected" : null %>
                                             >Snacks</option>
-                                        <option value="accesorios" <%=product.category=="accesorios" ? "selected" : null
+                                        <option value="accesorios" <%=product.category_product=="accesorios" ? "selected" : null
                                             %>>Accesorios</option>
-                                        <option value="juguetes" <%=product.category=="juguetes" ? "selected" : null %>
+                                        <option value="juguetes" <%=product.category_product=="juguetes" ? "selected" : null %>
                                             >Juguetes</option>
-                                        <option value="higiene" <%=product.category=="higiene" ? "selected" : null %>
+                                        <option value="higiene" <%=product.category_product=="higiene" ? "selected" : null %>
                                             >Cuidado e Higiene</option>
                                     </select>
 
@@ -82,7 +82,7 @@
                             </div>
                             <div class="image_edit_big">
                                 <div>
-                                    <img src="/images/<%= product.image %>" id="imgproductbig">
+                                    <img src="/images/<%= product.images %>" id="imgproductbig">
                                 </div>
                             </div>
                         </div>

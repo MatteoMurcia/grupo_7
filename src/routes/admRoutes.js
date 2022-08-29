@@ -23,7 +23,10 @@ router.get('/new', controller.crearProducto);
 router.post('/new', upload.single('imageProduct'), controller.storeProducto);
 
 router.get('/:id/edit', controller.editProducto);
-router.put('/:id', controller.updateProducto);
+router.put('/:id', upload.single('imageProduct'), controller.updateProducto);
+
+router.get('/delete/:id', controller.deleteProducto);
+router.delete('/destroy/:id', controller.destroyProducto);
 
 
 

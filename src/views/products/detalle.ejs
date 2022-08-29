@@ -40,8 +40,8 @@
                     </p>
                 </div>
                 <div class="buttons">
-                    <a href="/adm/<%=product.id %>/edit"><button class="button">Editar</button></a>
-                    <button class="button">Borrar</button>
+                    <a href="/adm/<%=product.product_id %>/edit"><button class="button">Editar</button></a>
+                    <a href="/adm/delete/<%= product.product_id %>"><button class="button">Borrar</button></a>
                 </div>
             </main>
             <%- include('../partials/footer') %>

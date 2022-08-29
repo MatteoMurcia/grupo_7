@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const { send } = require("process");
 const { stringify } = require("querystring");
+const db = require('../database/models')
 
 const DbPath = path.join(__dirname, "../db/products.json");
 
@@ -14,18 +15,29 @@ const readJsonFile = (path) => {
 
 const controller = {
     crearProducto: (req, res) => { res.render('../views/adm/productNew') },
-
-
     editProducto: (req, res) => {
-        const products = readJsonFile(DbPath)
-        const product = products.find(product => product.id == req.params.id)
-        res.render('../views/adm/productEdit', { product });
+        db.Product.findByPk(req.params.id)
+        .then(product=>  res.render('../views/adm/productEdit', { product }))
+/*      const products = readJsonFile(DbPath)
+        const product = products.find(product => product.id == req.params.id) 
+        res.render('../views/adm/productEdit', { product });*/
     },
-
-
     updateProducto: (req, res) => {
-
-        const products = readJsonFile(DbPath)
+        db.Product.update(
+            {
+                product_name: req.body.nameProduct,
+                price: req.body.priceProduct,
+                desc_product: req.body.descriptionProduct,
+                type: req.body.typeProduct,
+                images: req.file?.filename,
+                category_product: req.body.categoryProduct,
+                brand: req.body.brandProduct
+            },{
+                where: {product_id: req.params.id}
+            }
+        )
+        .then(()=> res.redirect("/products"))
+       /*  const products = readJsonFile(DbPath)
         for (let i = 0; i < products.length; i++) {
             if (products[i].id == req.params.id) {
                 products[i] = {
@@ -43,21 +55,26 @@ const controller = {
             }
         };
         fs.writeFileSync(DbPath, JSON.stringify(products, null, 2));
-        return res.redirect("/");
+        return res.redirect("/"); */
     },
-
-
-
     storeProducto: (req, res) => {
-
-        let archivoProductos = readJsonFile(DbPath);
+        db.Product.create({
+            product_name: req.body.nameProduct,
+            price: req.body.priceProduct,
+            desc_product: req.body.descriptionProduct,
+            type: req.body.typeProduct,
+            images: req.file?.filename || "default-image.png",
+            category_product: req.body.categoryProduct,
+            brand: req.body.brandProduct
+        })
+        .then(function(){
+            return res.redirect("/products")
+        })
+/*         let archivoProductos = readJsonFile(DbPath);
         let idProducto;
-
-
         for (let i = 0; i < archivoProductos.length; i++) {
             idProducto = archivoProductos[i].id
         }
-
         let producto = {
             name: req.body.nameProduct,
             price: req.body.priceProduct,
@@ -68,15 +85,22 @@ const controller = {
             id: idProducto + 1,
             brand: req.body.brandProduct
         }
-
-
-
         archivoProductos.push(producto)
         productsJSON = JSON.stringify(archivoProductos);
         fs.writeFileSync(DbPath, productsJSON);
 
-        res.redirect('/')
-
+        res.redirect('/') */
+    },
+    deleteProducto: (req, res)=>{
+        res.render("../views/adm/productDelete", {id:req.params.id})
+    },
+    destroyProducto: (req,res)=>{
+        db.Product.destroy({
+            where: {
+                product_id: req.params.id
+            }
+        })
+        .then(()=>res.redirect("/products"))
     }
 }
 

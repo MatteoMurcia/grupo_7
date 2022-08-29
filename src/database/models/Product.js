@@ -36,7 +36,10 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
 
-
+        type:  {
+            type: dataTypes.STRING(50),
+            allowNull: false
+        }
 
     };
     let config = {
