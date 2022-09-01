@@ -8,11 +8,13 @@
                 <p>Agregar dirección</p><i class="fa-solid fa-sort-down flecha"></i>
             </div>
         </div>
+        <div class="top-header__buttons">
+        </div>
         <%if (locals.islogged) {%>
 
             <div class="top-header__buttons-user">
                 <div style="display: flex">
-                    <img src="/images/userImages/<%=locals.userLogged.image%>" width="40" style="border-radius: 100%">
+                    <img src="/images/userImages/<%=locals.userLogged.images%>" width="30" style="border-radius: 100%">
                     <p style="margin-left: 10px; color: white">Hola, <%=locals.userLogged.first_name %>
                     </p>
                 </div>
@@ -26,17 +28,22 @@
                     <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
 
+                <%if (locals.userLogged.category_user=='admin' ) {%>
 
-                <% } else {%>
-                    <div class="top-header__buttons">
-                        <div class="top-header__buttons-login">
-                            <a href="/users/login"><i class="fa-solid fa-user"></i></a>
-                        </div>
-
-                        <% } %>
-
-
+                    <div class="top-header__buttons-login">
+                        <a href="/users/list"><i class="fa-solid fa-list"></i></i></a>
                     </div>
+                    <% } %>
+                        <% } else {%>
+                            <div class="top-header__buttons">
+                                <div class="top-header__buttons-login">
+                                    <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+                                </div>
+
+                                <% } %>
+
+
+                            </div>
             </div>
             <div class="bottom-header">
                 <div class="bottom-header__logo">
@@ -48,6 +55,7 @@
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>
+
             </div>
             <nav>
                 <ul class="site-bar">

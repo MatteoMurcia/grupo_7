@@ -9,27 +9,33 @@
                         <h2>Bienvenid@ - <%=user.first_name%>
                                 <h2>
                     </section>
-                    <section>
-                        <img src="/images/userImages/<%=user.image%>" width="100" style="margin:15px">
-                    </section>
-                    <section>
+                    <div class="userView">
                         <div>
-                            <label style="margin-right: 20px;">Primer Nombre: <%= user.first_name%> </label>
+                            <section>
+                                <img src="/images/userImages/<%=user.images%>" width="100" style="margin:15px">
+                            </section>
                         </div>
-                        <div>
-                            <label style="margin-right: 20px;">Apellido: <%= user.last_name%> </label>
-                        </div>
-                        <div>
-                            <label style="margin-right: 20px;">Nombre Usuario: <%= user.user_name%> </label>
-                        </div>
-                        <div>
-                            <label style="margin-right: 20px;">Email: <%= user.email%> </label>
-                        </div>
-                        <div>
-                            <label style="margin-right: 20px;">Categoria: <%= user.category%> </label>
-                        </div>
-                    </section>
+                        <section>
+                            <div>
+                                <div>
+                                    <label style="margin-right: 20px;">Primer Nombre: <%= user.first_name%> </label>
+                                </div>
+                                <div>
+                                    <label style="margin-right: 20px;">Apellido: <%= user.last_name%> </label>
+                                </div>
+                                <div>
+                                    <label style="margin-right: 20px;">Nombre Usuario: <%= user.user_name%> </label>
+                                </div>
+                                <div>
+                                    <label style="margin-right: 20px;">Email: <%= user.email%> </label>
+                                </div>
+                                <div>
+                                    <label style="margin-right: 20px;">Categoria: <%= user.category_user%> </label>
+                                </div>
+                            </div>
 
+                        </section>
+                    </div>
                 </div>
             </main>
             <%- include('../partials/footer') %>

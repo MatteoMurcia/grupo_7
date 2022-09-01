@@ -96,6 +96,7 @@ section h2 {
 .register {
   width: 60%;
   margin: 0 auto;
+
 }
 
 .register h2 .icon {
@@ -134,6 +135,93 @@ section h2 {
 .button_bck_home,
 .button_register {
   text-decoration: none;
+}
+
+.tabla_usuarios {
+  width: 100%;
+
+}
+
+.buttons a {
+  text-decoration: none;
+  color: #166e91;
+  margin-left: 5px;
+}
+
+.buttons a :hover {
+  color: #fff;
+}
+
+.enc_tabla_usuarios {
+  background-color: #166e91;
+  color: white
+}
+
+.fila_tabla_usuarios {
+  padding: 10px;
+  margin-bottom: solid, 1px, gray;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+
+}
+
+.userView {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+.button {
+
+  background-color: #166e91;
+  border-style: none;
+  border-radius: 5px;
+  color: #FFF;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;
+  margin: 10px;
+  font-size: 15px;
+}
+
+#button2 {
+
+  background-color: #166e91;
+  border-style: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;
+  color: #FFF;
+  margin: 10px;
+  font-size: 15px;
+}
+
+
+.button:hover {
+  background-color: #8fd4d2;
+}
+
+.button2:hover {
+  background-color: #8fd4d2;
+}
+
+.view_update {
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.combo_categoria {
+
+  padding: 4px 5px;
+  background-color: #eee;
+  border-style: none;
+  border-radius: 5px;
+  color: grey;
+  border: none;
+  width: 90%;
 }
 
 @media (min-width: 768px) {

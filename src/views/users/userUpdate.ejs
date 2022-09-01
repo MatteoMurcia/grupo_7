@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<%- include('../partials/head', {hojasDeEstilo: ["forms"] })%>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main class="align">
+                <div class="register">
+                    <section class="login__header">
+                        <h2>Editar Usuario<h2>
+                    </section>
+                    <form action="/users/update/<%=user.user_id%>" class="login__form" method="POST"
+                        enctype="multipart/form-data">
+                        <div class="view_update">
+                            <div>
+                                <div>
+                                    <img src="/images/userImages/<%=user.images%>" width="100" style="margin:15px">
+                                </div>
+
+                                <div>
+                                    <label for="avatar"></label>
+                                    <input type="file" name="avatar" value="" <%=user.images%>"">
+                                </div>
+
+                            </div>
+                            <div>
+
+
+
+                                <div>
+                                    <label for="name">Nombre</label>
+                                    <input type="text" id="name" name="name" value="<%= user.first_name%>">
+                                </div>
+
+                                <div>
+                                    <label for="lastname">Apellido</label>
+                                    <input type="text" id="lastname" name="lastname" value="<%= user.last_name%>">
+                                </div>
+                                <div>
+                                    <label for="username">Usuario</label>
+                                    <input type="text" id="username" name="username" value="<%= user.user_name%>">
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" value="<%= user.email%>">
+                                </div>
+
+                                <div>
+                                    <label for="category">Categoria</label>
+                                    </br>
+                                    <select name="category" class="combo_categoria">
+                                        <% if (user.user_category=="admin" ){ %>
+
+                                            <option value="admin" selected>Administrador</option>
+                                            <option value="user">Usuario</option>
+                                            <% } else{ %>
+                                                <option value="admin">Administrador</option>
+                                                <option value="user" selected>Usuario</option>
+
+
+                                                <% } %>
+
+
+
+                                    </select>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        </br>
+                        <div class="buttons" margin-top="50px">
+                            <button class="button">Aceptar</button>
+
+
+                            <a href="/users/list" type="button" id="button2" value="Cancelar">Cancelar</a>
+                            <!--     <button onclick="user/list" class="button" margin-top="50px">Cancelar</button>-->
+                        </div>
+
+                    </form>
+
+
+                    </section>
+
+                </div>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>

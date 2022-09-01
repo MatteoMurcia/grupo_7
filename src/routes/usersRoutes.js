@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const usersController = require('../controllers/usersController');
+const usersControllerDb = require('../controllers/usersControllerDb');
 const multer = require('multer');
 const path = require('path')
 
@@ -27,14 +28,22 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.get('/register', guestMiddleware, usersController.registerView);
-router.post('/register', upload.single("avatar"), usersController.register)
+//router.post('/register', upload.single("avatar"), usersController.register)
+router.post('/register', upload.single("avatar"), usersControllerDb.register)
 
-router.get('/login', guestMiddleware, usersController.login);
+router.get('/login', guestMiddleware, usersControllerDb.login);
 
-router.post('/login', guestMiddleware, usersController.loginProcess);
+router.post('/login', guestMiddleware, usersControllerDb.loginProcess);
 router.get('/userView', authMiddleware, usersController.profile)
+router.get('/userView/:id', authMiddleware, usersControllerDb.userView)
 
 router.get('/logout', usersController.logout)
+router.get('/list', usersControllerDb.listUser)
+
+router.get('/update/:id', usersControllerDb.update)
+router.post('/update/:id', upload.single("avatar"), usersControllerDb.update_save)
+
+router.get('/remove/:id', usersControllerDb.borrar)
 
 
 module.exports = router;

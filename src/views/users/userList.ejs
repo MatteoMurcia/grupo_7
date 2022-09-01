@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<%- include('../partials/head', {hojasDeEstilo: ["forms"] })%>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main class="align">
+                <div class="register">
+                    <section class="login__header">
+                        <h2>Listado de Usuarios<h2>
+                    </section>
+                    <section>
+                        <table class="tabla_usuarios">
+                            <tr class="enc_tabla_usuarios">
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Usuario</th>
+                                <th>Email</th>
+                                <th>Categoria</th>
+                                <th>Operaciones</th>
+                            </tr>
+                            <% for(let i=0; i < usuarios.length; i++){ %>
+
+                                <tr class="fila_tabla_usuarios">
+                                    <td width="7%" style="margin-left: 2px ">
+                                        <%=usuarios[i].user_id%>
+                                    </td>
+                                    <td width="20%">
+                                        <%=usuarios[i].user_name%>
+                                    </td>
+                                    <td width="20%">
+                                        <%=usuarios[i].first_name%>
+                                    </td>
+                                    <td width="20%">
+                                        <%=usuarios[i].last_name%>
+                                    </td>
+                                    <td width="20%">
+                                        <%=usuarios[i].email%>
+                                    </td>
+                                    <td width="8%" ">
+                                        <%=usuarios[i].category_user%>
+                                    </td>
+                                    <td width=" 15%">
+                                        <div class="buttons">
+
+                                            <a href="/users/userView/<%=usuarios[i].user_id%>">
+                                                <i class="fa-solid fa-eye"></i></a>
+                                            <a href="/users/update/<%=usuarios[i].user_id%>">
+                                                <i class="fa-solid fa-user-pen "></i></a>
+                                            <a href="/users/remove/<%=usuarios[i].user_id%>">
+                                                <i class="fa-solid fa-user-minus"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <% } %>
+                        </table>
+
+                    </section>
+
+                </div>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
