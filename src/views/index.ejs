@@ -49,12 +49,12 @@
         </section>
         <h3 class="tittle-products">Productos destacados</h3>
         <section class="products">
-            <% for(let i = 0; i < productosDestacados.length; i++){ %>
-                <a href="/products/<%= productosDestacados[i].id %>"><article class="control__a-article">
-                    <img src="images/<%= productosDestacados[i].image %>">
+            <% for(let i = 0; i < productsList.length; i++){ %>
+                <a href="/products/<%= productsList[i].product_id %>"><article class="control__a-article">
+                    <img src="images/<%= productsList[i].images %>">
                     <div class="products__details">
-                        <p class="products__details-name"><%= productosDestacados[i].name %></p>
-                        <p class="products__details-price"><%= productosDestacados[i].price %></p>
+                        <p class="products__details-name"><%= productsList[i].product_name %></p>
+                        <p class="products__details-price"><%= productsList[i].price %></p>
                     </div>
                 </article></a>
               <% } %>

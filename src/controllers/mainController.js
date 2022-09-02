@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const db = require('../database/models');
 
 
 const productsDbPath = path.join(__dirname, "../db/products.json");
@@ -12,18 +13,26 @@ const readJsonFile = (path) => {
 
 const controller = {
     index: function (req, res) {
-        const productsList = readJsonFile(productsDbPath);
+        db.Product.findAll({
+            where: {type:"destacado"}
+        })
+        .then(productsList => res.render('../views/index', {productsList}) )
+       /*  const productsList = readJsonFile(productsDbPath);
         const productosDestacados = productsList.filter(function (product) {
             return product.type == "destacado";
         })
-        res.render('index', { productosDestacados })
+        res.render('index', { productosDestacados }) */
     },
     carrito: function (req, res) {
-        const productsList = readJsonFile(productsDbPath);
+        db.Product.findAll({
+            where: {brand: "Eukanuba"}
+        })
+        .then(productsList => res.render('../views/index', {productsList}) )
+/*         const productsList = readJsonFile(productsDbPath);
         const carrito = productsList.filter(function (product) {
             return product.brand == "Eukanuba";
         })
-        res.render('../views/products/carrito', { carrito });
+        res.render('../views/products/carrito', { carrito }); */
     }
 };
 

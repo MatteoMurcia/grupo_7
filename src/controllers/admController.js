@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const { send } = require("process");
 const { stringify } = require("querystring");
-const db = require('../database/models')
+const db = require('../database/models');
 
 const DbPath = path.join(__dirname, "../db/products.json");
 
