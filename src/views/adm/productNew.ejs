@@ -28,12 +28,12 @@
                                 </div>
                                 <div>
                                     <label for="imageProduct" style="margin-right: 20px;">Imagen</label>
-                                    <input type="file" name="imageProduct" accept=".pdf,.jpg,.png" />
+                                    <input type="file" id="image" name="imageProduct" accept=".pdf,.jpg,.png" />
 
                                 </div>
                                 <div>
                                     <label for="categoryProduct" style="margin-right: 20px;">Categoria</label>
-                                    <select name="categoryProduct">
+                                    <select id="category" name="categoryProduct">
                                         <option value="alimentos">Alimentos</option>
                                         <option value="snacks">Snacks</option>
                                         <option value="accesorios">Accesorios</option>
@@ -44,7 +44,7 @@
                                 </div>
                                 <div>
                                     <label for="typeProduct" style="margin-right: 50px;">Tipo</label>
-                                    <select name="typeProduct">
+                                    <select id="type" name="typeProduct">
                                         <option value="destacado">Destacados</option>
                                         <option value="in-sale">Con Rebajas</option>
                                         <option value="normal">Normal</option>
@@ -62,18 +62,20 @@
                                     <input type="text" id="price" name="priceProduct" placeholder="Ingrese el precio">
                                 </div>
                             </div>
-
+                            <div class="errores__control">
+                                <ul class="errores"></ul>
+                            </div>
                         </div>
                         <div>
                             <input class="button" value="Crear producto" type="submit">
                         </div>
                     </form>
                     <div>
-                        <a href="/" class="button_bck_home"><input class="button" value="Volver a la tienda"
-                                type="submit"></a>
+                        <a href="/" class="button_bck_home"><input class="button" value="Volver a la tienda"></a>
                     </div>
             </main>
             <%- include('../partials/footer') %>
+            <script src="/js/productNewValidation.js"></script>
     </body>
 
 </html>
