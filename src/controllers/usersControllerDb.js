@@ -25,8 +25,6 @@ const controller = {
             where: { email: req.body.email }
         })
             .then(userToLogin => {
-
-
                 if (userToLogin) {
 
                     let isOk = bcrypt.compareSync(req.body.password, userToLogin.password);
