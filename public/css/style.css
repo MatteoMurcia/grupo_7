@@ -25,7 +25,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .top-header__buttons,
@@ -83,7 +83,7 @@ header{
 }
 
 .bottom-header__logo{
-    width: 30%;
+    width: 25%;
 }
 
 .bottom-header__logo img{
@@ -333,12 +333,12 @@ footer p.copyright{
 @media (min-width: 768px){
 /* ---------- Header ---------- */
     header{
-        padding: 20px;
-        height: 200px;
+        padding-top: 5px;
+        height: 180px;
     }
 
     .top-header__menus{
-        margin-left: 27%;
+        margin-left: 10%;
     }
 
     .top-header__buttons{
@@ -355,11 +355,11 @@ footer p.copyright{
     }
 
     .bottom-header__logo{
-        width: 20%;
+        width: 25%;
     }
 
     .bottom-header__search-bar{
-        width:75%;
+        width:50%;
     }
 
     nav{
@@ -402,7 +402,10 @@ footer p.copyright{
 /* ---------- Banner ---------- */
 
     .slider{
-        padding-top: 200px;
+        padding-top: 180px;
+    }
+    .slider_control{
+        width: 80%;
     }
     
 /* ---------- Main ---------- */
@@ -441,21 +444,22 @@ footer p.copyright{
 /* ---------- Header ---------- */
 
     header{
-        height: 220px;
+        padding: 5px;
+        height: 200px;
     }
 
     .bottom-header{
-        margin-bottom: 50px;
+        margin-bottom: 0px;
     }
     
     .bottom-header__logo{
-        width: 12%;
+        width: 25%;
     }
 
 /* ---------- Banner ---------- */
 
     .slider{
-        padding-top: 230px;
+        padding-top: 200px;
     }
 
     .slider_control{
@@ -506,4 +510,10 @@ footer p.copyright{
         flex-direction: row;
         justify-content: space-between;
     }
+}
+
+/* -----------Form validation ------------*/
+
+.is-invalid{
+    color: red;
 }

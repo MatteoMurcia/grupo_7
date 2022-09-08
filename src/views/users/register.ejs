@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <%- include('../partials/head', {hojasDeEstilo: ["forms"] })%>
-
-  <body>
+<body>
     <%- include('../partials/header') %>
-      <main class="align">
+    <main class="align">
         <div class="register">
           <section class="login__header">
             <h2>Crea tu cuenta</h2>
           </section>
-          <form action="/users/register" class="login__form" method="POST" enctype="multipart/form-data">
+          <section id="formulario">
+          <form action="/users/register" class="login__form" method="POST" enctype="multipart/form-data" >
             <div>
-              <label for="name">Nombre</label>
-              <input type="text" id="name" name="name" placeholder="">
+                <p><label for="name">Nombre</label></p>
+                <input type="text" id="name" name="name"  placeholder="Debe ingresar al menos 2 caracteres" data-nombre="nombre">
+                <br>
+                <span></span>
+            </div>
+        
+            <div>
+                <p><label for="lastname">Apellido</label></p>
+                <input type="text" id="lastname" name="lastname" placeholder="Debe ingresar al menos 2 caracteres" data-nombre="apellido">
+                <br>
+                <span></span>
             </div>
 
             <div>
-              <label for="lastname">Apellido</label>
-              <input type="text" id="lastname" name="lastname" placeholder="">
-            </div>
-            <div>
-              <label for="email">Ingresa tu em@il</label>
-              <input type="email" id="email" name="email" placeholder="">
-            </div>
-            <div>
-              <label for="username">Usuario</label>
-              <input type="text" id="username" name="username" placeholder="">
+                <p><label for="email">Ingresa tu em@il</label></p>
+                <input type="email" id="email" name="email"  data-nombre="email" placeholder="email@email.com">
+                <br>
+                <span></span>
             </div>
 
             <div>
-              <label for="password">Contraseña</label>
-              <input type="password" id="password" name="password" placeholder="">
+                <p><label for="username">Usuario</label></p>
+                <input type="text" id="username" name="username"  data-nombre="usuario" placeholder="Tu usuario">
+                <br>
+                <span></span>
+            </div>
+      
+            <div>
+                <p><label for="password">Contraseña</label></p>
+                <input type="password" id="password" name="password" placeholder="Debe tener al menos 8 caracteres" data-nombre="password">
+                <br>
+                <span></span>
             </div>
             <div>
-              <label for="category">Categoria</label>
+                <label for="category">Categoria</label>
               </br>
               <select name="category" class="combo_categoria">
                 <option value="admin">Administrador</option>
@@ -41,31 +53,41 @@
               </select>
             </div>
             <div>
-              <label for="avatar">Avatar</label>
-              <input type="file" id="avatar" name="avatar" placeholder="">
+                <p><label for="avatar">Avatar</label></p>
+                <div class="file-select" id="avatar">
+                    <input type="file" id="avatar" name="avatar" aria-label="Archivo" data-nombre="avatar">
+                  </div>
+                <br>
+                <span></span>
             </div>
-
-            <section>
-              <h3>Queremos saber de tus mascotas</h3>
-            </section>
-            <div>
-              <label for="species">Especie</label>
-              <input type="text" id="species" name="species" placeholder="">
-            </div>
-            <div>
-              <label for="age">Edad</label>
-              <input type="number" id="age" name="age" placeholder="">
+            
+    
+            <!-- <div class="login_header">
+                <h3>Queremos saber de tus mascotas</h3>
             </div>
             <div>
-              <input class="button" value="Agregar Mascota" type="submit">
+                <label for="species">Especie</label>
+                <input type="text" id="species" name="species" placeholder="">
             </div>
             <div>
-              <input class="button" value="Crear cuenta" type="submit">
+                <label for="age">Edad</label>
+                <input type="number" id="age" name="age" placeholder="">
             </div>
-          </form>
-          <div>
-
-          </div>
-      </main>
-      <%- include('../partials/footer') %>
-  </body>
+            <div>
+                <input class="button"  value="Agregar Mascota" type="submit"> 
+            </div> -->
+            <div>
+                <input class="button"  value="Crear cuenta" type="submit"> 
+            </div>
+        </form>
+        <div>
+            <a href="/" class="button_bck_home"><input class="button"  value="Volver a la tienda" type="submit"></a> 
+        </div>
+    </div>
+    </section>
+    </main>
+        <%- include('../partials/footer') %>
+        <script src="/js/userRegisterValidation.js"></script>
+        
+</body>
+</html>

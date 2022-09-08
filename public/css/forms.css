@@ -87,11 +87,42 @@ section h2 {
 }
 
 .text-danger {
-  color: rgb(158, 2, 2);
+  color: red;
   font-weight: bold
 }
 
 /* ----------Register-------------- */
+
+.file-select {
+  position: relative;
+  display: inline-block;
+}
+
+.file-select::before {
+  background-color: #166e91;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Seleccionar';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.file-select input[type="file"] {
+  opacity: 0;
+  width: 200px;
+  height: 32px;
+  display: inline-block;
+}
+
+#avatar::before {
+  content: 'Seleccionar Archivo';
+}
 
 .register {
   width: 60%;
@@ -222,6 +253,12 @@ section h2 {
   color: grey;
   border: none;
   width: 90%;
+}
+
+input::placeholder {
+  color: lightgray;
+  font-size: 1em;
+  font-style: italic;
 }
 
 @media (min-width: 768px) {
