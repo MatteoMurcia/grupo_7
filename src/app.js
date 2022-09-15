@@ -9,7 +9,8 @@ const cookies = require('cookie-parser')
 
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
-const apiProductsRoutes = require('./routes//api/apiProductsRoutes');
+const apiProductsRoutes = require('./routes/api/apiProductsRoutes');
+const apiUserRoutes = require('./routes/api/apiUserRoutes');
 const admRoutes = require('./routes/admRoutes');
 const usersRoutes = require('./routes/usersRoutes');
 const validationLogin = require("./middlewares/validationLogin");
@@ -41,6 +42,8 @@ app.use('/', mainRoutes);
 app.use('/products', productsRoutes);
 app.use('/adm', admRoutes);
 app.use('/users', usersRoutes);
+app.use('/api/users', apiUserRoutes);
 app.use('/api/products', apiProductsRoutes);
+
 
 app.listen(PORT, function () { console.log(`Servidor corriendo en el puerto ${PORT}`) });

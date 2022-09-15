@@ -7,6 +7,7 @@ router.get('/listado', controller.listado);
 
 router.get('/detalle/:id', controller.detalle);
 
+router.get('/categorias', controller.categorias);
 
 module.exports = router;
 

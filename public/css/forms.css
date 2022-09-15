@@ -217,6 +217,33 @@ section h2 {
   font-size: 15px;
 }
 
+#searchUsers {
+  background-color: #166e91;
+  border-style: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 80%;
+
+}
+
+#searchUsers:hover {
+  background-color: #FFF;
+  color: #166e91;
+
+}
+
+#src_user_id {
+  width: 5%;
+}
+
+#src_user_name {
+  width: 20%;
+}
+
+#src_user_lastName {
+  width: 20%;
+}
+
 #button2 {
 
   background-color: #166e91;

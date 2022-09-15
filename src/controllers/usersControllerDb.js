@@ -136,6 +136,10 @@ const controller = {
 
 
     borrar: function (req, res) {
+
+
+
+
         db.User.destroy({
 
             where: {
@@ -144,7 +148,8 @@ const controller = {
         });
         res.redirect("/users/list")
     }
-
 }
+
+
 
 module.exports = controller

@@ -36,7 +36,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
 
-        type:  {
+        type: {
             type: dataTypes.STRING(50),
             allowNull: false
         }
@@ -59,6 +59,6 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "order_id"
         })
     }
-    
+
     return Product
 }

@@ -7,6 +7,14 @@
                 <div class="register">
                     <section class="login__header">
                         <h2>Listado de Usuarios<h2>
+                                <div>
+                                    <input type="text" id="src_user_id" name="srch_user_id" placeholder="id">
+                                    <input type="text" id="src_user_name" name="srch_user_name" placeholder="nombre">
+                                    <input type="text" id="src_user_lastName" name="srch_user_lastName"
+                                        placeholder="apellido">
+                                    <button id="searchUsers" <i class="fa-solid fa-magnifying-glass"></i> </button>
+                                </div>
+
                     </section>
                     <section>
                         <table class="tabla_usuarios">
@@ -47,7 +55,7 @@
                                                 <i class="fa-solid fa-eye"></i></a>
                                             <a href="/users/update/<%=usuarios[i].user_id%>">
                                                 <i class="fa-solid fa-user-pen "></i></a>
-                                            <a href="/users/remove/<%=usuarios[i].user_id%>">
+                                            <a id="btnborrar" href="/users/remove/<%=usuarios[i].user_id%>">
                                                 <i class="fa-solid fa-user-minus"></i></a>
                                         </div>
                                     </td>
@@ -60,4 +68,5 @@
                 </div>
             </main>
             <%- include('../partials/footer') %>
+                <script src="/js/alertas.js"></script>
     </body>
