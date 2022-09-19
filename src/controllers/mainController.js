@@ -33,6 +33,14 @@ const controller = {
             return product.brand == "Eukanuba";
         })
         res.render('../views/products/carrito', { carrito }); */
+    },
+    listadoPorCategory: function (req, res) {
+        db.Product.findAll({
+            where: {
+                category_product: req.params.category
+            }
+        })
+        .then(product => res.render('../views/products/category_products',{ product }))
     }
 };
 

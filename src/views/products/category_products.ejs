@@ -4,21 +4,21 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        <h3 class="tittle"><%= products[0].category_product.toUpperCase()%></h3>
+        <h3 class="tittle"><%= product[0].category_product.toUpperCase()%></h3>
         <section class="productsList">
-            <% for(let i = 0; i < products.length; i++){ %>
-                <a class="control__a" href="/products/<%= products[i].product_id %>">
+            <% for(let i = 0; i < product.length; i++){ %>
+                <a class="control__a" href="/products/<%= product[i].product_id %>">
                     <article>
-                  <img src="/images/<%= products[i].images %>">
+                  <img src="/images/<%= product[i].images %>">
                   <div class="products__details">
                       <p class="products__details-name">
-                          <%= products[i].product_name %> 
+                          <%= product[i].product_name %> 
                       </p>
                       <p class="products__details-price">
-                          <%= products[i].price %>
+                          <%= product[i].price %>
                       </p>
                       <p>
-                          <%= products[i].desc_product %>
+                          <%= product[i].desc_product %>
                       </p>
                   </div>
                     </article>

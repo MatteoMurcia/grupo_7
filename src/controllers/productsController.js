@@ -25,14 +25,6 @@ const controller = {
         .then(productsList => res.render('../views/products/productsList', {productsList}) )
 /*         const productsList = readJsonFile(productsDbPath);
         res.render('../views/products/productsList', { productsList }) */
-    },
-    listadoDeAlimentos: function (req, res) {
-        db.Product.findAll({
-            where: {
-                category_product: req.params.category
-            }
-        })
-        .then(products => res.render('../views/products/products', { products }))
     }
 }
 
