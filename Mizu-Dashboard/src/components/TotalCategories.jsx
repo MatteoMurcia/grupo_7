@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './TotalCategories.css'
+import './Label/Label.css'
 
 class TotalCategories extends Component {
 
@@ -20,8 +20,8 @@ class TotalCategories extends Component {
 
     render() {
         return(
-            <div>
-                <h4 className='totalCategories'>Total de categorias de productos</h4>
+            <div className='label'>
+                <h4>Total de categorias de productos</h4>
                 <div className='rowCat'>
                 {
                     this.state.products.length

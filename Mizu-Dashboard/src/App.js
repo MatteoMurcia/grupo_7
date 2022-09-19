@@ -1,10 +1,10 @@
-import Titulo from './components/Titulo';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Label from './components/Label/Label'
 import Table from './components/Table/Table'
 import ListCategories from './components/ListCategories';
 import TotalCategories from './components/TotalCategories';
+import './App.css';
 
 const App = () =>  {
 
@@ -37,16 +37,21 @@ const App = () =>  {
   return (
 
     <main className="App">
-      <h1>Mizu Dashboard</h1>
+      <h1 className='titleMain'>Bienvenidos al MIZU - DASHBOARD</h1>
       {
         loading ? <p>Cargando...</p> : ''
       }
-      <Label title="Productos" value={products.length}/>
 
+      <div className="control_label">
+        <Label title="Productos" value={products.length}/>
+
+        <ListCategories />
+
+        <TotalCategories />
+      </div>
+
+      <h2 className='titleTable'>Tabla de Productos</h2>
       <Table columns={tableColumns} products ={products} />
-
-      <ListCategories />
-      <TotalCategories />
 
     </main>
   );

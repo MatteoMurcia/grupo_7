@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Category from './Category';
-import './ListCategories.css'
+import './Label/Label.css'
 
 class ListCategories extends Component {
 
@@ -21,8 +21,8 @@ class ListCategories extends Component {
 
     render() {
         return(
-            <div>
-                <h4 className='listCategories'>Listado de categorias de productos</h4>
+            <div className='label'>
+                <h4>Listado de categorias de productos</h4>
                 <div className='rowCat'>
                 {
                     this.state.products.map(category => <Category key={category.category_product} category_product={ category.category_product} />)

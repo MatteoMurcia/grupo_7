@@ -1,0 +1,29 @@
+*{
+    font-family: Quicksand;
+}
+
+body{
+    background-color: #eaeae6;
+}
+
+.titleMain{
+    color: #fff;
+    background-color: #166e91;
+    text-align: center;
+    border: solid 2px #000;
+}
+
+.titleTable{
+    color: #fff;
+    background-color: #166e91;
+    text-align: center;
+    border: solid 2px #000;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.control_label{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
