@@ -37,12 +37,8 @@ const App = () =>  {
   return (
 
     <main className="App">
-<<<<<<< HEAD
-      <h1>Mizu Dashboard</h1>
-=======
       <Titulo />
       <h1>Dashboard</h1>
->>>>>>> d060bbc919cce4359c315219a61ab83370b9e195
       {
         loading ? <p>Cargando...</p> : ''
       }
