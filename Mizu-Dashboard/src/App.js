@@ -1,13 +1,16 @@
 import Titulo from './components/Titulo';
+import ListCategories from './components/ListCategories';
+import TotalCategories from './components/TotalCategories';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-
+      <Titulo />
       </header>
       <main>
-        <Titulo />
+      <ListCategories />
+      <TotalCategories />
       </main>
     </div>
   );

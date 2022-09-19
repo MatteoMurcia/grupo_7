@@ -6,34 +6,30 @@
             <main class="align">
                 <div class="register">
                     <section class="login__header">
-                        <h2>Bienvenid@ - <%=user.first_name%>
-                                <h2>
+                        <h2>Bienvenid@ - <%=user.first_name%></h2>
                     </section>
-                    <div class="userView">
+                    <div  class="login__form_datos">
+                        <section class="userView">
                         <div>
-                            <section>
-                                <img src="/images/userImages/<%=user.images%>" width="100" style="margin:15px">
-                            </section>
+                                <img src="/images/userImages/<%=user.images%>" width="70%" style="margin:5px">
                         </div>
-                        <section>
-                            <div>
+                        <div class="userViewDatos">
                                 <div>
-                                    <label style="margin-right: 20px;">Primer Nombre: <%= user.first_name%> </label>
+                                    <label>Nombre: <%= user.first_name%> </label>
                                 </div>
                                 <div>
-                                    <label style="margin-right: 20px;">Apellido: <%= user.last_name%> </label>
+                                    <label>Apellido: <%= user.last_name%> </label>
                                 </div>
                                 <div>
-                                    <label style="margin-right: 20px;">Nombre Usuario: <%= user.user_name%> </label>
+                                    <label>Usuario: <%= user.user_name%> </label>
                                 </div>
                                 <div>
-                                    <label style="margin-right: 20px;">Email: <%= user.email%> </label>
+                                   <label>Email: <%= user.email%> </label>
                                 </div>
                                 <div>
-                                    <label style="margin-right: 20px;">Categoria: <%= user.category_user%> </label>
+                                    <label>Categoria: <%= user.category_user%> </label>
                                 </div>
-                            </div>
-
+                        </div>
                         </section>
                     </div>
                 </div>

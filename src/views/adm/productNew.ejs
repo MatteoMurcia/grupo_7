@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head', {hojasDeEstilo: ["formCreateProduct"] })%>
-
-
     <body>
-
         <%- include('../partials/header') %>
-
             <main class="align">
                 <div class="register">
                     <section class="login__header">
                         <h2>Crear Producto</h2>
                     </section>
-                    <form action="new" class="createProduct__form" method="POST" enctype="multipart/form-data">
-                        <div class="insideForm">
-                            <div class="inputs">
+                    <section id="createProduct__form">
+                    <form action="new" method="POST" enctype="multipart/form-data" class="login__form">
+                        <!-- <div class="insideForm">
+                            <div class="inputs"> -->
                                 <div>
-                                    <label for="nameProduct" style="margin-right: 20px;">Nombre</label>
-                                    <input type="text" id="name" name="nameProduct"
-                                        placeholder="Ingrese el nombre del producto">
+                                    <p><label for="nameProduct">Nombre</label></p>
+                                    <input type="text" id="name" name="nameProduct" data-nombre2="nombre" placeholder="Ingrese el nombre del producto">
+                                    <br>
+                                    <span></span>
                                 </div>
-
+                                
                                 <div>
-                                    <label for="descriptionProduct" style="margin-right: 20px;">Descripción</label>
-                                    <textarea id="ProductDescription" name="descriptionProduct"
-                                        placeholder="Ingrese la descripción"></textarea>
+                                    <p><label for="descriptionProduct">Descripción</label></p>
+                                    <textarea id="ProductDescription" name="descriptionProduct" placeholder="Ingrese la descripción" data-nombre2="descripcion"></textarea>
+                                    <br>
+                                    <span></span>
+                                </div>
+                                
+                                <div>
+                                    <p><label for="imageProduct">Imagen</label></p>
+                                    <input type="file" id="image" name="imageProduct" accept="" data-nombre2="image"/>
+                                    <br>
+                                    <span></span>    
                                 </div>
                                 <div>
-                                    <label for="imageProduct" style="margin-right: 20px;">Imagen</label>
-                                    <input type="file" id="image" name="imageProduct" accept=".pdf,.jpg,.png" />
-
-                                </div>
-                                <div>
-                                    <label for="categoryProduct" style="margin-right: 20px;">Categoria</label>
+                                    <p><label for="categoryProduct">Categoria</label></p>
                                     <select id="category" name="categoryProduct">
                                         <option value="alimentos">Alimentos</option>
                                         <option value="snacks">Snacks</option>
@@ -40,42 +41,46 @@
                                         <option value="juguetes">Juguetes</option>
                                         <option value="higiene">Cuidado e Higiene</option>
                                     </select>
-
+                                    
                                 </div>
                                 <div>
-                                    <label for="typeProduct" style="margin-right: 50px;">Tipo</label>
+                                    <p><label for="typeProduct">Tipo</label></p>
                                     <select id="type" name="typeProduct">
                                         <option value="destacado">Destacados</option>
                                         <option value="in-sale">Con Rebajas</option>
                                         <option value="normal">Normal</option>
                                     </select>
-
+                                    
                                 </div>
-
+                                
                                 <div>
-                                    <label for="brandProduct" style="margin-right: 20px;">Marca</label>
-                                    <input type="text" id="brand" name="brandProduct" placeholder="Ingrese la marca">
+                                    <p><label for="brandProduct">Marca</label></p>
+                                    <input type="text" id="brand" name="brandProduct" placeholder="Ingrese la marca" data-nombre2="marca">
+                                    <br>
+                                    <span></span>
                                 </div>
-
+                                
                                 <div>
-                                    <label for="priceProduct" style="margin-right: 20px;">Precio</label>
-                                    <input type="text" id="price" name="priceProduct" placeholder="Ingrese el precio">
+                                    <p><label for="priceProduct">Precio</label></p>
+                                    <input type="text" id="price" name="priceProduct" placeholder="Ingrese el precio" data-nombre2="precio">
+                                    <br>
+                                    <span></span>
                                 </div>
-                            </div>
+                            <!-- </div> -->
                             <div class="errores__control">
                                 <ul class="errores"></ul>
                             </div>
-                        </div>
+                        <!-- </div> -->
                         <div>
                             <input class="button" value="Crear producto" type="submit">
                         </div>
                     </form>
+                    </section>
                     <div>
                         <a href="/" class="button_bck_home"><input class="button" value="Volver a la tienda"></a>
                     </div>
-            </main>
-            <%- include('../partials/footer') %>
-            <script src="/js/productNewValidation.js"></script>
+                </main>
+                <%- include('../partials/footer') %>
+                <script src="/js/addProductValidation.js"></script>
     </body>
-
 </html>

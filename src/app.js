@@ -4,8 +4,10 @@ const PORT = process.eventNames.PORT || 3000;
 const path = require("path");
 const methodOverride = require('method-override');
 const session = require("express-session");
-const cookies = require('cookie-parser')
+const cookies = require('cookie-parser');
+const cors = require('cors');
 
+app.use(cors());
 
 const mainRoutes = require('./routes/mainRoutes');
 const productsRoutes = require('./routes/productsRoutes');
