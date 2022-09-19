@@ -42,6 +42,9 @@ header{
    height: 80%;
    padding-top: 20%;
 }
+.userA{
+    text-decoration: none;
+}
 
 .top-header__menus-adress,
 .top-header__menus-burger{
