@@ -6,7 +6,6 @@ const Label = ({title, value, description}) => {
             {/* icon */}
             <p className="title">Total de {title}</p>
             <h3 className="value">{value}</h3>
-            <span className="description">{description}</span>
         </div>
     )
 

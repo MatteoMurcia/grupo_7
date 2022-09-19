@@ -1,7 +1,8 @@
 .label{
-    color:red;
-    border: 1px solid black;
-    background: violet;
-    font-size: 2rem;
+    color: #fff;
+    border: 1px solid #000;
+    background: #166e91;
+    font-size: 1.5rem;
     width: 300px;
+    margin-left: 1.5%;
 }

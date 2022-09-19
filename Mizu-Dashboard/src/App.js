@@ -34,11 +34,11 @@ const App = () =>  {
 
   return (
     <main className="App">
-      <h1>Dashboard</h1>
+      <h1>Mizu Dashboard</h1>
       {
         loading ? <p>Cargando...</p> : ''
       }
-      <Label title="Productos" value={products.length} description="Test" />
+      <Label title="Productos" value={products.length}/>
 
       <Table columns={tableColumns} products ={products} />
 
