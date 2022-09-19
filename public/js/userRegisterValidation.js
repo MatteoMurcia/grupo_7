@@ -7,10 +7,11 @@ window.onload = function (){
     let inputEmail =  document.getElementById('email');
     let inputUsername =  document.getElementById('username');
     let inputPassword =  document.getElementById('password');
+    let inputImage = document.getElementById('avatar')
     let emailExp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-    let extensionExp = /(.jpg|.jpeg|.png|.gif)$/i;
+    let extensionExp = /(.jpg|.jpeg|.png|.gif|.heic)$/i;
     
-    const arrayInputs = [inputName, inputLastname, inputEmail, inputUsername, inputPassword]
+    const arrayInputs = [inputName, inputLastname, inputEmail, inputUsername, inputPassword, inputImage]
     
     formulario.addEventListener ('submit', function (e) {
         let errors = 0;
@@ -41,6 +42,11 @@ window.onload = function (){
                     input.classList.remove('is-invalid');
                     errors++;
             
+                }else if (input.dataset.nombre == 'avatar' && !extensionExp.exec(inputImage.value)) {
+                    input.nextElementSibling.nextElementSibling.innerHTML = 'El archivo ' + input.dataset.nombre + ' debe ser extension jpg, jpeg, png, heic o gif'
+                    input.nextElementSibling.nextElementSibling.classList.add('is-invalid'); 
+                    input.classList.remove('is-invalid');
+        
                 }else if (input.value === ""){
                     input.nextElementSibling.nextElementSibling.innerHTML = 'El campo ' + input.dataset.nombre + ' no puede estar vacio'
                     input.nextElementSibling.nextElementSibling.classList.add('is-invalid'); 
@@ -84,6 +90,11 @@ window.onload = function (){
                 input.classList.remove('is-invalid');
                 
         
+            }else if (input.dataset.nombre == 'avatar' && !extensionExp.exec(inputFile.value)) {
+                input.nextElementSibling.nextElementSibling.innerHTML = 'El archivo ' + input.dataset.nombre + ' debe ser extension jpg, jpeg, png, heic o gif'
+                input.nextElementSibling.nextElementSibling.classList.add('is-invalid'); 
+                input.classList.remove('is-invalid');
+    
             }else if (input.value === ""){
                 input.nextElementSibling.nextElementSibling.innerHTML = 'El campo ' + input.dataset.nombre + ' no puede estar vacio'
                 input.nextElementSibling.nextElementSibling.classList.add('is-invalid'); 

@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Label from './components/Label/Label'
 import Table from './components/Table/Table'
+import ListCategories from './components/ListCategories';
+import TotalCategories from './components/TotalCategories';
 
 const App = () =>  {
 
@@ -33,8 +35,14 @@ const App = () =>  {
   const tableColumns = ['Id', 'Nombre', 'Categoría', 'Descripción']
 
   return (
+
     <main className="App">
+<<<<<<< HEAD
       <h1>Mizu Dashboard</h1>
+=======
+      <Titulo />
+      <h1>Dashboard</h1>
+>>>>>>> d060bbc919cce4359c315219a61ab83370b9e195
       {
         loading ? <p>Cargando...</p> : ''
       }
@@ -42,8 +50,11 @@ const App = () =>  {
 
       <Table columns={tableColumns} products ={products} />
 
+      <ListCategories />
+      <TotalCategories />
+
     </main>
   );
-}
+    }
 
 export default App;

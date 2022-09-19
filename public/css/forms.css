@@ -205,6 +205,20 @@ section h2 {
   justify-content: space-evenly;
 }
 
+.userViewDatos {
+  display: table-column;
+  margin-bottom: 0px;
+}
+
+.login__form_datos {
+  background-color: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: #777;
+  display: grid;
+  padding: 15px 15px;
+}
+
 .button {
 
   background-color: #166e91;
@@ -297,5 +311,12 @@ input::placeholder {
 @media (min-width: 1280px) {
   main {
     padding-top: 270px;
+  }
+
+  .userView {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
   }
 }
