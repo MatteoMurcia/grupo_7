@@ -18,20 +18,34 @@
                                     <br>
                                     <span></span>
                                 </div>
-                                
+                                <% if (locals.errors && errors.nameProduct) { %>
+                                    <div class="text-danger">
+                                        <%= errors.nameProduct.msg %> 
+                                    </div>
+                                <% } %>
+
                                 <div>
                                     <p><label for="descriptionProduct">Descripción</label></p>
                                     <textarea id="ProductDescription" name="descriptionProduct" placeholder="Ingrese la descripción" data-nombre2="descripcion"></textarea>
                                     <br>
                                     <span></span>
                                 </div>
-                                
+                                <% if (locals.errors && errors.descriptionProduct) { %>
+                                    <div class="text-danger">
+                                        <%= errors.descriptionProduct.msg %> 
+                                    </div>
+                                <% } %>
                                 <div>
                                     <p><label for="imageProduct">Imagen</label></p>
                                     <input type="file" id="image" name="imageProduct" accept="" data-nombre2="image"/>
                                     <br>
                                     <span></span>    
                                 </div>
+                                <% if(locals.errors && errors.imageProduct){ %>
+                                    <div class="text-danger">
+                                        <%= errors.imageProduct.msg %> 
+                                    </div>
+                                <% } %>
                                 <div>
                                     <p><label for="categoryProduct">Categoria</label></p>
                                     <select id="category" name="categoryProduct">
@@ -59,14 +73,23 @@
                                     <br>
                                     <span></span>
                                 </div>
-                                
+                                <% if(locals.errors && errors.brandProduct){ %>
+                                    <div class="text-danger">
+                                        <%= errors.brandProduct.msg %> 
+                                    </div>
+                                <% } %>
                                 <div>
                                     <p><label for="priceProduct">Precio</label></p>
                                     <input type="text" id="price" name="priceProduct" placeholder="Ingrese el precio" data-nombre2="precio">
                                     <br>
                                     <span></span>
                                 </div>
-                            <!-- </div> -->
+                                <% if(locals.errors && errors.priceProduct){ %>
+                                    <div class="text-danger">
+                                        <%= errors.priceProduct.msg %> 
+                                    </div>
+                                <% } %>
+                            </div>
                             <div class="errores__control">
                                 <ul class="errores"></ul>
                             </div>
@@ -79,8 +102,8 @@
                     <div>
                         <a href="/" class="button_bck_home"><input class="button" value="Volver a la tienda"></a>
                     </div>
-                </main>
-                <%- include('../partials/footer') %>
-                <script src="/js/addProductValidation.js"></script>
+            </main>
+            <%- include('../partials/footer') %>         
+            <script src="/js/productNewValidation.js"></script>   
     </body>
 </html>

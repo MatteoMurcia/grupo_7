@@ -1,16 +1,15 @@
 const path = require("path");
 const fs = require("fs");
-const { send } = require("process");
-const { stringify } = require("querystring");
 const db = require('../database/models');
+const {validationResult} = require('express-validator');
 
-const DbPath = path.join(__dirname, "../db/products.json");
+/* const DbPath = path.join(__dirname, "../db/products.json");
 
 const readJsonFile = (path) => {
     const data = fs.readFileSync(path, "utf-8");
     const dataParsed = JSON.parse(data);
     return dataParsed;
-}
+} */
 
 
 const controller = {
@@ -58,6 +57,13 @@ const controller = {
         return res.redirect("/"); */
     },
     storeProducto: (req, res) => {
+        const resultValidation = validationResult(req);
+		if(resultValidation.errors.length > 0){
+			return res.render('../views/adm/productNew', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}else{
         db.Product.create({
             product_name: req.body.nameProduct,
             price: req.body.priceProduct,
@@ -70,6 +76,7 @@ const controller = {
         .then(function(){
             return res.redirect("/products")
         })
+    }
 /*         let archivoProductos = readJsonFile(DbPath);
         let idProducto;
         for (let i = 0; i < archivoProductos.length; i++) {

@@ -8,8 +8,32 @@ const path = require('path')
 
 const { body } = require('express-validator');
 
+const validationsUser = [
+    body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
+    body('lastname').notEmpty().withMessage('Tienes que escribir un apellido'),
+	body('email')
+	.notEmpty().withMessage('Tienes que escribir un e-mail').bail()
+	.isEmail().withMessage('Debes escribir un formato de correo válido'),
+    body('username').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
+	body('password').notEmpty().withMessage('Tienes que escribir una contrasena'),
+	body('avatar').custom((value, { req }) => {
+		let file = req.file;
+		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		
+		if(!file){
+			throw new Error ('Tienes que subir una imagen');
+		} else {
+			let fileExtension = path.extname(file.originalname);
+			if(!acceptedExtensions.includes(fileExtension)){
+				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`)
+			}
+		}
+		
+		return true
+	})
+]
 
-const guestMiddleware = require('../middlewares/guestMiddleware')
+const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 const validationLogin = require('../middlewares/validationLogin');
 
@@ -29,7 +53,7 @@ const upload = multer({ storage });
 
 router.get('/register', guestMiddleware, usersController.registerView);
 //router.post('/register', upload.single("avatar"), usersController.register)
-router.post('/register', upload.single("avatar"), usersControllerDb.register)
+router.post('/register', upload.single("avatar"), validationsUser, usersControllerDb.register)
 
 router.get('/login', guestMiddleware, usersControllerDb.login);
 
@@ -41,7 +65,7 @@ router.get('/logout', usersController.logout)
 router.get('/list', usersControllerDb.listUser)
 
 router.get('/update/:id', usersControllerDb.update)
-router.post('/update/:id', upload.single("avatar"), usersControllerDb.update_save)
+router.post('/update/:id', upload.single("avatar"), validationsUser, usersControllerDb.update_save)
 
 router.get('/remove/:id', usersControllerDb.borrar)
 

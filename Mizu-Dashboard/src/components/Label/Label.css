@@ -1,0 +1,7 @@
+.label{
+    color:red;
+    border: 1px solid black;
+    background: violet;
+    font-size: 2rem;
+    width: 300px;
+}

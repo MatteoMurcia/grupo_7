@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <%- include('../partials/head', { hojasDeEstilo: ["productsList"] })%>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <h3 class="tittle"><%= products[0].category_product.toUpperCase()%></h3>
+        <section class="productsList">
+            <% for(let i = 0; i < products.length; i++){ %>
+                <a class="control__a" href="/products/<%= products[i].product_id %>">
+                    <article>
+                  <img src="/images/<%= products[i].images %>">
+                  <div class="products__details">
+                      <p class="products__details-name">
+                          <%= products[i].product_name %> 
+                      </p>
+                      <p class="products__details-price">
+                          <%= products[i].price %>
+                      </p>
+                      <p>
+                          <%= products[i].desc_product %>
+                      </p>
+                  </div>
+                    </article>
+                </a>
+              <% } %>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

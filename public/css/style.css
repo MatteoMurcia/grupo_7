@@ -330,6 +330,13 @@ footer p.copyright{
     font-size: 2em;
 }
 
+/* ---------- Utility calsses ---------- */
+
+.text-danger{
+    color: #eb0f0f;
+    font-size: 1rem;
+}
+
 @media (min-width: 768px){
 /* ---------- Header ---------- */
     header{

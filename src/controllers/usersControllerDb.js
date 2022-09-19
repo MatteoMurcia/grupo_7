@@ -7,6 +7,7 @@ const db = require('../database/models');
 const { Op } = require("sequelize");
 const { stringify } = require("querystring");
 const { parse } = require('path');
+const {validationResult} = require('express-validator')
 
 const usersDbPath = path.join(__dirname, "../db/users.json");
 
@@ -81,22 +82,30 @@ const controller = {
         res.render('../views/users/register')
     },
     register: (req, res) => {
-        const passHasheada = bcrypt.hashSync(req.body.password, 10)
-        db.User.create({
-            first_name: req.body.name,
-            last_name: req.body.lastname,
-            user_name: req.body.username,
-            email: req.body.email,
-            password: passHasheada,
-            category_user: req.body.category,
-            images: req.file?.filename || 'default.jpg'
-
-        })
-            .then(() => {
-                return res.redirect('../')
+        const resultValidation = validationResult(req);
+		if(resultValidation.errors.length > 0){
+			return res.render('../views/users/register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}else{
+            const passHasheada = bcrypt.hashSync(req.body.password, 10)
+            db.User.create({
+                first_name: req.body.name,
+                last_name: req.body.lastname,
+                user_name: req.body.username,
+                email: req.body.email,
+                password: passHasheada,
+                category_user: req.body.category,
+                images: req.file?.filename || 'default.jpg'
+    
             })
-            .catch(error => res.send(error))
-        // const users = readJsonFile(usersDbPath);
+                .then(() => {
+                    return res.redirect('../')
+                })
+                .catch(error => res.send(error))
+            // const users = readJsonFile(usersDbPath);
+        }
     },
     listUser: function (req, res) {
         db.User.findAll()

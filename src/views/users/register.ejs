@@ -15,34 +15,55 @@
                 <br>
                 <span></span>
             </div>
-        
+            <% if (locals.errors && errors.name) { %>
+                <div class="text-danger">
+                    <%= errors.name.msg %> 
+                </div>
+            <% } %>
             <div>
                 <p><label for="lastname">Apellido</label></p>
                 <input type="text" id="lastname" name="lastname" placeholder="Debe ingresar al menos 2 caracteres" data-nombre="apellido">
                 <br>
                 <span></span>
             </div>
-
+            <% if (locals.errors && errors.lastname) { %>
+                <div class="text-danger">
+                    <%= errors.lastname.msg %> 
+                </div>
+            <% } %>
             <div>
                 <p><label for="email">Ingresa tu em@il</label></p>
                 <input type="email" id="email" name="email"  data-nombre="email" placeholder="email@email.com">
                 <br>
                 <span></span>
             </div>
-
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %> 
+                </div>
+            <% } %>
             <div>
                 <p><label for="username">Usuario</label></p>
                 <input type="text" id="username" name="username"  data-nombre="usuario" placeholder="Tu usuario">
                 <br>
                 <span></span>
             </div>
-      
+            <% if (locals.errors && errors.username) { %>
+                <div class="text-danger">
+                    <%= errors.username.msg %> 
+                </div>
+            <% } %>
             <div>
                 <p><label for="password">Contraseña</label></p>
                 <input type="password" id="password" name="password" placeholder="Debe tener al menos 8 caracteres" data-nombre="password">
                 <br>
                 <span></span>
             </div>
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %> 
+                </div>
+            <% } %>
             <div>
                 <label for="category">Categoria</label>
               </br>
@@ -52,13 +73,23 @@
 
               </select>
             </div>
+            <% if (locals.errors && errors.category) { %>
+                <div class="text-danger">
+                    <%= errors.category.msg %> 
+                </div>
+            <% } %>
             <div>
                 <p><label for="avatar">Avatar</label></p>
                 <div class="file-select" >
                     <input type="file" id="avatar" name="avatar" aria-label="Archivo" data-nombre="avatar">
-                    <br>
-                    <span></span>
-                </div>
+                  </div>
+                  <% if (locals.errors && errors.avatar) { %>
+                    <div class="text-danger">
+                        <%= errors.avatar.msg %> 
+                    </div>
+                <% } %>
+                <br>
+                <span></span>
             </div>
             
     
