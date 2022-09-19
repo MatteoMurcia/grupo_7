@@ -13,12 +13,12 @@ window.onload = function(){
     form.addEventListener("submit", function(e){
         if(name.value == ""){
             errores.push("El producto debe tener un nombre")
-        }else if(name.value.length < 10 && name.value.length > 25){
+        }else if(name.value.length < 10 || name.value.length > 25){
             errores.push("El nombre del producto debe tener entre 10 y 25 caracteres")
         }
         if(description.value == ""){
             errores.push("El producto debe tener una descrpción")
-        }else if(description.value.length < 25 && description.value.length > 300){
+        }else if(description.value.length < 25 || description.value.length > 300){
             errores.push("La descripción del producto debe tener entre 25 y 300 caracteres")
         }
         if(brand.value == ""){

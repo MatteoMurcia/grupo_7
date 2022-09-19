@@ -20,17 +20,32 @@
                                     <input type="text" id="name" name="nameProduct"
                                         placeholder="Ingrese el nombre del producto">
                                 </div>
+                                <% if (locals.errors && errors.nameProduct) { %>
+                                    <div class="text-danger">
+                                        <%= errors.nameProduct.msg %> 
+                                    </div>
+                                <% } %>
 
                                 <div>
                                     <label for="descriptionProduct" style="margin-right: 20px;">Descripción</label>
                                     <textarea id="ProductDescription" name="descriptionProduct"
                                         placeholder="Ingrese la descripción"></textarea>
                                 </div>
+                                <% if (locals.errors && errors.descriptionProduct) { %>
+                                    <div class="text-danger">
+                                        <%= errors.descriptionProduct.msg %> 
+                                    </div>
+                                <% } %>
                                 <div>
                                     <label for="imageProduct" style="margin-right: 20px;">Imagen</label>
                                     <input type="file" id="image" name="imageProduct" accept=".pdf,.jpg,.png" />
 
                                 </div>
+                                <% if(locals.errors && errors.imageProduct){ %>
+                                    <div class="text-danger">
+                                        <%= errors.imageProduct.msg %> 
+                                    </div>
+                                <% } %>
                                 <div>
                                     <label for="categoryProduct" style="margin-right: 20px;">Categoria</label>
                                     <select id="category" name="categoryProduct">
@@ -56,11 +71,20 @@
                                     <label for="brandProduct" style="margin-right: 20px;">Marca</label>
                                     <input type="text" id="brand" name="brandProduct" placeholder="Ingrese la marca">
                                 </div>
-
+                                <% if(locals.errors && errors.brandProduct){ %>
+                                    <div class="text-danger">
+                                        <%= errors.brandProduct.msg %> 
+                                    </div>
+                                <% } %>
                                 <div>
                                     <label for="priceProduct" style="margin-right: 20px;">Precio</label>
                                     <input type="text" id="price" name="priceProduct" placeholder="Ingrese el precio">
                                 </div>
+                                <% if(locals.errors && errors.priceProduct){ %>
+                                    <div class="text-danger">
+                                        <%= errors.priceProduct.msg %> 
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="errores__control">
                                 <ul class="errores"></ul>
@@ -74,8 +98,8 @@
                         <a href="/" class="button_bck_home"><input class="button" value="Volver a la tienda"></a>
                     </div>
             </main>
-            <%- include('../partials/footer') %>
-            <script src="/js/productNewValidation.js"></script>
+            <%- include('../partials/footer') %>         
+            <script src="/js/productNewValidation.js"></script>   
     </body>
 
 </html>

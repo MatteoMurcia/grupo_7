@@ -29,44 +29,11 @@ const controller = {
     listadoDeAlimentos: function (req, res) {
         db.Product.findAll({
             where: {
-                category_product: "alimentos"
+                category_product: req.params.category
             }
         })
-        .then(alimentos => res.render('../views/products/alimentos', { alimentos }))
-    },
-    listadoDeSnacks: function (req, res) {
-        db.Product.findAll({
-            where: {
-                category_product: "snacks"
-            }
-        })
-        .then(snacks => res.render('../views/products/snacks', { snacks }))
-    },
-    listadoDeAccesorios: function (req, res) {
-        db.Product.findAll({
-            where: {
-                category_product: "accesorios"
-            }
-        })
-        .then(accesorios => res.render('../views/products/accesorios', { accesorios }))
-    },
-    listadoDeJuguetes: function (req, res) {
-        db.Product.findAll({
-            where: {
-                category_product: "juguetes"
-            }
-        })
-        .then(juguetes => res.render('../views/products/juguetes', { juguetes }))
-        
-    },
-    listadoDeHigiene: function (req, res) {
-        db.Product.findAll({
-            where: {
-                category_product: "higiene"
-            }
-        })
-        .then(higiene => res.render('../views/products/higiene', { higiene }))
-    },
+        .then(products => res.render('../views/products/products', { products }))
+    }
 }
 
 module.exports = controller;
