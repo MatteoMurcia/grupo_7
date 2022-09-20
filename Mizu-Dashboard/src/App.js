@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Label from './components/Label/Label'
 import Table from './components/Table/Table'
-import ListCategories from './components/ListCategories';
+//import ListCategories from './components/ListCategories';
 import TotalCategories from './components/TotalCategories';
 import './App.css';
 
@@ -44,8 +44,6 @@ const App = () =>  {
 
       <div className="control_label">
         <Label title="Productos" value={products.length}/>
-
-        <ListCategories />
 
         <TotalCategories />
       </div>
