@@ -66,6 +66,18 @@ main{
     margin-bottom: 20px;
 }
 
+.button_buy{
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #28a72ec0;
+    border: solid 1px #000;
+    border-radius: 5px;
+    color: #FFF;
+}
+.button_buy:hover{
+    background-color: #0ed418;
+}
+
 @media (min-width: 768px) {
     main{
         padding-top: 200px;
