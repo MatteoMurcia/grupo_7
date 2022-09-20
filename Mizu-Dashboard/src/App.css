@@ -13,6 +13,7 @@ body{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     margin: 0px;
     border-radius: 10px;
+    padding: 25px 0px;
 }
 
 .titleTable{
@@ -22,6 +23,7 @@ body{
     border: solid 2px #000;
     margin: 0px;
     margin-top: 20px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .control_label{
