@@ -18,14 +18,14 @@
                             <% for(let i=0; i < carrito.length; i++){ %>
                                 <div class="articuloPrinc">
                                     <div class="imgProducto">
-                                        <img src="/images/<%= carrito[i].image %>" width="40 rem" alt="Producto1">
+                                        <img src="/images/<%= carrito[i].images %>" width="40 rem" alt="Producto1">
                                     </div>
                                     <div class="detalleProducto">
                                         <h5 class="nombreProducto">
-                                            <%= carrito[i].name %>
+                                            <%= carrito[i].product_name %>
                                         </h5>
                                         <p class="descProducto">
-                                            <%= carrito[i].description%>>
+                                            <%= carrito[i].descr_product%>>
                                         </p>
                                         <div class="cantProducto">
                                             <i class="fas fa-minus"></i>

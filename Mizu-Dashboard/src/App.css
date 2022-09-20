@@ -12,6 +12,7 @@ body{
     text-align: center;
     border: solid 2px #000;
     margin: 0px;
+    border-radius: 10px;
 }
 
 .titleTable{

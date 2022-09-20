@@ -27,7 +27,7 @@ const controller = {
         db.Product.findAll({
             where: {brand: "Eukanuba"}
         })
-        .then(productsList => res.render('../views/index', {productsList}) )
+        .then(carrito => res.render('../views/products/carrito', {carrito}) )
 /*         const productsList = readJsonFile(productsDbPath);
         const carrito = productsList.filter(function (product) {
             return product.brand == "Eukanuba";
