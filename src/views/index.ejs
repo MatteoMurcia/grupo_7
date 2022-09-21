@@ -54,12 +54,15 @@
                     <img src="images/<%= productsList[i].images %>">
                     <div class="products__details">
                         <p class="products__details-name"><%= productsList[i].product_name %></p>
-                        <p class="products__details-price"><%= productsList[i].price %></p>
+                        <p class="products__details-price">$ <%= productsList[i].price %></p>
                     </div>
                 </article></a>
               <% } %>
         </section>
         <a class="control__main-a" href="/products"><h4>Ver todos los productos</h4></a>
+        <a class="create__product-button" href="/adm/new"> 
+            <button class="button_buy">+</button>
+        </a>
     </main>
     <%- include('./partials/footer') %>
 </body>
