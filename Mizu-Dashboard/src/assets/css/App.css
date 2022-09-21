@@ -3,7 +3,11 @@
 }
 
 body{
-    background-color: #eaeae6;
+    background-color: #fff;
+}
+
+.App{
+    display: flex;
 }
 
 .titleMain{
@@ -22,7 +26,7 @@ body{
     text-align: center;
     border: solid 2px #000;
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -31,3 +35,29 @@ body{
     justify-content: center;
     padding: 0px 10%;
 }
+
+.contentWrapper{
+    margin-left: 20px;
+    width: 90%;
+}
+
+.user_detail__image{
+    width: 30%;
+}
+
+.user_detail__image img{
+    max-width: 100%;
+}
+
+.user_detail{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.user_detail__data{
+    margin: 0px 0px 0px 20px;
+}
+
+
+
+

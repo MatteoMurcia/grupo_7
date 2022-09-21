@@ -1,11 +1,11 @@
-import './Label.css'
-const Label = ({title, value, description}) => {
+import '../../assets/css/Label.css'
+
+const Label = ({title, value, }) => {
 
     return (
         <div className="label">
-            {/* icon */}
             <h4 className="title">Total de {title}</h4>
-            <div className="value">{value}</div>
+            <span className="value">{value}</span>
         </div>
     )
 

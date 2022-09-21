@@ -1,18 +1,18 @@
 import '../../assets/css/Table.css'
-const Table = ({columns, products}) => {
+const UsersTable = ({columns, users}) => {
 
     return(
         <div className='table'>
             <div className='columns'>
                 {columns.map((column, i) => <span key={column + "" + i}>{column}</span>)}
             </div>
-                {products.map((product, i)=>{
+                {users.map((user, i)=>{
                     return(
                         <div key={i} className='rows'>
-                            <span>{product.product_id}</span>
-                            <span>{product.product_name}</span>
-                            <span>{product.category_product}</span>
-                            <span>{product.desc_product}</span>
+                            <span>{user.user_id}</span>
+                            <span>{user.user_name}</span>
+                            <span>{user.first_name}</span>
+                            <span>{user.email}</span>
                         </div>
                     )
                 })}
@@ -21,4 +21,4 @@ const Table = ({columns, products}) => {
 }
 
 
-export default Table
+export default UsersTable
