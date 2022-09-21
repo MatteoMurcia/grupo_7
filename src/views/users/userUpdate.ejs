@@ -8,8 +8,7 @@
                     <section class="login__header">
                         <h2>Editar Usuario<h2>
                     </section>
-                    <form action="/users/update/<%=user.user_id%>" class="login__form" method="POST"
-                        enctype="multipart/form-data">
+                    <form action="/users/update/<%=user.user_id%>" class="login__form" method="POST" enctype="multipart/form-data">
                         <div class="view_update">
                             <div>
                                 <div>
@@ -47,33 +46,21 @@
                                 <div>
                                     <label for="category">Categoria</label>
                                     </br>
-                                    <select name="category" class="combo_categoria">
-                                        <% if (user.user_category=="admin" ){ %>
+                                    <div name="category" class="combo_categoria">
+                                        <% if (user.category_user=="admin" ){ %>
 
-                                            <option value="admin" selected>Administrador</option>
-                                            <option value="user">Usuario</option>
+                                            <label>Administrador</label>
                                             <% } else{ %>
-                                                <option value="admin">Administrador</option>
-                                                <option value="user" selected>Usuario</option>
-
-
-                                                <% } %>
-
-
-
-                                    </select>
+                                            <label>Usuario</label>
+                                            <% } %>
+                                    </div>
                                 </div>
-
-
-
                             </div>
                         </div>
                         </br>
                         <div class="buttons" margin-top="50px">
                             <button class="button">Aceptar</button>
-
-
-                            <a href="/users/list" type="button" id="button2" value="Cancelar">Cancelar</a>
+                            <a href="/users/userView" type="button" id="button2" value="Cancelar">Cancelar</a>
                             <!--     <button onclick="user/list" class="button" margin-top="50px">Cancelar</button>-->
                         </div>
 

@@ -131,7 +131,7 @@ const controller = {
             { where: { user_id: req.params.id } }
         )
             .then(() => {
-                return res.redirect("/users/list")
+                return res.redirect("/")
             })
             .catch(error => res.send(error))
         // const users = readJsonFile(usersDbPath);
