@@ -82,7 +82,9 @@ const App = () =>  {
         <h2 className='titleTable'>Tabla de Productos</h2>
         <Table columns={tableColumns} products={products} />
 
-        <Label title="Users" value={users.length}/>
+        <div className="control_label">
+          <Label title="Users" value={users.length}/>
+        </div>
         
         <h2 className='titleTable'>Tabla de Usuarios</h2>
         <UsersTable columns={userTableColumns} users={users}/>
